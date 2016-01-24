@@ -1,14 +1,27 @@
 var path = require('path');
 
-module.exports = {
-  entry: ['webpack/hot/dev-server', path.resolve(__dirname, '../app/main.js')],
+var config = {
+    entry: ['webpack/hot/dev-server', path.resolve(__dirname, '../app/main.js')],
   output: {
     path: path.resolve(__dirname, '../build'),
     filename: 'bundle.js'
   },
-  plugins: [
-    new webpack.ProvidePlugin({
-      'angular': 'angular'
-    })
-  ]
+    module: {
+        loaders: [{
+            test: /\.html$/, // Only .html files
+            loader: 'ngtemplate!html'
+        },{
+
+        	loader: "babel-loader",
+      		test: /\.jsx?$/,
+      		query: {
+        		presets: ['es2015', 'stage-0']
+      		}
+        }
+
+        ]
+
+    }
 };
+
+module.exports = config;

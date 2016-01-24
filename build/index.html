@@ -4,6 +4,14 @@
     <meta charset="UTF-8"/>
   </head>
   <body>
+<div ng-app="testApp">
+  <div> 
+    <a ui-sref="list" > List </a>
+    <a ui-sref="detail" > Detail </a>
+    <div class="main-content" ui-view>  
+    </div>
+  </div>
+</div>
     <script src="http://localhost:8080/webpack-dev-server.js"></script>
     <script src="bundle.js"></script>
   </body>
