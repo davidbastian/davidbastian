@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/davidbastian/davidbastian/issues"
   },
-  "homepage": "https://github.com/davidbastian/davidbastian"
+  "homepage": "https://github.com/davidbastian/davidbastian",
+  "devDependencies": {
+    "webpack": "^1.12.12"
+  }
 }
