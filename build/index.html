@@ -6,9 +6,34 @@
 </head>
 
 <body>
-    <div ng-app="db">         
-            <div class="main-container" ng-view>       
-    </div>
+    <main ng-app="db">       
+    <header>
+
+            <div class="container">
+
+                <nav>
+                    <a ng-href="#/" id="logo">
+                        David Bastian
+                    </a>
+
+                    <ul id="menu">            
+                        <li>         
+                            <a ng-href="#/about"> + About me </a>
+                        </li>
+
+                        <li>
+                            <a href="mailto:d@davidbastian.cl">+ d@davidbastian.cl</a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+
+    </header>
+
+            <div class="main-container" ng-view>  
+    </main>
+
     <script src="http://localhost:8080/webpack-dev-server.js"></script>
     <script src="bundle.js"></script>
 </body>

@@ -1,10 +1,85 @@
 @import "./variables.scss";
 @import "./reset.scss";
+html,
+body {
+    background-color: $body-bg;
+    font-size: $font-size;
+    color: $text-color;
+    font-family: sans-serif;
+    &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: white;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #ddd;
+    }
+    a {
+        color: $text-color;
+        text-decoration: none;
+        position: relative;
+    }
+    h2 {
+        font-size: 40px;
+        letter-spacing: -1px;
+        small {
+            letter-spacing: 0px;
+            font-weight: 100;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+            position: relative;
+            // opacity:0;
+            //transform: translatey(0px);
+        }
+    }
+    p {
+        line-height: 1.2em;
+    }
+    h6 {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+}
 
-.main-container {	
-		/*	position: fixed;
+.main-container {
+    /*	position: fixed;
 			width: 100vw;
 			height: 100vh;
 			top: 0;
 			left: 0;*/
+}
+
+.container {
+    width: 90%;
+    max-width: $max-width-container;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+        #logo {
+            font-size: 17px;
+            font-weight: 600px;
+        }
+        #menu {
+            display: flex;
+            li {
+                margin-left: 40px;
+                a {
+                    text-transform: lowercase;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
 }

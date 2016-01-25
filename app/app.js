@@ -25,7 +25,7 @@ import {SingleController} from  './single/single.controller'
 //start app
 angular
 	.module("db", [ngroute, nganimate, sanitize])
-	.animation('.main-content',pageAnimation)
+	.animation('.main-container',pageAnimation)
 	.config(['$routeProvider', '$locationProvider', pageRouting])
 	.filter('toslug',toSlug)
 	.controller('Home', HomeController)
