@@ -1,3 +1,10 @@
 <div data-msg="{{message}}">
- 
+  
+   <div class="slides">
+        <a ng-href="#/{{x.slug|toslug}}"  ng-repeat="x in home" class="slideItem">
+            <img ng-src="{{x.img}}" alt="{{x.slug}}"/>
+            <p>{{x.slug}} — <span ng-class="role">{{x.role}}</span></p>
+        </a>
+    </div>
+
 </div>

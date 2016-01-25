@@ -4,7 +4,8 @@ const data = p.projects
 
 
 function HomeController($scope, $http, $window, $location) {
-            $scope.message = 'This is Home';        
+            $scope.message = 'This is Home';
+            $scope.home = data;        
 }
 
 export {HomeController};

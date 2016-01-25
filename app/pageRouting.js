@@ -8,8 +8,12 @@ function pageRouting($routeProvider, $locationProvider) {
                     controller: 'Home'
                 }).         
                 when('/about', {
-                    template: "<h4>Lots of list items will go here333</h4>"
-                    //controller: 'BlogDetail'
+                    template: require('./about/about.html'),
+                    controller: 'About'
+                }).
+                when('/:single', {
+                    template: require('./single/single.html'),
+                    controller: 'Single'
                 }).
                 otherwise({
                     redirectTo: '/home'
