@@ -3,11 +3,8 @@ import p from 'json!../data.json'
 const data = p.projects
 
 
-
-export default class HomeController {
-  constructor() {
-    var vm = this;
-    vm.title = 'Home';
-    vm.data = data;
-  }
+function HomeController($scope, $http, $window, $location) {
+            $scope.message = 'This is Home';        
 }
+
+export {HomeController};
