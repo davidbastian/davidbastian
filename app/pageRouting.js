@@ -1,8 +1,10 @@
+
+
 function pageRouting($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state("list", {
                 url: "/list",
-                template: '<h4>Lots of list items will go here33</h4>'
+                template: require("./main.html")
             })
             .state("detail", {
                 url: "/detail",
@@ -10,6 +12,5 @@ function pageRouting($stateProvider, $urlRouterProvider) {
             })
         $urlRouterProvider.otherwise("/list");
     }
-
 
 export {pageRouting};

@@ -4,10 +4,13 @@ import nganimate from 'angular-animate'
 import gsap from 'gsap'
 
 import {pageAnimation} from  './pageAnimation'
-import {pageRouting} from  './pageRouting'
+
+import routing from './app.config'
+import home from './home'
+import about from './about'
 
 
-var db = angular
-    .module("db", [uirouter, nganimate])
+angular
+    .module("db", [uirouter, home, about, nganimate])
     .animation('.main-content',pageAnimation)
-	.config(pageRouting)
+	.config(routing)

@@ -1,7 +1,7 @@
 var path = require('path');
 
 var config = {
-    entry: ['webpack/hot/dev-server', path.resolve(__dirname, '../app/main.js')],
+    entry: ['webpack/hot/dev-server', path.resolve(__dirname, '../app/app.js')],
   output: {
     path: path.resolve(__dirname, '../build'),
     filename: 'bundle.js'
@@ -9,7 +9,7 @@ var config = {
     module: {
         loaders: [{
             test: /\.html$/, // Only .html files
-            loader: 'ngtemplate!html'
+            loader: 'raw-loader'
         },{
 
         	loader: "babel-loader",
