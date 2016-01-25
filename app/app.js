@@ -8,7 +8,9 @@ import nganimate from 'angular-animate'
 import sanitize from 'angular-sanitize'
 
 //load gsap & pageAnimation
+import jquery from 'jquery'
 import gsap from 'gsap'
+import scrolltoplugin from '../node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin.js'
 import {pageAnimation} from  './pageAnimation'
 
 //load routing

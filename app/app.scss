@@ -24,6 +24,7 @@ body {
     h2 {
         font-size: 40px;
         letter-spacing: -1px;
+        padding-top: 12vh;
         small {
             letter-spacing: 0px;
             font-weight: 100;
@@ -52,6 +53,16 @@ body {
     left: 0;
     overflow: auto;
     height: 100vh;
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: white;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #ddd;
+    }
 }
 
 .container {
@@ -214,6 +225,7 @@ footer {
         width: 55%;
         float: right;
         position: relative;
+        left: 10px;
         .media {
             height: auto;
             width: 100%;

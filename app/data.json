@@ -30,7 +30,7 @@
                 "type": "video",
                 "enabled": 1,
                 "links": [{
-                    "src": "http://www.davidbastian.cl/proyectos/media/009.mp4"
+                    "src": "media/009.mp4"
                 }]
 
             }, {
@@ -113,7 +113,7 @@
                     "type": "video",
                     "enabled": 1,
                     "links": [{
-                        "src": "http://www.davidbastian.cl/proyectos/media/001.mp4"
+                        "src": "media/001.mp4"
                     }]
                 }
 
@@ -162,13 +162,13 @@
                     "type": "video",
                     "enabled": 1,
                     "links": [{
-                        "src": "http://www.davidbastian.cl/proyectos/media/004a.mp4"
+                        "src": "media/004a.mp4"
                     }]
                 }, {
                     "type": "video",
                     "enabled": 1,
                     "links": [{
-                        "src": "http://www.davidbastian.cl/proyectos/media/004.mp4"
+                        "src": "media/004.mp4"
                     }]
                 }
 
@@ -204,7 +204,7 @@
                     "type": "video",
                     "enabled": 1,
                     "links": [{
-                        "src": "http://www.davidbastian.cl/proyectos/media/011.mp4"
+                        "src": "media/011.mp4"
                     }]
                 }, {
                     "type": "image",
@@ -237,7 +237,7 @@
                     "type": "video",
                     "enabled": 1,
                     "links": [{
-                        "src": "http://www.davidbastian.cl/proyectos/media/025.mp4"
+                        "src": "media/025.mp4"
                     }]
                 }, {
                     "type": "image",
@@ -249,13 +249,13 @@
                     "type": "video",
                     "enabled": 1,
                     "links": [{
-                        "src": "http://www.davidbastian.cl/proyectos/media/025a.mp4"
+                        "src": "media/025a.mp4"
                     }]
                 }, {
                     "type": "video",
                     "enabled": 1,
                     "links": [{
-                        "src": "http://www.davidbastian.cl/proyectos/media/025b.mp4"
+                        "src": "media/025b.mp4"
                     }]
                 }
 
@@ -294,13 +294,13 @@
                     "type": "video",
                     "enabled": 1,
                     "links": [{
-                        "src": "http://www.davidbastian.cl/proyectos/media/020a.mp4"
+                        "src": "media/020a.mp4"
                     }]
                 }, {
                     "type": "video",
                     "enabled": 1,
                     "links": [{
-                        "src": "http://www.davidbastian.cl/proyectos/media/020b.mp4"
+                        "src": "media/020b.mp4"
                     }]
                 }
 
@@ -313,7 +313,7 @@
             "title": "<small>New Zealand</small><div><span>Hino Trucks</span></div>",
             "role": "Interaction Design & Front End Development.",
             "description": "Interfaces Design and Front-end for Hino Trucks, It was required  a responsive website, with great images and modern transitions and interactions with the user, applying knowledge of CSS3 and jQuery for the development.",
-            "link": "http://www.davidbastian.cl/proyectos/hino/preview/",
+            "link": "hino/preview/",
             "year": "2014",
             "agency": "Blacksheepdesign",
             "img": "media/023.jpg",
@@ -333,7 +333,7 @@
                     "type": "video",
                     "enabled": 1,
                     "links": [{
-                        "src": "http://www.davidbastian.cl/proyectos/media/023.mp4"
+                        "src": "media/023.mp4"
                     }]
                 }, {
                     "type": "image",
@@ -379,7 +379,7 @@
                 "type": "video",
                 "enabled": 1,
                 "links": [{
-                    "src": "http://www.davidbastian.cl/proyectos/media/014.mp4"
+                    "src": "media/014.mp4"
                 }]
             }, {
                 "type": "image",
@@ -391,19 +391,19 @@
                 "type": "video",
                 "enabled": 1,
                 "links": [{
-                    "src": "http://www.davidbastian.cl/proyectos/media/014a.mp4"
+                    "src": "media/014a.mp4"
                 }]
             }, {
                 "type": "video",
                 "enabled": 1,
                 "links": [{
-                    "src": "http://www.davidbastian.cl/proyectos/media/014b.mp4"
+                    "src": "media/014b.mp4"
                 }]
             }, {
                 "type": "video",
                 "enabled": 1,
                 "links": [{
-                    "src": "http://www.davidbastian.cl/proyectos/media/014c.mp4"
+                    "src": "media/014c.mp4"
                 }]
             }]
         },
@@ -478,7 +478,7 @@
                 "type": "video",
                 "enabled": 1,
                 "links": [{
-                    "src": "http://www.davidbastian.cl/proyectos/media/005.mp4"
+                    "src": "media/005.mp4"
                 }]
             }]
         },
@@ -503,13 +503,13 @@
                 "type": "video",
                 "enabled": 1,
                 "links": [{
-                    "src": "http://www.davidbastian.cl/proyectos/media/016.mp4"
+                    "src": "media/016.mp4"
                 }]
             }, {
                 "type": "video",
                 "enabled": 1,
                 "links": [{
-                    "src": "http://www.davidbastian.cl/proyectos/media/016a.mp4"
+                    "src": "media/016a.mp4"
                 }]
             }]
         },
@@ -574,7 +574,7 @@
                     "type": "video",
                     "enabled": 1,
                     "links": [{
-                        "src": "http://www.davidbastian.cl/proyectos/media/026.mp4"
+                        "src": "media/026.mp4"
                     }]
                 }, {
                     "type": "image",
@@ -598,7 +598,7 @@
                     "type": "video",
                     "enabled": 1,
                     "links": [{
-                        "src": "http://www.davidbastian.cl/proyectos/media/026a.mp4"
+                        "src": "media/026a.mp4"
                     }]
                 }
 
@@ -680,7 +680,7 @@
                 "type": "video",
                 "enabled": 1,
                 "links": [{
-                    "src": "http://www.davidbastian.cl/proyectos/media/006.mp4"
+                    "src": "media/006.mp4"
                 }]
             }, {
                 "type": "image",
