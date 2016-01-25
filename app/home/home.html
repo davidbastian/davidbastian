@@ -1,3 +1,8 @@
-<div>
-  <h1>This is, {{home.title}}</h1>
+<div data-msg="This is, {{home.title}}">
+    <div class="slides">
+        <a ng-repeat="x in home.data" class="slideItem" ui-sref={{x.slug}}>
+            <img ng-src={{x.img}} alt={{x.slug}}/>
+            <p>{{x.slug}} — <span ng-class="role">{{x.role}}</span></p>
+        </a>
+    </div>
 </div>

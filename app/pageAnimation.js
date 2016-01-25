@@ -16,5 +16,4 @@ function pageAnimation() {
             }
         }
 }
-
 export {pageAnimation};
