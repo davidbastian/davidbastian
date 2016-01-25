@@ -1,9 +1,7 @@
-
-
 function pageRouting($routeProvider, $locationProvider) {
                 $routeProvider.
 
-                when('/home', {
+                when('/', {
                     template: require('./home/home.html'),
                     controller: 'Home'
                 }).         
@@ -16,7 +14,7 @@ function pageRouting($routeProvider, $locationProvider) {
                     controller: 'Single'
                 }).
                 otherwise({
-                    redirectTo: '/home'
+                    redirectTo: '/'
                 });
 
                //if (window.history && window.history.pushState) {
