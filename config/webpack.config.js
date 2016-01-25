@@ -8,6 +8,9 @@ var config = {
         path: path.resolve(__dirname, '../build'),
         filename: 'bundle.js'
     },
+     plugins: [
+        new webpack.optimize.UglifyJsPlugin()
+    ],
     module: {
         loaders: [{
                 test: /\.scss$/,
