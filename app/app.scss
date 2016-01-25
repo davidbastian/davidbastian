@@ -44,12 +44,13 @@ body {
     }
 }
 
-.main-container {
-    /*	position: fixed;
-			width: 100vw;
-			height: 100vh;
-			top: 0;
-			left: 0;*/
+.wrap-container {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    height: 100vh;;
 }
 
 .container {
