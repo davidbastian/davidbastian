@@ -1,5 +1,24 @@
 <div class="wrap-container">
-    <div data-msg="{{message}}" id="single">
-        <h2 ng-bind-html="project.title"></h2>
+    <div data-msg="{{message}}" id="single" class="container">
+        <div class="description">
+            <div class="descriptionInner">
+                <h2 ng-bind-html="project.title"></h2>
+                <div class="credits">
+                    <p ng-bind-html="project.description"></p>
+                    <ul>
+                               <li  ng-if="project.agency">Agency: {{project.agency}}</li>
+                               <li ng-if="project.year">Agency: {{project.year}}</li>                  
+                               <li ng-if="project.link">
+                               		<a target="_blank" href={{project.link}}>
+                               			<span class="see">Take a Look</span>
+                               			<span class="plane"></span>
+                               		</a>
+                               	</li>
+                            
+
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

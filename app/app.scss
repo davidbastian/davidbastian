@@ -87,6 +87,26 @@ header {
     }
 }
 
+
+//footer
+footer {
+    position: fixed;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    //display:none;
+    opacity:0.5;
+    z-index: 3;
+
+    p {
+            font-size:13px;
+            padding-bottom:4vh;
+            //font-weight:100;
+
+    }
+
+}
+
 //home
 #home {
     height: 53vh;
@@ -109,7 +129,7 @@ header {
             padding-left: 0%;
             font-size: 14px;
             padding-top: 40px;
-            font-weight: 100;
+            font-weight: normal;
             .role {
                 font-weight: 100;
                 font-style: italic;
@@ -138,23 +158,7 @@ header {
             max-width: 380px;
             width: 90%;
             h2 {
-
-
-                width: 400px;
-                padding-top: 10vh;
-                small {
-                    font-weight: 100;
-                    font-size: 16px;
-                    display: block;
-                    margin-bottom: 10px;
-                    position: relative;
-                   // opacity:0;
-                    //transform: translatey(0px);
-                }
-
-
                 div {
-
                    // overflow: hidden;
                     //display: inline-block;
                     //height: 44px;

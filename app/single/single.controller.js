@@ -15,6 +15,11 @@ function SingleController($scope, $routeParams, $http, $location, $window) {
                 });
 
             $scope.project = $scope.inner[0];
+
+
+            $scope.$on('$routeChangeSuccess', function () {
+				 	//my nice script
+			});
 }
 
 export {SingleController};
