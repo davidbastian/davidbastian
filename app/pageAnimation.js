@@ -11,10 +11,17 @@ function pageAnimation() {
                     onComplete: done
                 })*/
 
-                TweenMax.to($('.white'), .7, {
-                    top: '0vh',
-                     ease: Expo.easeOut,
+                TweenMax.to($('.white'), 1, {
+                    autoAlpha: 1,
+                     ease: Power4.easeOut,
                     onComplete:done
+                });
+
+
+                TweenMax.to($('.white h1'), 0.6, {
+                    y: '0vh',
+                    opacity: 1,
+                     ease: Back.easeOut.config(1)
                 })
 
             },
@@ -23,7 +30,7 @@ function pageAnimation() {
                    // y: '-20vh',
                     opacity: 0,
                     delay:0.7,
-                    ease: Expo.easeOut,
+                    ease: Power4.easeOut,
                     onComplete: done
                 })
 
