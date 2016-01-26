@@ -1,9 +1,7 @@
 import p from 'json!../data.json'
 const data = p.projects
-import zepto from 'npm-zepto'
 
 function scrollFunction() {
-
     function displaywheel(e) {
         var el = $('.wrap-container'),
             scrollTime = 2,
@@ -25,7 +23,6 @@ function scrollFunction() {
         });
 
     }
-
     var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel"
     if (document.attachEvent) {
         document.attachEvent("on" + mousewheelevt, displaywheel)
@@ -37,7 +34,6 @@ function scrollFunction() {
 }
 
 
-
 function HomeController($scope, $routeParams, $http, $location, $window) {
     $scope.message = 'This is Home';
     $scope.home = data;
@@ -46,9 +42,6 @@ function HomeController($scope, $routeParams, $http, $location, $window) {
         if ($('#home').length > 0) {
             scrollFunction();
         }
-
-
-
     });
 }
 

@@ -8,7 +8,7 @@ import nganimate from 'angular-animate'
 import sanitize from 'angular-sanitize'
 
 //load gsap & pageAnimation
-import jquery from 'jquery'
+import zepto from 'npm-zepto'
 import gsap from 'gsap'
 import scrolltoplugin from '../node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin.js'
 import {pageAnimation} from  './pageAnimation'
@@ -24,6 +24,9 @@ import {HomeController} from  './home/home.controller'
 import {AboutController} from  './about/about.controller'
 import {SingleController} from  './single/single.controller'
 
+//load directives
+import {pagePreload} from  './pagePreload'
+
 //start app
 angular
 	.module("db", [ngroute, nganimate, sanitize])
@@ -33,3 +36,5 @@ angular
 	.controller('Home', HomeController)
 	.controller('About', AboutController)
 	.controller('Single', SingleController)
+	.directive('loader', pagePreload)
+

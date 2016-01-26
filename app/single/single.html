@@ -15,19 +15,17 @@
                             </a>
                         </li>
                     </ul>
-                    </div>
-                    
                 </div>
             </div>
-
-            <div class="media-container">
-                        <div class="media" ng-repeat="x in project.media">
-                            <video  ng-repeat="m in x.links[0]" ng-if="x.type ==='video'" preload="auto" ref='video' loop="true" autoplay>
-                                <source ng-src="{{m}}" type="video/mp4" /> Your browser does not support the video tag.
-                            </video>
-                            <img  ng-repeat="i in x.links[0]"  ng-if="x.type ==='image'" alt="image"  ng-src="{{i}}"/>
-                        </div>
-                    </div>
+        </div>
+        <div class="media-container" >
+            <div ng-repeat="x in project.media" class="media" >
+                <video class="item"  ng-repeat="m in x.links[0]" loader  ng-if="x.type ==='video'" preload="auto" loop="true" muted autoplay>
+                    <source ng-src="{{m}}"   type="video/mp4" /> Your browser does not support the video tag.
+                </video>
+                <img class="item"  loader ng-repeat="i in x.links[0]" ng-if="x.type ==='image'" alt="image" ng-src="{{i}}" />
+            </div>
         </div>
     </div>
 </div>
+
