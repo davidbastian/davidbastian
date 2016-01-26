@@ -1,11 +1,17 @@
 <div class="wrap-container">
     <div data-msg="{{message}}" id="single" class="container">
-        <div class="white"></div>
+        <div class="white">
+            
+                <div class="container">
+                    <h1>12</h1>
+                </div>
+            
+        </div>
         <div class="description">
-            <div class="descriptionInner">
+            <div class="descriptionInner appear">
                 <h2 ng-bind-html="project.title"></h2>
                 <div class="credits">
-                    <p ng-bind-html="project.description"></p>
+                    <p  ng-bind-html="project.description"></p>
                     <ul>
                         <li ng-if="project.agency">Agency: {{project.agency}}</li>
                         <li ng-if="project.year">Agency: {{project.year}}</li>
@@ -19,14 +25,13 @@
                 </div>
             </div>
         </div>
-        <div class="media-container" >
-            <div ng-repeat="x in project.media" class="media" >
-                <video class="item"  ng-repeat="m in x.links[0]" loader  ng-if="x.type ==='video'" preload="auto" loop="true" muted autoplay>
-                    <source ng-src="{{m}}"   type="video/mp4" /> Your browser does not support the video tag.
+        <div class="media-container">
+            <div ng-repeat="x in project.media" class="media appear">
+                <video class="item" ng-repeat="m in x.links[0]" loader ng-if="x.type ==='video'" preload="auto" loop="true" muted autoplay>
+                    <source ng-src="{{m}}" type="video/mp4" /> Your browser does not support the video tag.
                 </video>
-                <img class="item"  loader ng-repeat="i in x.links[0]" ng-if="x.type ==='image'" alt="image" ng-src="{{i}}" />
+                <img class="item" loader ng-repeat="i in x.links[0]" ng-if="x.type ==='image'" alt="image" ng-src="{{i}}" />
             </div>
         </div>
     </div>
 </div>
-

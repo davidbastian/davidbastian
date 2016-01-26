@@ -21,6 +21,12 @@ body {
         text-decoration: none;
         position: relative;
     }
+    h1 {
+        font-size: 53vh;
+        color: #ddd;
+        //opacity: 0.1;
+        //letter-spacing: -10px;
+    }
     h2 {
         font-size: 40px;
         letter-spacing: -1px;
@@ -69,6 +75,26 @@ body {
     width: 90%;
     max-width: $max-width-container;
     margin: 0 auto;
+}
+
+.white {
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    top: 100vh;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 2;
+    overflow: hidden;
+    .container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    h1 {
+        //padding-top:17vh;
+        position: relative;
+    }
 }
 
 //header
@@ -149,17 +175,10 @@ footer {
 }
 
 #single {
-
-    .white {
-        position:fixed;
-        width:0;
-        right:0;
-        top:0;
-        height:100vh;
-        background-color: $body-bg;
-        z-index:4;
+    .appear {
+        opacity: 0;
+        transform: translatey(50vh);
     }
-
     padding-top: 18vh;
     .description {
         position: fixed;
@@ -231,10 +250,8 @@ footer {
             width: 100%;
             display: block;
             margin-bottom: 15px;
-            opacity:0;
-            transform: translatey(30px);
-
-
+            // opacity:0;
+            // transform: translatey(50vh);
             img,
             video {
                 width: 100%;

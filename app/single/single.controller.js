@@ -51,7 +51,7 @@ function SingleController($scope, $routeParams, $http, $location, $window) {
     $scope.$on('$routeChangeSuccess', function() {
         if ($('#single').length > 0) {
             
-           scrollFunction();
+           //scrollFunction();
         }
     });
 
