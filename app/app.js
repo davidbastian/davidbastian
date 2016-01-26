@@ -24,9 +24,12 @@ import {HomeController} from  './home/home.controller'
 import {AboutController} from  './about/about.controller'
 import {SingleController} from  './single/single.controller'
 
-//load directives
+//load directives Preload
 import {singlePreload} from  './single/singlePreload'
 import {homePreload} from  './home/homePreload'
+
+//load directives Scroll
+import {homeScroll} from  './home/homeScroll'
 
 //start app
 angular
@@ -42,8 +45,14 @@ angular
 	.controller('About', AboutController)
 	.controller('Single', SingleController)
 	
+	//loaders
 	.directive('homeLoader', homePreload)
 	.directive('singleLoader', singlePreload)
+
+	//scrollers
+	.directive('homeScroll', homeScroll)
+
+
 
 	.run(function() {
 	  // add somethig before compilation ??

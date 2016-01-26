@@ -49,12 +49,18 @@ function pageAnimation() {
 
             } else if (tag === 'tagHome') {
 
-                TweenMax.to($('#home .appear'), 1, {
+               TweenMax.to($('#home .appear'), 1, {
                     opacity: 0,
-                    y: '-20vh',
+                   // y: '20vh',
                     ease: Power4.easeOut,
                     onComplete: done
                 });
+
+               /* TweenMax.staggerTo("#home .appear", 1, {
+                    opacity: 0,
+                    y: '-300vh',
+                    ease: Power4.easeOut
+                }, 0.1, done);*/
 
             }
 

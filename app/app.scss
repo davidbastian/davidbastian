@@ -98,14 +98,14 @@ body {
         //padding-top:17vh;
         opacity: 0;
         position: relative;
-        transform: translatey(20vh);
+        transform: translatey(10vh);
     }
 }
 
 #home {
 
     h1 {
-         transform: translatey(-20vh);
+         transform: translatey(-10vh);
     }
    
 }
@@ -158,7 +158,7 @@ footer {
 #home {
       .appear {
         opacity: 0;
-        transform: translatey(-20vh);
+        transform: translatey(-10vh);
     }
 
     height: 53vh;
@@ -196,7 +196,7 @@ footer {
 #single {
     .appear {
         opacity: 0;
-        transform: translatey(20vh);
+        transform: translatey(10vh);
     }
     padding-top: 18vh;
     .description {
