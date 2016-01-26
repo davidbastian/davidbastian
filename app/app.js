@@ -25,16 +25,28 @@ import {AboutController} from  './about/about.controller'
 import {SingleController} from  './single/single.controller'
 
 //load directives
-import {pagePreload} from  './pagePreload'
+import {singlePreload} from  './singlePreload'
+import {homePreload} from  './homePreload'
 
 //start app
 angular
 	.module("db", [ngroute, nganimate, sanitize])
+
 	.animation('.main-container',pageAnimation)
+
 	.config(['$routeProvider', '$locationProvider', pageRouting])
+
 	.filter('toslug',toSlug)
+
 	.controller('Home', HomeController)
 	.controller('About', AboutController)
 	.controller('Single', SingleController)
-	.directive('loader', pagePreload)
+	
+	.directive('homeLoader', homePreload)
+	.directive('singleLoader', singlePreload)
+
+	.run(function() {
+	  // add somethig before compilation ??
+	})
+
 

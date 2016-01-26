@@ -1,4 +1,4 @@
-<div class="wrap-container">
+<div class="wrap-container" id="tagSingle">
     <div data-msg="{{message}}" id="single" class="container">
         <div class="white">
             
@@ -27,10 +27,10 @@
         </div>
         <div class="media-container">
             <div ng-repeat="x in project.media" class="media appear">
-                <video class="item" ng-repeat="m in x.links[0]" loader ng-if="x.type ==='video'" preload="auto" loop="true" muted autoplay>
+                <video class="item" ng-repeat="m in x.links[0]" single-loader ng-if="x.type ==='video'" preload="auto" loop="true" muted autoplay>
                     <source ng-src="{{m}}" type="video/mp4" /> Your browser does not support the video tag.
                 </video>
-                <img class="item" loader ng-repeat="i in x.links[0]" ng-if="x.type ==='image'" alt="image" ng-src="{{i}}" />
+                <img class="item" single-loader ng-repeat="i in x.links[0]" ng-if="x.type ==='image'" alt="image" ng-src="{{i}}" />
             </div>
         </div>
     </div>

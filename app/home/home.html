@@ -1,8 +1,16 @@
-<div class="wrap-container">
-    <div data-msg="{{message}}" id="home">
+<div class="wrap-container" id="tagHome">
+    <div data-msg="{{message}}" id="home" >
+
+    	<div class="white">
+            
+                <div class="container">
+                    <h1>0.</h1>
+                </div>
+            
+        </div>
         
-        <a ng-href="#/{{x.slug|toslug}}" ng-repeat="x in home">
-            <img ng-src="{{x.img}}" alt="{{x.slug}}" />
+        <a ng-href="#/{{x.slug|toslug}}" class="appear" ng-repeat="x in home">
+            <img class="item" ng-src="{{x.img}}"  home-loader alt="{{x.slug}}" />
             <p>
                 {{x.slug}} —
                 <span class="role">{{x.role}}</span>

@@ -1,53 +1,67 @@
 function pageAnimation() {
-        return {
-            enter: function(element, done) {
+    return {
+        enter: function(element, done, attr) {
 
-                console.log(element)
+            var tag = element[0].children[0].id;
+            if (tag === 'tagSingle') {
 
-
-               /* TweenMax.from(element, .5, {
-                    opacity: 0,
-                   // y: 50,
-                    onComplete: done
-                })*/
-
-                TweenMax.to($('.white'), 1, {
+                TweenMax.to($('#single .white'), 1, {
                     autoAlpha: 1,
-                     ease: Power4.easeOut,
-                    onComplete:done
+                    ease: Power4.easeOut,
+                    onComplete: done
+                });
+                TweenMax.to($('#single .white h1'), 0.6, {
+                    y: '0vh',
+                    opacity: 1,
+                    ease: Power4.easeOut
+                });
+
+            } else if (tag === 'tagHome') {
+
+                TweenMax.to($('#home .white'), 1, {
+                    autoAlpha: 1,
+                    ease: Power4.easeOut,
+                    onComplete: done
+                });
+                TweenMax.to($('#home .white h1'), 0.6, {
+                    y: '0vh',
+                    opacity: 1,
+                    ease: Power4.easeOut
+                });
+
+            }
+
+        },
+
+        leave: function(element, done, attr) {
+
+            var tag = element[0].children[0].id;
+
+            if (tag === 'tagSingle') {
+
+                TweenMax.to($('#single .appear'), 1, {
+                    opacity: 0,
+                    y: '20vh',
+                    ease: Power4.easeOut,
+                    onComplete: done
                 });
 
 
-                TweenMax.to($('.white h1'), 0.6, {
-                    y: '0vh',
-                    opacity: 1,
-                     ease: Back.easeOut.config(1)
-                })
+            } else if (tag === 'tagHome') {
 
-            },
-            leave: function(element, done) {
-                TweenMax.to($('#home'), .1, {
-                   // y: '-20vh',
+                TweenMax.to($('#home .appear'), 1, {
                     opacity: 0,
-                    delay:0.7,
+                    y: '20vh',
                     ease: Power4.easeOut,
                     onComplete: done
-                })
+                });
 
-
-
-
-                /*TweenMax.staggerTo(".media", 0.8, {opacity: 0, y: '30px'}, 0.2, done);
-
-                TweenMax.staggerTo(".media", 0.8, {opacity: 0, y: '30px'}, 0.2, done);*/
-
-
-                /*TweenMax.to(element, .5, {
-                    opacity: 0,
-                    //y: -50,
-                    onComplete: done
-                })*/
             }
+
+
         }
+    }
 }
-export {pageAnimation};
+export {
+    pageAnimation
+};

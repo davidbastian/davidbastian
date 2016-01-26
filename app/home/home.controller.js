@@ -40,7 +40,7 @@ function HomeController($scope, $routeParams, $http, $location, $window) {
     $scope.$on('$routeChangeSuccess', function() {
         //my nice script
         if ($('#home').length > 0) {
-            scrollFunction();
+           // scrollFunction();
         }
     });
 }

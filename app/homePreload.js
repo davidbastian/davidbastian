@@ -1,36 +1,35 @@
 import zepto from 'npm-zepto'
 var count = 0;
 
-
 function listo() {
-    // TweenMax.staggerTo(".media", 0.8, {opacity: 1, y: 0}, 0.2);
-
-    TweenMax.to($('.white'), 2, {
-      //  top: '-100vh',
+    TweenMax.to($('#home .white'), 2, {
         autoAlpha:0,
         ease: Power4.easeOut
-    })
-  
+    });
 
-    TweenMax.to($('.white h1'), 0.65, {
-        y: '-200vh',
+    TweenMax.to($('#home .white h1'), 0.65, {
+        y: '200vh',
         opacity: 0,
-         ease: Power4.easeIn
+        ease: Power4.easeIn
     })
 
-    TweenMax.staggerTo(".appear", .7, {opacity: 1, y: 0, ease: Power4.easeOut, delay:0.4}, 0.2);
-    //TweenMax.staggerTo(".media", .5, {opacity: 1, y: 0, ease: Expo.easeOut, delay:0.6}, 0.2);
+
+    TweenMax.staggerTo("#home .appear", .7, {
+        opacity: 1,
+        y: 0,
+        ease: Power4.easeOut,
+        delay: 0.4
+    }, 0.2);
 
 }
 
-
-function pagePreload($timeout) {
+function homePreload($timeout) {
     return {
         link: function(scope, element, attr) {
             $timeout(function() {
 
-                var sizeItem = $('.item').size();
-                // console.log(element)
+                var sizeItem = $('#home .item').size();
+                console.log(sizeItem)
 
                 function checkLoad() {
                     if (element[0].readyState === 4 || element[0].complete === true) {
@@ -40,7 +39,7 @@ function pagePreload($timeout) {
 
                         setTimeout(function() {
                             console.log(done) // show the percent 
-                            $('.white h1').text( Math.round(done) + '.');
+                            $('#home .white h1').text( Math.round(done) + '.');
                             
                             if (done === 100) {
                                 console.log('yes') // ready 
@@ -63,5 +62,5 @@ function pagePreload($timeout) {
     }
 }
 export {
-    pagePreload
+    homePreload
 };
