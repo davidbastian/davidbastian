@@ -51,7 +51,7 @@ function pageAnimation() {
 
                 TweenMax.to($('#home .appear'), 1, {
                     opacity: 0,
-                    y: '20vh',
+                    y: '-20vh',
                     ease: Power4.easeOut,
                     onComplete: done
                 });

@@ -25,8 +25,8 @@ import {AboutController} from  './about/about.controller'
 import {SingleController} from  './single/single.controller'
 
 //load directives
-import {singlePreload} from  './singlePreload'
-import {homePreload} from  './homePreload'
+import {singlePreload} from  './single/singlePreload'
+import {homePreload} from  './home/homePreload'
 
 //start app
 angular
