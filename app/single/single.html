@@ -1,17 +1,15 @@
-<div class="wrap-container" id="tagSingle">
+<div class="wrap-container" id="tagSingle" single-scroll>
     <div data-msg="{{message}}" id="single" class="container">
         <div class="white">
-            
-                <div class="container">
-                    <h1>0. <span></span></h1>
-                </div>
-            
+            <div class="container">
+                <h1>0. <span></span></h1>
+            </div>
         </div>
         <div class="description">
             <div class="descriptionInner appear">
                 <h2 ng-bind-html="project.title"></h2>
                 <div class="credits">
-                    <p  ng-bind-html="project.description"></p>
+                    <p ng-bind-html="project.description"></p>
                     <ul>
                         <li ng-if="project.agency">Agency: {{project.agency}}</li>
                         <li ng-if="project.year">Agency: {{project.year}}</li>

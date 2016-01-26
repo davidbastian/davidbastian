@@ -3,7 +3,7 @@ var count = 0;
 
 function listo() {
     TweenMax.to($('#home .white'), 2, {
-        autoAlpha:0,
+        autoAlpha: 0,
         ease: Power4.easeOut
     });
 
@@ -39,8 +39,8 @@ function homePreload($timeout) {
 
                         setTimeout(function() {
                             console.log(done) // show the percent 
-                            $('#home .white h1').text( Math.round(done) + '.');
-                            
+                            $('#home .white h1').text(Math.round(done) + '.');
+
                             if (done === 100) {
                                 console.log('yes') // ready 
                                 count = 0; // reset counter

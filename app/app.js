@@ -30,6 +30,7 @@ import {homePreload} from  './home/homePreload'
 
 //load directives Scroll
 import {homeScroll} from  './home/homeScroll'
+import {singleScroll} from  './single/singleScroll'
 
 //start app
 angular
@@ -51,6 +52,7 @@ angular
 
 	//scrollers
 	.directive('homeScroll', homeScroll)
+	.directive('singleScroll', singleScroll)
 
 
 

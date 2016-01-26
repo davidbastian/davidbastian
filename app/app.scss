@@ -103,13 +103,10 @@ body {
 }
 
 #home {
-
     h1 {
-         transform: translatey(-10vh);
+        transform: translatey(-10vh);
     }
-   
 }
-
 
 //header
 header {
@@ -156,11 +153,10 @@ footer {
 
 //home
 #home {
-      .appear {
+    .appear {
         opacity: 0;
         transform: translatey(-10vh);
     }
-
     height: 53vh;
     padding-top: 18vh;
     display: flex;

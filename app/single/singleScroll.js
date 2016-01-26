@@ -1,29 +1,30 @@
 import zepto from 'npm-zepto'
 
 
-
 function scrollFunction() {
+
     function displaywheel(e) {
-        var el = $('#tagHome'),
+        var el = $('#tagSingle'),
             scrollTime = 2,
-            scrollDistance = 200,
+            scrollDistance = 180,
 
             evt = window.event || e,
             delta = evt.detail ? evt.detail / 3 : evt.wheelDelta / 120,
-            scrollLeft = el.scrollLeft(),
-            finalScroll = scrollLeft - parseInt((delta * scrollDistance), 10);
+            scrollTop = el.scrollTop(),
+            finalScroll = scrollTop - parseInt((delta * scrollDistance), 10);
 
         //console.log(finalScroll) 
 
         TweenMax.to(el, scrollTime, {
             scrollTo: {
-                x: finalScroll
+                y: finalScroll
             },
             ease: Expo.easeOut,
             overwrite: 5
         });
 
     }
+
     var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel"
     if (document.attachEvent) {
         document.attachEvent("on" + mousewheelevt, displaywheel)
@@ -31,11 +32,10 @@ function scrollFunction() {
         document.addEventListener(mousewheelevt, displaywheel, false)
     }
 
-
 }
 
 
-function homeScroll($timeout) {
+function singleScroll($timeout) {
     return {
         link: function(scope, element, attr) {
             $timeout(function() {
@@ -47,5 +47,5 @@ function homeScroll($timeout) {
     }
 }
 export {
-    homeScroll
+    singleScroll
 };
