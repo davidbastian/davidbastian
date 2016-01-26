@@ -1,7 +1,7 @@
 <div class="wrap-container">
     <div data-msg="{{message}}" id="home">
         <a ng-href="#/{{x.slug|toslug}}" ng-repeat="x in home">
-            <img ng-src="{{x.img}}" alt="{{x.slug}}" />
+            <img  loader class="item" ng-src="{{x.img}}" alt="{{x.slug}}" />
             <p>
                 {{x.slug}} —
                 <span class="role">{{x.role}}</span>

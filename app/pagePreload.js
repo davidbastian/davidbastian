@@ -2,13 +2,18 @@ import zepto from 'npm-zepto'
 var count = 0;
 
 
+function listo(){
+    TweenMax.staggerTo(".media", 0.8, {opacity: 1, y: 0}, 0.2);
+}
+
+
 function pagePreload($timeout) {
     return {
         link: function(scope, element, attr) {
             $timeout(function() {
 
             	var sizeItem = $('.item').size();
-                console.log(element)
+               // console.log(element)
      
                 function checkLoad() {
                     if (element[0].readyState === 4 || element[0].complete === true) {
@@ -21,6 +26,8 @@ function pagePreload($timeout) {
                         	if (done === 100) {
                         		console.log('yes') // ready 
                         		count = 0; // reset counter
+
+                        		listo();
                         	}
                            
                         }, 500)

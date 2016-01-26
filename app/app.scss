@@ -152,7 +152,7 @@ footer {
     padding-top: 18vh;
     .description {
         position: fixed;
-        width: auto;
+        width: 90%;
         height: 60vh;
         .descriptionInner {
             position: relative;
@@ -220,8 +220,10 @@ footer {
             width: 100%;
             display: block;
             margin-bottom: 15px;
-            // opacity:0;
-            //transform: translatey(30px);
+            opacity:0;
+            transform: translatey(30px);
+
+
             img,
             video {
                 width: 100%;
