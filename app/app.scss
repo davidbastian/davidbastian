@@ -149,6 +149,17 @@ footer {
 }
 
 #single {
+
+    .white {
+        position:fixed;
+        width:0;
+        right:0;
+        top:0;
+        height:100vh;
+        background-color: $body-bg;
+        z-index:4;
+    }
+
     padding-top: 18vh;
     .description {
         position: fixed;
