@@ -12,7 +12,9 @@ function pageLink() {
 
 
             }
-            element.on('click', functionToBeCalled);
+            element.one('click', functionToBeCalled);
+
+
         }
     };
 
