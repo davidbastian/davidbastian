@@ -1,14 +1,16 @@
 <div class="wrap-container" id="tagFull">
     <div data-msg="{{message}}" id="full">
+
         <div class="white">
             <div class="container">
                 <h1>0.<span></span></h1>
             </div>
         </div>
-        <div class="wrap-full"   full-carousel>
+
+        <div class="wrap-full" full-carousel>
             <a  ng-href="#/{{x.slug|toslug}}" class="wrap-a" ng-repeat="x in full" ng-class='{active:$first}'>
                 <div class="wrap-fix">
-                    <div class="appear" >
+                    <div class="el">
                         <img class="item" full-loader ng-src="{{x.img}}" alt="{{x.slug}}" />
                         <p>
                             {{x.slug}}

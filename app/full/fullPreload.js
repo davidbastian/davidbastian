@@ -8,18 +8,18 @@ function listo() {
     });
 
     TweenMax.to($('#full .white h1'), 0.65, {
-        y: '200vh',
+        y: '-200vh',
         opacity: 0,
         ease: Power4.easeIn
     })
 
-
-   /* TweenMax.staggerTo("#full .appear", .7, {
+    TweenMax.to($('#full .wrap-full'), 1, {
+        scale: 1,
         opacity: 1,
-        y: 0,
-        ease: Power4.easeOut,
-        delay: 0.4
-    }, 0.2);*/
+        delay:0.4,
+        ease: Power4.easeOut
+    })
+
 
 }
 

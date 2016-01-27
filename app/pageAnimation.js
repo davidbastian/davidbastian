@@ -28,6 +28,18 @@ function pageAnimation() {
                     opacity: 1,
                     ease: Power4.easeOut
                 });
+            } else if (tag === 'tagFull') {
+
+                TweenMax.to($('#full .white'), 1, {
+                    autoAlpha: 1,
+                    ease: Power4.easeOut,
+                    onComplete: done
+                });
+                TweenMax.to($('#full .white h1'), 0.6, {
+                    y: '0vh',
+                    opacity: 1,
+                    ease: Power4.easeOut
+                });
             }
         },
 
@@ -64,9 +76,9 @@ function pageAnimation() {
 
             } else if (tag === 'tagFull') {
 
-               TweenMax.to($('#full'), 1, {
-                    opacity: 0,
-                   // y: '20vh',
+                TweenMax.to($('#full .wrap-full'), 1, {
+                    scale:0.9,
+                    opacity:0,
                     ease: Power4.easeOut,
                     onComplete: done
                 });

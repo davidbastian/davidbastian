@@ -19,7 +19,7 @@ function listo() {
         y: 0,
         ease: Power4.easeOut,
         delay: 0.4
-    }, 0.2);
+    }, 0.05);
 
 }
 
