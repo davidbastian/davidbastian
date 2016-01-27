@@ -38,6 +38,8 @@ import {fullPreload} from  './full/fullPreload'
 import {homeScroll} from  './home/homeScroll'
 import {singleScroll} from  './single/singleScroll'
 
+import {fullCarousel} from  './full/fullCarousel.js'
+
 //start app
 angular
 	.module("db", [ngroute, nganimate, sanitize])
@@ -61,6 +63,8 @@ angular
 	//scrollers
 	.directive('homeScroll', homeScroll)
 	.directive('singleScroll', singleScroll)
+
+	.directive('fullCarousel', fullCarousel)
 
 
 
