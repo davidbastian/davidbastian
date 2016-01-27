@@ -1,0 +1,40 @@
+//home
+#home {
+    h1 {
+        transform: translatey(-10vh);
+    }
+    .appear {
+        opacity: 0;
+        transform: translatey(-10vh);
+    }
+    height: 53vh;
+    padding-top: 18vh;
+    display: flex;
+    padding-left: 5%;
+    position: absolute;
+    top: 0;
+    a {
+        height: 53vh;
+        padding-right: 10px;
+        display: inline-table;
+        text-decoration: none;
+        img {
+            height: 53vh;
+            width: auto;
+            display: inline-block;
+        }
+        p {
+            padding-left: 0%;
+            font-size: 14px;
+            padding-top: 40px;
+            font-weight: normal;
+            .role {
+                font-weight: 100;
+                font-style: italic;
+            }
+        }
+        &:last-child {
+            padding-right: 0px;
+        }
+    }
+}

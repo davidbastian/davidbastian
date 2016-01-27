@@ -34,7 +34,6 @@ function scrollFunction() {
 
 }
 
-
 function singleScroll($timeout) {
     return {
         link: function(scope, element, attr) {
@@ -46,6 +45,7 @@ function singleScroll($timeout) {
         }
     }
 }
+
 export {
     singleScroll
 };

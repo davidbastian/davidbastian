@@ -28,9 +28,7 @@ function pageAnimation() {
                     opacity: 1,
                     ease: Power4.easeOut
                 });
-
             }
-
         },
 
         leave: function(element, done, attr) {
@@ -46,7 +44,6 @@ function pageAnimation() {
                     onComplete: done
                 });
 
-
             } else if (tag === 'tagHome') {
 
                TweenMax.to($('#home .appear'), 1, {
@@ -56,11 +53,14 @@ function pageAnimation() {
                     onComplete: done
                 });
 
-               /* TweenMax.staggerTo("#home .appear", 1, {
+            } else if (tag === 'tagAbout') {
+
+               TweenMax.to($('#about'), 1, {
                     opacity: 0,
-                    y: '-300vh',
-                    ease: Power4.easeOut
-                }, 0.1, done);*/
+                   // y: '20vh',
+                    ease: Power4.easeOut,
+                    onComplete: done
+                });
 
             }
 

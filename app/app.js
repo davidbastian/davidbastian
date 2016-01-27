@@ -1,5 +1,9 @@
 //load styles
 import './app.scss'
+import './home/home.scss'
+import './full/full.scss'
+import './about/about.scss'
+import './single/single.scss'
 
 //load angular
 import angular from 'angular'
@@ -21,12 +25,14 @@ import {toSlug} from  './toSlug'
 
 //load controllers
 import {HomeController} from  './home/home.controller'
+import {FullController} from  './full/full.controller'
 import {AboutController} from  './about/about.controller'
 import {SingleController} from  './single/single.controller'
 
 //load directives Preload
 import {singlePreload} from  './single/singlePreload'
 import {homePreload} from  './home/homePreload'
+import {fullPreload} from  './full/fullPreload'
 
 //load directives Scroll
 import {homeScroll} from  './home/homeScroll'
@@ -43,11 +49,13 @@ angular
 	.filter('toslug',toSlug)
 
 	.controller('Home', HomeController)
+	.controller('Full', FullController)
 	.controller('About', AboutController)
 	.controller('Single', SingleController)
 	
 	//loaders
 	.directive('homeLoader', homePreload)
+	.directive('fullLoader', fullPreload)
 	.directive('singleLoader', singlePreload)
 
 	//scrollers

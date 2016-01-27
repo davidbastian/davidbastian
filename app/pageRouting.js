@@ -4,6 +4,10 @@ function pageRouting($routeProvider, $locationProvider) {
                 when('/', {
                     template: require('./home/home.html'),
                     controller: 'Home'
+                }).
+                when('/full', {
+                    template: require('./full/full.html'),
+                    controller: 'Full'
                 }).         
                 when('/about', {
                     template: require('./about/about.html'),
