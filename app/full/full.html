@@ -5,20 +5,20 @@
                 <h1>0.<span></span></h1>
             </div>
         </div>
-        <div class="wrap-full"  >
-            <div class="wrap-a" ng-repeat="x in full" ng-class='{active:$first}'>
+        <div class="wrap-full"   full-carousel>
+            <a  ng-href="#/{{x.slug|toslug}}" class="wrap-a" ng-repeat="x in full" ng-class='{active:$first}'>
                 <div class="wrap-fix">
-                    <a ng-href="#/{{x.slug|toslug}}" class="appear" >
+                    <div class="appear" >
                         <img class="item" full-loader ng-src="{{x.img}}" alt="{{x.slug}}" />
                         <p>
                             {{x.slug}}
                             <span class="role">{{x.role}}</span>
                         </p>
-                    </a>
+                    </div>
 
-                    <div class="next" full-carousel></div>
+                    <div class="next"></div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>

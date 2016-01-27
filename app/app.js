@@ -40,6 +40,10 @@ import {singleScroll} from  './single/singleScroll'
 
 import {fullCarousel} from  './full/fullCarousel.js'
 
+//load directives Trigger Link
+import {pageLink} from  './pageLink.js'
+
+
 //start app
 angular
 	.module("db", [ngroute, nganimate, sanitize])
@@ -65,6 +69,9 @@ angular
 	.directive('singleScroll', singleScroll)
 
 	.directive('fullCarousel', fullCarousel)
+
+	//links trigger
+	.directive('pageLink', pageLink)
 
 
 

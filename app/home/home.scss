@@ -13,11 +13,12 @@
     padding-left: 5%;
     position: absolute;
     top: 0;
-    a {
+    .link {
         height: 53vh;
         padding-right: 10px;
         display: inline-table;
         text-decoration: none;
+        cursor:pointer;
         img {
             height: 53vh;
             width: auto;
@@ -35,6 +36,11 @@
         }
         &:last-child {
             padding-right: 0px;
+        }
+
+        a {
+            opacity:0;
+            visibility:hidden;
         }
     }
 }
