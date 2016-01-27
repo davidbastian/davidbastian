@@ -62,6 +62,15 @@ function pageAnimation() {
                     onComplete: done
                 });
 
+            } else if (tag === 'tagFull') {
+
+               TweenMax.to($('#full'), 1, {
+                    opacity: 0,
+                   // y: '20vh',
+                    ease: Power4.easeOut,
+                    onComplete: done
+                });
+
             }
 
 

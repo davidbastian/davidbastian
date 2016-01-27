@@ -3,10 +3,6 @@
     h1 {
         transform: translatey(-10vh);
     }
-    .appear {
-        opacity: 0;
-        transform: translatey(-10vh);
-    }
     width:100vw;
     height:100vh;
     position:fixed;
@@ -27,32 +23,48 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            a {
-                width: 60vw;
-                max-width:1200px;
-                top: 0;
+            overflow: hidden;
+            width: 100vw;
+            .wrap-fix {
+                width: 100vw;
+                position: absolute;
                 left: 0;
-                display: block;
-                background: white;
-                img {
+                height: 100vh;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a {
+                    width: 60vw;
+                    max-width: 1200px;
+                    top: 0;
+                    left: 0;
                     display: block;
-                    width: 100%;
-                    height: auto;
-                }
-                p {
-                    padding-top: 10px;
-                    font-size: 17px;
-                    padding-top: 40px;
-                    font-weight: normal;
-                    text-align: right;
-                    .role {
-                        font-weight: 100;
-                        //  font-style: italic;
-                        font-size: 15px;
+                    background: white;
+                    img {
                         display: block;
-                        padding-top:5px;
+                        width: 100%;
+                        height: auto;
+                    }
+                    p {
+                        padding-top: 10px;
+                        font-size: 17px;
+                        padding-top: 40px;
+                        font-weight: normal;
+                        text-align: right;
+                        .role {
+                            font-weight: 100;
+                            //  font-style: italic;
+                            font-size: 13px;
+                            display: block;
+                            padding-top: 5px;
+                        }
                     }
                 }
+            }
+            &:first-child {
+                z-index:1;
+                width: 50vw;
             }
         }
     }

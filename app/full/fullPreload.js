@@ -14,12 +14,12 @@ function listo() {
     })
 
 
-    TweenMax.staggerTo("#full .appear", .7, {
+   /* TweenMax.staggerTo("#full .appear", .7, {
         opacity: 1,
         y: 0,
         ease: Power4.easeOut,
         delay: 0.4
-    }, 0.2);
+    }, 0.2);*/
 
 }
 
