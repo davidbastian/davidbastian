@@ -1,3 +1,5 @@
+
+
 //load styles
 import './app.scss'
 import './home/home.scss'
@@ -43,6 +45,9 @@ import {fullCarousel} from  './full/fullCarousel.js'
 //load directives Trigger Link
 import {pageLink} from  './pageLink.js'
 
+//load directives SplitText
+import {aboutSplit} from  './about/aboutSplit.js'
+
 
 //start app
 angular
@@ -72,7 +77,7 @@ angular
 
 	//links trigger
 	.directive('pageLink', pageLink)
-
+	.directive('aboutSplit', aboutSplit)
 
 
 	.run(function() {

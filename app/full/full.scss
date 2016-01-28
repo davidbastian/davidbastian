@@ -1,5 +1,10 @@
 //home
 #full {
+    .appear {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
     h1 {
         transform: translatey(10vh);
     }
@@ -14,9 +19,6 @@
         position: fixed;
         top: 0;
         left: 0;
-        opacity:0;
-        transform: scale(0.95);
-
         .wrap-a {
             position: absolute;
             width: 100vw;

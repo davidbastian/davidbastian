@@ -76,9 +76,9 @@ function pageAnimation() {
 
             } else if (tag === 'tagFull') {
 
-                TweenMax.to($('#full .wrap-full'), 1, {
-                    scale:0.9,
-                    opacity:0,
+                TweenMax.to($('#full .appear'), 1.6, {
+                    opacity: 0,
+                    scale: '0.95',
                     ease: Power4.easeOut,
                     onComplete: done
                 });

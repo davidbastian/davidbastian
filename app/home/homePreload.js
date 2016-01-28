@@ -29,7 +29,6 @@ function homePreload($timeout) {
             $timeout(function() {
 
                 var sizeItem = $('#home .item').size();
-                console.log(sizeItem)
 
                 function checkLoad() {
                     if (element[0].readyState === 4 || element[0].complete === true) {
@@ -38,11 +37,11 @@ function homePreload($timeout) {
                         var done = ((count * 100) / sizeItem);
 
                         setTimeout(function() {
-                            console.log(done) // show the percent 
+                            //console.log(Math.round(done) + '%') // show the percent 
                             $('#home .white h1').text(Math.round(done) + '.');
 
                             if (done === 100) {
-                                console.log('yes') // ready 
+                               // console.log('yes') // ready 
                                 count = 0; // reset counter
 
                                 listo();

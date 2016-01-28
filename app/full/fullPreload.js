@@ -2,10 +2,13 @@ import zepto from 'npm-zepto'
 var count = 0;
 
 function listo() {
+
     TweenMax.to($('#full .white'), 2, {
+        //  top: '-100vh',
         autoAlpha: 0,
         ease: Power4.easeOut
-    });
+    })
+
 
     TweenMax.to($('#full .white h1'), 0.65, {
         y: '-200vh',
@@ -13,12 +16,11 @@ function listo() {
         ease: Power4.easeIn
     })
 
-    TweenMax.to($('#full .wrap-full'), 1, {
-        scale: 1,
+    TweenMax.to("#full .appear", 1.5, {
         opacity: 1,
-        delay:0.4,
+        scale: 1,
         ease: Power4.easeOut
-    })
+    });
 
 
 }
@@ -29,7 +31,7 @@ function fullPreload($timeout) {
             $timeout(function() {
 
                 var sizeItem = $('#full .item').size();
-                console.log(sizeItem)
+                // console.log(sizeItem)
 
                 function checkLoad() {
                     if (element[0].readyState === 4 || element[0].complete === true) {
@@ -38,11 +40,11 @@ function fullPreload($timeout) {
                         var done = ((count * 100) / sizeItem);
 
                         setTimeout(function() {
-                            console.log(done) // show the percent 
+                            //  console.log(Math.round(done) + '%') // show the percent 
                             $('#full .white h1').text(Math.round(done) + '.');
 
                             if (done === 100) {
-                                console.log('yes') // ready 
+                                //console.log('yes') // ready 
                                 count = 0; // reset counter
 
                                 listo();
