@@ -9,6 +9,8 @@ function aboutSplit($timeout) {
         link: function(scope, element, attr) {
             $timeout(function() {
 
+              
+               
                 $('#about h2').each(function() {
 
                     var $el = $(this).find('span'),
