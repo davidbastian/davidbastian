@@ -40,6 +40,14 @@ function pageAnimation() {
                     opacity: 1,
                     ease: Power4.easeOut
                 });
+            } else if (tag === 'tagAbout') {
+
+               TweenMax.to($('#about'), 1, {
+                    opacity: 1,
+                    ease: Power4.easeOut,
+                    onComplete: done
+                });
+
             }
         },
 
