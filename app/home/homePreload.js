@@ -32,26 +32,26 @@ function homePreload($timeout) {
                 $('.page-switch').css('display', 'block');
                 $('.page-switch').attr('href', '#/full');
 
-                TweenMax.to($('.page-switch').find('.w'), .8, {
+                TweenMax.to($('.page-switch').find('.w'), .6, {
                                 opacity: '1',
                                 scale:'1',
                                 ease: Power4.easeOut,
                                 delay:0.8
                  });
 
-                TweenMax.to($('.page-switch').children().eq(0), .6, {
+                TweenMax.to($('.page-switch').children().eq(0), .4, {
                                 opacity: '1',
                                 x:'0',
                                 ease: Power4.easeOut,
                  });
 
-                TweenMax.to($('.page-switch').children().eq(1), .7, {
+                TweenMax.to($('.page-switch').children().eq(1), .5, {
                                 opacity: '0',
                                 x:'0',
                                 ease: Power4.easeOut,
                  });
 
-                TweenMax.to($('.page-switch').children().eq(2), .8, {
+                TweenMax.to($('.page-switch').children().eq(2), .6, {
                                 opacity: '0',
                                 ease: Power4.easeOut,
                  });
