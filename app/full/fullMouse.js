@@ -9,7 +9,7 @@ function fullMouse() {
                 var pos = e.clientX,
                     win = $(window).width() / 2;
                    // console.log(pos);
-
+                     
                       if (pos < win) {
                             console.log('left');
                             $('.wrap-full').css('cursor','url(media/l.png),auto');
