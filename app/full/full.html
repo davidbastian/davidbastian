@@ -7,20 +7,20 @@
             </div>
         </div>
 
-        <div class="wrap-full appear" full-carousel>
-            <a  ng-href="#/{{x.slug|toslug}}" class="wrap-a" ng-repeat="x in full" ng-class='{active:$first}'>
+        <div class="wrap-full appear">
+            <div   class="wrap-a"  ng-repeat="x in full" ng-class='{active:$first}'>
                 <div class="wrap-fix">
-                    <div class="el">
+                    <a  ng-href="#/{{x.slug|toslug}}" class="el">
                         <img class="item" full-loader ng-src="{{x.img}}" alt="{{x.slug}}" />
                         <p>
                             {{x.slug}}
                             <span class="role">{{x.role}}</span>
                         </p>
-                    </div>
+                    </a>
 
-                    <div class="next"></div>
+                    <div class="next"  full-carousel></div>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 </div>

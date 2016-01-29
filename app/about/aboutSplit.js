@@ -33,7 +33,16 @@ function aboutSplit($timeout) {
 
                             if (char == txtLen) {
                                 $el.text($el.text().slice(0, -1)); // remove the '|'
+
                                 clearTimeout(timeOut);
+                               
+                            } else if (char == (txtLen - 15) ){
+
+                                     TweenMax.to($('.findme'), 1, {
+                                    opacity: '1',
+                                    y: '0',
+                                    ease: Power4.easeOut,
+                                });
                             }
 
                         }, humanize);
