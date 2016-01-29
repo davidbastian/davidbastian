@@ -24,6 +24,7 @@
             width: auto;
             display: inline-block;
         }
+        
         p {
             padding-left: 0%;
             font-size: 14px;
@@ -33,7 +34,19 @@
                 font-weight: 100;
                 font-style: italic;
             }
+
+            @media (max-width:680px) {
+                .role {
+                    display: block;
+                    padding-top: 5px;
+                }
+                span {
+                    display: none;
+                }
+                
+            }
         }
+
         &:last-child {
             padding-right: 0px;
         }

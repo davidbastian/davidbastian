@@ -70,6 +70,10 @@ body {
     &::-webkit-scrollbar-thumb {
         background-color: #ddd;
     }
+
+     @media (max-width:1040px) {
+        position: relative;
+    }
 }
 
 .container {
@@ -118,8 +122,13 @@ header {
         }
         #menu {
             display: flex;
+            padding-right: 2vw;
             li {
                 margin-left: 40px;
+                 @media (max-width:1040px) {
+                    margin-left: 4vw;
+                }
+
                 a {
                     text-transform: lowercase;
                     font-size: 13px;
@@ -184,4 +193,10 @@ footer {
             }
         }
     }
+
+    @media (max-width:1040px) {
+       // position: relative;
+    }
+    
+   // padding-top: 25px;
 }

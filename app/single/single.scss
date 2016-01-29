@@ -1,3 +1,9 @@
+#tagSingle {
+    @media (max-width: 1040px) {
+        position: relative;
+    }
+}
+
 #single {
     .appear {
         opacity: 0;
@@ -52,6 +58,21 @@
                         top: 1px;
                     }
                 }
+                @media (max-width:1040px) {
+                    position: relative;
+                    padding-top: 3vh;
+                }
+            }
+        }
+        @media (max-width:1040px) {
+            position: relative;
+            height: auto;
+            width: 100%;
+            .descriptionInner {
+                height: auto;
+                margin-bottom: 5vh;
+                max-width: 500px;
+                width: 100%;
             }
         }
     }
@@ -73,6 +94,12 @@
             &:last-of-type {
                 margin-bottom: 0px;
             }
+        }
+        @media (max-width:1040px) {
+            float: none;
+            width: 100%;
+            max-width: 1200px;
+            left: 0;
         }
     }
 }

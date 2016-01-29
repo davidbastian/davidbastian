@@ -11,7 +11,7 @@ function fullMouse() {
                 // console.log(pos);
 
                 if (pos < win) {
-                    console.log('left');
+                    // console.log('left');
                     $('.wrap-full').css('cursor', 'url(media/l.png),auto');
                 } else {
                     $('.wrap-full').css('cursor', 'url(media/r.png),auto');
