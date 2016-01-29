@@ -41,6 +41,7 @@ import {homeScroll} from  './home/homeScroll'
 import {singleScroll} from  './single/singleScroll'
 
 import {fullCarousel} from  './full/fullCarousel.js'
+import {fullMouse} from  './full/fullMouse.js'
 
 //load directives Trigger Link
 import {pageLink} from  './pageLink.js'
@@ -74,6 +75,9 @@ angular
 	.directive('singleScroll', singleScroll)
 
 	.directive('fullCarousel', fullCarousel)
+
+
+	.directive('fullMouse', fullMouse)
 
 	//links trigger
 	.directive('pageLink', pageLink)
