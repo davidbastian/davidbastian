@@ -46,6 +46,7 @@ import {fullMouse} from  './full/fullMouse.js'
 //load directives Trigger Link
 import {pageLink} from  './pageLink.js'
 
+
 //load directives SplitText
 import {aboutSplit} from  './about/aboutSplit.js'
 
@@ -75,7 +76,6 @@ angular
 	.directive('singleScroll', singleScroll)
 
 	.directive('fullCarousel', fullCarousel)
-
 
 	.directive('fullMouse', fullMouse)
 

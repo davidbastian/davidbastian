@@ -5,6 +5,8 @@ function pageAnimation() {
             var tag = element[0].children[0].id;
             if (tag === 'tagSingle') {
 
+                $('.page-switch').css('display', 'none');
+                
                 TweenMax.to($('#single .white'), 1, {
                     autoAlpha: 1,
                     ease: Power4.easeOut,
@@ -17,7 +19,7 @@ function pageAnimation() {
                 });
 
             } else if (tag === 'tagHome') {
-
+             
                 TweenMax.to($('#home .white'), 1, {
                     autoAlpha: 1,
                     ease: Power4.easeOut,
@@ -29,6 +31,7 @@ function pageAnimation() {
                     ease: Power4.easeOut
                 });
             } else if (tag === 'tagFull') {
+                
 
                 TweenMax.to($('#full .white'), 1, {
                     autoAlpha: 1,
@@ -41,8 +44,8 @@ function pageAnimation() {
                     ease: Power4.easeOut
                 });
             } else if (tag === 'tagAbout') {
-
-               TweenMax.to($('#about'), 1, {
+                $('.page-switch').css('display', 'none');
+                TweenMax.to($('#about'), 1, {
                     opacity: 1,
                     ease: Power4.easeOut,
                     onComplete: done
@@ -65,24 +68,25 @@ function pageAnimation() {
                 });
 
             } else if (tag === 'tagHome') {
-
-               TweenMax.to($('#home .appear'), 1, {
+                $('.page-switch').css('display', 'none');
+                TweenMax.to($('#home .appear'), 1, {
                     opacity: 0,
-                   // y: '20vh',
+                    // y: '20vh',
                     ease: Power4.easeOut,
                     onComplete: done
                 });
 
             } else if (tag === 'tagAbout') {
 
-               TweenMax.to($('#about'), 1, {
+                TweenMax.to($('#about'), 1, {
                     opacity: 0,
-                   // y: '20vh',
+                    // y: '20vh',
                     ease: Power4.easeOut,
                     onComplete: done
                 });
 
             } else if (tag === 'tagFull') {
+                $('.page-switch').css('display', 'none');
 
                 TweenMax.to($('#full .appear'), 1.6, {
                     opacity: 0,

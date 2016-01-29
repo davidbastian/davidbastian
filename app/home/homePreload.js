@@ -28,6 +28,35 @@ function homePreload($timeout) {
         link: function(scope, element, attr) {
             $timeout(function() {
 
+
+                $('.page-switch').css('display', 'block');
+                $('.page-switch').attr('href', '#/full');
+
+                TweenMax.to($('.page-switch').find('.w'), .8, {
+                                opacity: '1',
+                                scale:'1',
+                                ease: Power4.easeOut,
+                                delay:0.8
+                 });
+
+                TweenMax.to($('.page-switch').children().eq(0), .6, {
+                                opacity: '1',
+                                x:'0',
+                                ease: Power4.easeOut,
+                 });
+
+                TweenMax.to($('.page-switch').children().eq(1), .7, {
+                                opacity: '0',
+                                x:'0',
+                                ease: Power4.easeOut,
+                 });
+
+                TweenMax.to($('.page-switch').children().eq(2), .8, {
+                                opacity: '0',
+                                ease: Power4.easeOut,
+                 });
+
+
                 var sizeItem = $('#home .item').size();
 
                 function checkLoad() {

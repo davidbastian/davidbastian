@@ -2,7 +2,7 @@ import zepto from 'npm-zepto'
 var count = 0;
 
 function listo() {
-
+     $('.page-switch').css('display', 'none');
     TweenMax.to($('#single .white'), 2, {
         //  top: '-100vh',
         autoAlpha: 0,

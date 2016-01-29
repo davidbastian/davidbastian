@@ -5,6 +5,7 @@ function aboutSplit($timeout) {
     return {
         link: function(scope, element, attr) {
             $timeout(function() {
+                 $('.page-switch').css('display', 'none');
 
                 $('#about h2').addClass('active');
                 $('#about h2').each(function() {

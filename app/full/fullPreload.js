@@ -30,6 +30,39 @@ function fullPreload($timeout) {
         link: function(scope, element, attr) {
             $timeout(function() {
 
+
+                $('.page-switch').css('display', 'block');
+                $('.page-switch').attr('href', '#/');
+                TweenMax.to($('.page-switch').find('.w'), .8, {
+                    opacity: '0',
+                    scale: '0.8',
+                    ease: Power4.easeOut,
+                    onComplete: function() {
+
+
+                        TweenMax.to($('.page-switch').children().eq(0), .6, {
+                            opacity: '1',
+                            x: '-22',
+                            ease: Power4.easeOut
+                        });
+
+                        TweenMax.to($('.page-switch').children().eq(1), .7, {
+                            opacity: '1',
+                            x: '-11',
+                            ease: Power4.easeOut
+                        });
+
+                        TweenMax.to($('.page-switch').children().eq(2), .8, {
+                            opacity: '1',
+                            ease: Power4.easeOut
+                        });
+
+
+                    }
+                });
+
+
+
                 var sizeItem = $('#full .item').size();
                 // console.log(sizeItem)
 
