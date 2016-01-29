@@ -10,7 +10,7 @@ function aboutSplit($timeout) {
             $timeout(function() {
 
               
-               
+                $('#about h2').addClass('active');
                 $('#about h2').each(function() {
 
                     var $el = $(this).find('span'),
