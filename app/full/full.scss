@@ -4,7 +4,6 @@
         opacity: 0;
         transform: scale(0.95);
     }
-
     h1 {
         transform: translatey(10vh);
     }
@@ -48,8 +47,6 @@
                     background: white;
                     position: relative;
                     z-index: 1;
-
-
                     img {
                         display: block;
                         width: 100%;
@@ -75,13 +72,13 @@
                     width: 100vw;
                     height: 100vh;
                     top: 0;
-                   // cursor: move;
+                    // cursor: move;
                     left: 0;
                 }
             }
             &.active {
                 z-index: 2;
-                left:0vw;
+                left: 0vw;
                 //width: 50vw;
             }
         }

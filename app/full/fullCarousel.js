@@ -22,6 +22,7 @@ function fullCarousel() {
 
                 //console.log(pos,win);
                 if (pos < win) {
+
                     //console.log('right');
                      $('.next').css('display', 'none');
                     if (!$('.wrap-a').first().hasClass('active')) {

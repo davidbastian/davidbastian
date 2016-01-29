@@ -1,15 +1,11 @@
 import zepto from 'npm-zepto'
 
 
-
-
-
 function aboutSplit($timeout) {
     return {
         link: function(scope, element, attr) {
             $timeout(function() {
 
-              
                 $('#about h2').addClass('active');
                 $('#about h2').each(function() {
 
@@ -35,10 +31,10 @@ function aboutSplit($timeout) {
                                 $el.text($el.text().slice(0, -1)); // remove the '|'
 
                                 clearTimeout(timeOut);
-                               
-                            } else if (char == (txtLen - 15) ){
 
-                                     TweenMax.to($('.findme'), 1, {
+                            } else if (char == (txtLen - 15)) {
+
+                                TweenMax.to($('.findme'), 1, {
                                     opacity: '1',
                                     y: '0',
                                     ease: Power4.easeOut,
