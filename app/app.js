@@ -51,9 +51,6 @@ import {pageLink} from  './pageLink.js'
 //load header & footer
 import {headerApp} from  './header/header.directive.js'
 import {footerApp} from  './footer/footer.directive.js'
-//import {pageLink} from  './pageLink.js'
-
-
 
 //load directives SplitText
 import {aboutSplit} from  './about/aboutSplit.js'
@@ -83,8 +80,8 @@ angular
 	.directive('homeScroll', homeScroll)
 	.directive('singleScroll', singleScroll)
 
+	//slider Carousel
 	.directive('fullCarousel', fullCarousel)
-
 	.directive('fullMouse', fullMouse)
 
 	//links trigger
