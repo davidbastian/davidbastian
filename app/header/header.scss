@@ -1,0 +1,31 @@
+//header
+header {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+        #logo {
+            font-size: 17px;
+            font-weight: 600px;
+        }
+        #menu {
+            display: flex;
+            padding-right: 2vw;
+            li {
+                margin-left: 40px;
+                 @media (max-width:1040px) {
+                    margin-left: 4vw;
+                }
+
+                a {
+                    text-transform: lowercase;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

@@ -6,6 +6,8 @@ import './home/home.scss'
 import './full/full.scss'
 import './about/about.scss'
 import './single/single.scss'
+import './header/header.scss'
+import './footer/footer.scss'
 
 //load angular
 import angular from 'angular'
@@ -46,6 +48,12 @@ import {fullMouse} from  './full/fullMouse.js'
 //load directives Trigger Link
 import {pageLink} from  './pageLink.js'
 
+//load header & footer
+import {headerApp} from  './header/header.directive.js'
+import {footerApp} from  './footer/footer.directive.js'
+//import {pageLink} from  './pageLink.js'
+
+
 
 //load directives SplitText
 import {aboutSplit} from  './about/aboutSplit.js'
@@ -82,6 +90,10 @@ angular
 	//links trigger
 	.directive('pageLink', pageLink)
 	.directive('aboutSplit', aboutSplit)
+
+	//header & footer
+	.directive('headerApp', headerApp)
+	.directive('footerApp', footerApp)
 
 
 	.run(function() {
