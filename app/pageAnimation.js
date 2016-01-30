@@ -6,43 +6,13 @@ function pageAnimation() {
             if (tag === 'tagSingle') {
 
                 $('.page-switch').css('display', 'none');
-                
-                TweenMax.to($('#single .white'), 1, {
-                    autoAlpha: 1,
-                    ease: Power4.easeOut,
-                    onComplete: done
-                });
-                TweenMax.to($('#single .white h1'), 0.6, {
-                    y: '0vh',
-                    opacity: 1,
-                    ease: Power4.easeOut
-                });
 
             } else if (tag === 'tagHome') {
-             
-                TweenMax.to($('#home .white'), 1, {
-                    autoAlpha: 1,
-                    ease: Power4.easeOut,
-                    onComplete: done
-                });
-                TweenMax.to($('#home .white h1'), 0.6, {
-                    y: '0vh',
-                    opacity: 1,
-                    ease: Power4.easeOut
-                });
-            } else if (tag === 'tagFull') {
-                
 
-                TweenMax.to($('#full .white'), 1, {
-                    autoAlpha: 1,
-                    ease: Power4.easeOut,
-                    onComplete: done
-                });
-                TweenMax.to($('#full .white h1'), 0.6, {
-                    y: '0vh',
-                    opacity: 1,
-                    ease: Power4.easeOut
-                });
+
+            } else if (tag === 'tagFull') {
+
+
             } else if (tag === 'tagAbout') {
                 $('.page-switch').css('display', 'none');
                 TweenMax.to($('#about'), 1, {

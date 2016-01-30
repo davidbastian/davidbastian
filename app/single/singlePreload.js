@@ -30,6 +30,17 @@ function singlePreload($timeout) {
         link: function(scope, element, attr) {
             $timeout(function() {
 
+                TweenMax.to($('#single .white'), 1, {
+                    autoAlpha: 1,
+                    ease: Power4.easeOut,
+                   // onComplete: done
+                });
+                TweenMax.to($('#single .white h1'), 0.6, {
+                    y: '0vh',
+                    opacity: 1,
+                    ease: Power4.easeOut
+                });
+
                 var sizeItem = $('#single .item').size();
 
                 function checkLoad() {

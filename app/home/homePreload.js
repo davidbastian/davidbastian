@@ -32,6 +32,16 @@ function homePreload($timeout) {
                 $('.page-switch').css('display', 'block');
                 $('.page-switch').attr('href', '#/full');
 
+                 TweenMax.to($('#home .white'), 1, {
+                    autoAlpha: 1,
+                    ease: Power4.easeOut
+                });
+                TweenMax.to($('#home .white h1'), 0.6, {
+                    y: '0vh',
+                    opacity: 1,
+                    ease: Power4.easeOut
+                });
+
                 TweenMax.to($('.page-switch').find('.w'), .6, {
                                 opacity: '1',
                                 scale:'1',
