@@ -43,18 +43,18 @@ import {fullPreload} from  './full/fullPreload'
 import {homeScroll} from  './home/homeScroll'
 import {singleScroll} from  './single/singleScroll'
 
-import {fullCarousel} from  './full/fullCarousel.js'
-import {fullMouse} from  './full/fullMouse.js'
+import {fullCarousel} from  './full/fullCarousel'
+import {fullMouse} from  './full/fullMouse'
 
 //load directives Trigger Link
 import {pageLink} from  './pageLink.js'
 
 //load header & footer
-import {headerApp} from  './header/header.directive.js'
-import {footerApp} from  './footer/footer.directive.js'
+import {headerApp} from  './header/header.directive'
+import {footerApp} from  './footer/footer.directive'
 
-//load directives SplitText
-import {aboutSplit} from  './about/aboutSplit.js'
+//load directives SplitText for about
+import {aboutSplit} from  './about/aboutSplit'
 
 
 //start app

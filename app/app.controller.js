@@ -1,9 +1,5 @@
-
 function AppController($scope, $routeParams, $http, $location, $window) {
-
- //console.log('AppController');
-
-  $scope.metadata = {
+    $scope.metadata = {
         'title': 'default title',
         'description': 'default description',
     };
@@ -12,7 +8,7 @@ function AppController($scope, $routeParams, $http, $location, $window) {
     $scope.$on('newPageLoaded', function(event, metadata) {
         $scope.metadata = metadata
     });
-    
+
 
 }
 

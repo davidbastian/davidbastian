@@ -10,32 +10,32 @@
             "img": "media/009.jpg",
             "media": [{
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/009.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/009a.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/009b.jpg"
                 }]
             }, {
                 "type": "video",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/009.mp4"
                 }]
 
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/009c.jpg"
                 }]
@@ -50,13 +50,13 @@
             "agency": "Blacksheepdesign",
             "media": [{
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/008b.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/008c.jpg"
                     }]
@@ -64,19 +64,19 @@
 
                 {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/008f.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/008e.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/008d.jpg"
                     }]
@@ -93,25 +93,25 @@
             "img": "media/001.jpg",
             "media": [{
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/001.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/001a.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/001b.jpg"
                     }]
                 }, {
                     "type": "video",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/001.mp4"
                     }]
@@ -128,7 +128,7 @@
             "img": "media/007.jpg",
             "media": [{
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/007a.jpg"
                 }]
@@ -148,25 +148,25 @@
 
             "media": [{
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/004.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/004a.jpg"
                     }]
                 }, {
                     "type": "video",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/004a.mp4"
                     }]
                 }, {
                     "type": "video",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/004.mp4"
                     }]
@@ -190,25 +190,25 @@
 
             "media": [{
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/011.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/011a.jpg"
                     }]
                 }, {
                     "type": "video",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/011.mp4"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/011b.jpg"
                     }]
@@ -229,31 +229,31 @@
             "img": "media/025a.jpg",
             "media": [{
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/025b.jpg"
                     }]
                 }, {
                     "type": "video",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/025.mp4"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/025c.jpg"
                     }]
                 }, {
                     "type": "video",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/025a.mp4"
                     }]
                 }, {
                     "type": "video",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/025b.mp4"
                     }]
@@ -274,31 +274,31 @@
             "img": "media/020.jpg",
             "media": [{
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/020.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/020a.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/020b.jpg"
                     }]
                 }, {
                     "type": "video",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/020a.mp4"
                     }]
                 }, {
                     "type": "video",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/020b.mp4"
                     }]
@@ -319,37 +319,37 @@
             "img": "media/023.jpg",
             "media": [{
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/023a.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/023c.jpg"
                     }]
                 }, {
                     "type": "video",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/023.mp4"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/023d.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/023e.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/023f.jpg"
                     }]
@@ -371,37 +371,37 @@
             "img": "media/014b.jpg",
             "media": [{
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/014b.jpg"
                 }]
             }, {
                 "type": "video",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/014.mp4"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/014a.jpg"
                 }]
             }, {
                 "type": "video",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/014a.mp4"
                 }]
             }, {
                 "type": "video",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/014b.mp4"
                 }]
             }, {
                 "type": "video",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/014c.mp4"
                 }]
@@ -418,31 +418,31 @@
             "img": "media/010.jpg",
             "media": [{
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/010.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/010a.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/010b.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/010c.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/010d.jpg"
                 }]
@@ -458,25 +458,25 @@
             "img": "media/005.jpg",
             "media": [{
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/005a.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/005b.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/005c.jpg"
                 }]
             }, {
                 "type": "video",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/005.mp4"
                 }]
@@ -495,19 +495,19 @@
             "img": "media/016.jpg",
             "media": [{
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/016a.jpg"
                 }]
             }, {
                 "type": "video",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/016.mp4"
                 }]
             }, {
                 "type": "video",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/016a.mp4"
                 }]
@@ -524,31 +524,31 @@
             "img": "media/017.jpg",
             "media": [{
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/017.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/017a.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/017b.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/017c.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/017d.jpg"
                 }]
@@ -566,37 +566,37 @@
             "img": "media/026.jpg",
             "media": [{
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/026a.jpg"
                     }]
                 }, {
                     "type": "video",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/026.mp4"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/026c.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/026b.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/026d.jpg"
                     }]
                 }, {
                     "type": "video",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/026a.mp4"
                     }]
@@ -615,31 +615,31 @@
             "img": "media/013.jpg",
             "media": [{
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/013aa.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/013b.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/013c.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/013d.jpg"
                     }]
                 }, {
                     "type": "image",
-                    "enabled": 1,
+
                     "links": [{
                         "src": "media/013e.jpg"
                     }]
@@ -659,44 +659,44 @@
             "img": "media/006.jpg",
             "media": [{
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/006a.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/006b.jpg"
                 }]
             }, {
 
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/006c.jpg"
                 }]
             }, {
                 "type": "video",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/006.mp4"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/006d.jpg"
                 }]
             }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/006e.jpg"
                 }]
-            },{
+            }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/006f.jpg"
                 }]
@@ -713,7 +713,7 @@
             "img": "media/024.jpg",
             "media": [{
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/024a.jpg"
                 }]
@@ -738,7 +738,7 @@
             "img": "media/018.jpg",
             "media": [{
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/018a.jpg"
                 }]
@@ -755,37 +755,37 @@
             "img": "media/003.jpg",
             "media": [{
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/003a.jpg"
                 }]
-            },{
+            }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/003b.jpg"
                 }]
-            },{
+            }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/003c.jpg"
                 }]
-            },{
+            }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/003d.jpg"
                 }]
-            },{
+            }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/003e.jpg"
                 }]
-            },{
+            }, {
                 "type": "image",
-                "enabled": 1,
+
                 "links": [{
                     "src": "media/003f.jpg"
                 }]
