@@ -1,4 +1,8 @@
 import zepto from 'npm-zepto'
+import {
+    toRight
+}
+from './toRight.js'
 var count = 0;
 
 function listo() {
@@ -16,8 +20,15 @@ function listo() {
         ease: Power4.easeIn,
         onComplete: function() {
 
-            $('.next').click();
+            setTimeout(function() {
+                toRight();
 
+            }, 1000)
+
+            setInterval(function() {
+                toRight();
+
+            }, 7000)
         }
     })
 
