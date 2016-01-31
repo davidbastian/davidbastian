@@ -723,15 +723,60 @@
                 "links": [{
                     "src": "media/024b.jpg"
                 }]
+            }, {
+                "type": "image",
+
+                "links": [{
+                    "src": "media/024c.jpg"
+                }]
+            }, {
+                "type": "image",
+
+                "links": [{
+                    "src": "media/024d.jpg"
+                }]
+            }, {
+                "type": "image",
+
+                "links": [{
+                    "src": "media/024e.jpg"
+                }]
             }]
         },
 
         {
             "slug": "Kaufmann",
+            "title": "<small>Mercedez Benz</small><div><span>Kaufmann</span></div>",
             "role": "Mobile Design.",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, ut.",
-            "link": "demo.html",
-            "img": "media/022.jpg"
+            "year": "2011",
+            "agency": "Ilogica",
+            "description": "This is my oldest project here, but I still like. I think it was a good way to show the information & products, anyway the font size is small because it was a project for old smarthphones (years ago).",
+            "img": "media/022.jpg",
+            "media": [{
+                "type": "image",
+
+                "links": [{
+                    "src": "media/022.jpg"
+                }]
+            },{
+                "type": "image",
+
+                "links": [{
+                    "src": "media/022a.jpg"
+                }]
+            },{
+                "type": "image",
+
+                "links": [{
+                    "src": "media/022c.jpg"
+                }]
+            },{
+                "type": "image",
+
+                "links": [{
+                    "src": "media/022b.jpg"
+                }]
+            }]
         },
 
         {
