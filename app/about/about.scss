@@ -1,37 +1,30 @@
 #about {
-		height:100vh;
-		display:flex;
-		align-items:center;
-
-		h2 {
-			max-width:900px;
-			width:100%;
-			line-height:1.6em;
-			padding:0px;
-			opacity: 0;
-			&.active {
-					opacity:1;
-			}
-
-				
-		}
-
-		.findme {
-
-				margin-top: 50px;
-				//font-weight:100;
-
-				a {
-					margin-left: 13px;
-					//text-decoration:underline;
-					border-bottom:1px solid;
-					padding-bottom:2px;
-				//	font-size: 13px;
-					letter-spacing: 0.1px;
-					font-weight:100;
-				}
-				opacity:0;
-				transform:translatey(20px);
-		}
-	
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    h2 {
+        max-width: 900px;
+        width: 100%;
+        line-height: 1.6em;
+        padding: 0px;
+        opacity: 0;
+        &.active {
+            opacity: 1;
+        }
+    }
+    .findme {
+        margin-top: 50px;
+        //font-weight:100;
+        a {
+            margin-left: 13px;
+            //text-decoration:underline;
+            border-bottom: 1px solid;
+            padding-bottom: 2px;
+            //	font-size: 13px;
+            letter-spacing: 0.1px;
+            font-weight: 100;
+        }
+        opacity:0;
+        transform:translatey(20px);
+    }
 }

@@ -4,6 +4,7 @@ import zepto from 'npm-zepto'
 
 
 function SingleController($scope, $routeParams, $http, $location, $window) {
+
     $scope.message = 'This is Single';
     $scope.slug = $routeParams.single;
 
@@ -13,6 +14,7 @@ function SingleController($scope, $routeParams, $http, $location, $window) {
         return slug === $scope.slug
     });
     $scope.project = $scope.inner[0];
+    $scope.$emit('newPageLoaded', { 'title': 'Some Page', 'description': 'blah' });
 
 }
 

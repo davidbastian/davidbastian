@@ -28,6 +28,7 @@ import {pageRouting} from  './pageRouting'
 import {toSlug} from  './toSlug'
 
 //load controllers
+import {AppController} from  './app.controller'
 import {HomeController} from  './home/home.controller'
 import {FullController} from  './full/full.controller'
 import {AboutController} from  './about/about.controller'
@@ -66,6 +67,7 @@ angular
 
 	.filter('toslug',toSlug)
 
+	.controller('AppController', AppController)
 	.controller('Home', HomeController)
 	.controller('Full', FullController)
 	.controller('About', AboutController)

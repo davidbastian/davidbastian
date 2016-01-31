@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html ng-app="db">
+<html ng-app="db" ng-controller="AppController">
 <head>
-    <meta name="description" content="I am a Designer & Web Developer from Viña del Mar (Chile), but I am based in New Zealand. I love enjoying Good Art, Conceptualising and Designing simple and clean interfaces." />
-    <meta name="keywords" content="Diseño, Creatividad, Animacion, Producción,  Multimedia, Direccion de Arte,  Post-producción, Diseño Web, Front-End, Interfaces, Motion Graphics, Ilustración, Fotografia, Tipografía, Iconografia, Publicidad." />
+    <meta description="{{ metadata.description}}" ng-if="metadata.description" />
+    <meta name="keywords" content="design,art direction,creative,product design,interaction design,interfaces design,chile,web,frontend,backend,reactjs,angularjs, photography, typography, iconography, marketing, javascript." />
     <meta name="copyright" content="Copyright © 2016 David Bastian, Chilean Designer & Web Developer." />
     <meta name="author" content="David Bastian Fernandez Izarraulde" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
@@ -13,7 +13,7 @@
     <meta property="og:image" content="http://www.davidbastian.cl/wp-content/themes/davidbastian-v21/img/fb-thumb.png" />
     <meta property="og:description" content="I am a Designer & Web Developer from Viña del Mar (Chile), but I am based in New Zealand. I love enjoying Good Art, Conceptualising and Designing simple and clean interfaces." />
     <meta property="og:updated_time" content="1358722925" />
-    <title>David Bastian, Chilean Designer & Web Developer.</title>
+    
 </head>
 
 <body>
