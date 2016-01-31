@@ -7,20 +7,25 @@ function listo() {
         //  top: '-100vh',
         autoAlpha: 0,
         ease: Power4.easeOut
-    })
 
+    })
 
     TweenMax.to($('#full .white h1'), 0.65, {
         y: '-200vh',
         opacity: 0,
-        ease: Power4.easeIn
+        ease: Power4.easeIn,
+        onComplete: function() {
+
+            $('.next').click();
+
+        }
     })
 
     TweenMax.to("#full .appear", 1.5, {
         opacity: 1,
         scale: 1,
         ease: Power4.easeOut
-    });
+    })
 
 
 }

@@ -27,11 +27,18 @@ body {
         //opacity: 0.1;
         //letter-spacing: -10px;
         margin-top: -7vh;
+         @media (max-width: 630px) {
+            font-size: 43vw;
+        }
+       
     }
     h2 {
         font-size: 40px;
         letter-spacing: -1px;
         padding-top: 12vh;
+         @media (max-width: 560px) {
+            font-size: 7vw;
+        }
         small {
             letter-spacing: 0px;
             font-weight: 100;

@@ -7,123 +7,123 @@ function fullCarousel() {
 
             function functionToBeCalled(e) {
                 // console.log(e)
-                /*if (!$('.wrap-a').last().hasClass('active')) {
-                    $('.wrap-a.active').removeClass('active').next().addClass('active');
+                /*if (!wrapA.last().hasClass('active')) {
+                    wrapActive.removeClass('active').next().addClass('active');
                 } else {
-                    $('.wrap-a.active').removeClass('active');
-                    $('.wrap-a').first().addClass('active');
+                    wrapActive.removeClass('active');
+                    wrapA.first().addClass('active');
                 }*/
 
-
                 var pos = e.clientX,
-                    win = $(window).width() / 2;
+                    win = $(window).width() / 2,
+                    wrapActive = $('.wrap-a.active'),
+                    wrapA = $('.wrap-a'),
+                    wrapNext = $('.next');
 
                    
-
                 //console.log(pos,win);
                 if (pos < win) {
 
                     //console.log('right');
-                     $('.next').css('display', 'none');
-                    if (!$('.wrap-a').first().hasClass('active')) {
+                     wrapNext.css('display', 'none');
+                    if (!wrapA.first().hasClass('active')) {
 
-                        TweenMax.set($('.wrap-a.active'), {
+                        TweenMax.set(wrapActive, {
                             left: '0vw'
                         });
-                        TweenMax.set($('.wrap-a.active').next(), {
+                        TweenMax.set(wrapActive.next(), {
                             left: '100vw'
                         });
-                        TweenMax.set($('.wrap-a.active').prev(), {
+                        TweenMax.set(wrapActive.prev(), {
                             left: '-100vw'
                         });
 
-                        TweenMax.to($('.wrap-a.active'), .8, {
+                        TweenMax.to(wrapActive, .8, {
                             left: '100vw',
                             ease: Power4.easeOut,
                             onComplete: function() {
-                                $('.wrap-a.active').removeClass('active').prev().addClass('active');
-                                $('.next').css('display', 'block');
+                                wrapActive.removeClass('active').prev().addClass('active');
+                                wrapNext.css('display', 'block');
                             }
                         });
-                        TweenMax.to($('.wrap-a.active').prev(), .8, {
+                        TweenMax.to(wrapActive.prev(), .8, {
                             left: '0vw',
                             ease: Power4.easeOut,
                         });
 
                     } else {
-                        TweenMax.set($('.wrap-a').last(), {
+                        TweenMax.set(wrapA.last(), {
                             left: '-100vw'
                         });
 
-                        TweenMax.to($('.wrap-a').last(), .8, {
+                        TweenMax.to(wrapA.last(), .8, {
                             left: '0vw',
                             ease: Power4.easeOut,
                         });
 
-                        TweenMax.to($('.wrap-a').first(), .8, {
+                        TweenMax.to(wrapA.first(), .8, {
                             left: '100vw',
                             ease: Power4.easeOut,
 
                             onComplete: function() {
-                                $('.wrap-a.active').removeClass('active');
-                                $('.wrap-a').last().addClass('active');
-                                $('.next').css('display', 'block');
+                                wrapActive.removeClass('active');
+                                wrapA.last().addClass('active');
+                                wrapNext.css('display', 'block');
                             }
                         });
-                        /*$('.wrap-a.active').removeClass('active');
-                        $('.wrap-a').first().addClass('active');*/
+
                     }
 
                 } else {
                     //console.log('left');
-                         $('.next').css('display', 'none');
-                    if (!$('.wrap-a').last().hasClass('active')) {
+                         wrapNext.css('display', 'none');
+                    if (!wrapA.last().hasClass('active')) {
 
-                        TweenMax.set($('.wrap-a.active'), {
+                        TweenMax.set(wrapActive, {
                             left: '0vw'
                         });
-                        TweenMax.set($('.wrap-a.active').next(), {
+                        TweenMax.set(wrapActive.next(), {
                             left: '100vw'
                         });
-                        TweenMax.set($('.wrap-a.active').prev(), {
+                        TweenMax.set(wrapActive.prev(), {
                             left: '-100vw'
                         });
 
-                        TweenMax.to($('.wrap-a.active'), .8, {
+                        TweenMax.to(wrapActive, .8, {
                             left: '-100vw',
                             ease: Power4.easeOut,
                             onComplete: function() {
-                                $('.wrap-a.active').removeClass('active').next().addClass('active');
-                                $('.next').css('display', 'block');
+                                wrapActive.removeClass('active').next().addClass('active');
+                                wrapNext.css('display', 'block');
                             }
                         });
-                        TweenMax.to($('.wrap-a.active').next(), .8, {
+                        TweenMax.to(wrapActive.next(), .8, {
                             left: '0vw',
                             ease: Power4.easeOut,
                         });
 
                     } else {
-                        TweenMax.set($('.wrap-a').first(), {
+                        TweenMax.set(wrapA.first(), {
                             left: '100vw'
                         });
 
-                        TweenMax.to($('.wrap-a').first(), .8, {
+                        TweenMax.to(wrapA.first(), .8, {
                             left: '0vw',
                             ease: Power4.easeOut,
                         });
 
-                        TweenMax.to($('.wrap-a').last(), .8, {
+                        TweenMax.to(wrapA.last(), .8, {
                             left: '-100vw',
                             ease: Power4.easeOut,
 
                             onComplete: function() {
-                                $('.wrap-a.active').removeClass('active');
-                                $('.wrap-a').first().addClass('active');
-                                $('.next').css('display', 'block');
+                                wrapActive.removeClass('active');
+                                wrapA.first().addClass('active');
+                                wrapNext.css('display', 'block');
                             }
                         });
-                        /*$('.wrap-a.active').removeClass('active');
-                        $('.wrap-a').first().addClass('active');*/
+                        /*wrapActive.removeClass('active');
+                        wrapA.first().addClass('active');*/
                     }
 
                 }
@@ -135,12 +135,12 @@ function fullCarousel() {
                 /*var x = e.clientX - this.offsetLeft,
                     w = document.body.offsetWidth,*/
                 //console.log(e.clientX)
-                /*var toSu = (($('.wrap-a').size()*100)/10),
-                      suSize =  $(window).width()/ $('.wrap-a').size(),
+                /*var toSu = ((wrapA.size()*100)/10),
+                      suSize =  $(window).width()/ wrapA.size(),
                       suEq = (Math.floor(((e.clientX*toSu)/$(window).width())/10));
 
-                 $('.wrap-a').removeClass('active');
-                 $('.wrap-a').eq(suEq).addClass('active');*/
+                 wrapA.removeClass('active');
+                 wrapA.eq(suEq).addClass('active');*/
             }
             //element.on('mousemove', functionToBeCalled);
             element.on('click', functionToBeCalled);
