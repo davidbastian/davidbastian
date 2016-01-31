@@ -28,7 +28,7 @@ function listo() {
             setInterval(function() {
                 toRight();
 
-            }, 7000)
+            }, 8000)
         }
     })
 
