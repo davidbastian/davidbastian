@@ -25,10 +25,10 @@ function listo() {
 
             }, 1000)
 
-            setInterval(function() {
+            /*setInterval(function() {
                 toRight();
 
-            }, 8000)
+            }, 8000)*/
         }
     })
 
