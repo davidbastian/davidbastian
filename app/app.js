@@ -88,7 +88,7 @@ angular
 
 	//links trigger
 	.directive('pageLink', pageLink)
-	.directive('aboutSplit', aboutSplit)
+	.directive('aboutSplit',['$timeout',aboutSplit])
 
 	//header & footer
 	.directive('headerApp', headerApp)
