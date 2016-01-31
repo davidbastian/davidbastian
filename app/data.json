@@ -717,6 +717,12 @@
                 "links": [{
                     "src": "media/024a.jpg"
                 }]
+            }, {
+                "type": "image",
+
+                "links": [{
+                    "src": "media/024b.jpg"
+                }]
             }]
         },
 

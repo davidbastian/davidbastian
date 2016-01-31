@@ -1,7 +1,6 @@
 var webpack = require('webpack')
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require('path');
-var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
 var config = {
      context: __dirname + '/app',
@@ -14,11 +13,7 @@ var config = {
   plugins: [
     new webpack.DefinePlugin({
       ON_TEST: process.env.NODE_ENV === 'test'
-    }),
-    new ngAnnotatePlugin({
-            add: true,
-            // other ng-annotate options here 
-        })
+    })
   ],
     module: {
         loaders: [{
