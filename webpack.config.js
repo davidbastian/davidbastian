@@ -3,14 +3,18 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require('path');
 
 var config = {
-    entry: ['webpack/hot/dev-server', path.resolve(__dirname, '../app/app.js')],
-    output: {
-        path: path.resolve(__dirname, '../build'),
-        filename: 'bundle.js'
-    },
-     plugins: [
-        new webpack.optimize.UglifyJsPlugin()
-    ],
+     context: __dirname + '/app',
+  entry: './app.js',
+  output: {
+    path: __dirname + '/app',
+    filename: 'bundle.js'
+  },
+
+  plugins: [
+    new webpack.DefinePlugin({
+      ON_TEST: process.env.NODE_ENV === 'test'
+    })
+  ],
     module: {
         loaders: [{
                 test: /\.scss$/,
@@ -39,4 +43,11 @@ var config = {
 
     }
 };
+
+if (process.env.NODE_ENV === 'production') {
+  config.output.path = __dirname + '/dist';
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+  config.devtool = 'source-map';
+}
+
 module.exports = config;
