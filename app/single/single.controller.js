@@ -3,7 +3,7 @@ const data = p.projects
 import zepto from 'npm-zepto'
 
 
-function SingleController($scope, $routeParams, $http, $location, $window) {
+function SingleController($scope, $routeParams) {
 
     $scope.message = 'This is Single';
     $scope.slug = $routeParams.single;

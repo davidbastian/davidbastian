@@ -67,20 +67,20 @@ angular
 
 	.filter('toslug',toSlug)
 
-	.controller('AppController', AppController)
-	.controller('Home', HomeController)
-	.controller('Full', FullController)
-	.controller('About', AboutController)
-	.controller('Single', SingleController)
+	.controller('AppController', ['$scope',AppController])
+	.controller('Home', ['$scope',HomeController])
+	.controller('Full', ['$scope',FullController])
+	.controller('About', ['$scope', AboutController])
+	.controller('Single', ['$scope','$routeParams',SingleController])
 	
 	//loaders
-	.directive('homeLoader', homePreload)
-	.directive('fullLoader', fullPreload)
-	.directive('singleLoader', singlePreload)
+	.directive('homeLoader', ['$timeout',homePreload])
+	.directive('fullLoader', ['$timeout',fullPreload])
+	.directive('singleLoader', ['$timeout',singlePreload])
 
 	//scrollers
-	.directive('homeScroll', homeScroll)
-	.directive('singleScroll', singleScroll)
+	.directive('homeScroll', ['$timeout',homeScroll])
+	.directive('singleScroll', ['$timeout',singleScroll])
 
 	//slider Carousel
 	.directive('fullCarousel', fullCarousel)

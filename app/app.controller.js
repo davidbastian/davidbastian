@@ -1,4 +1,4 @@
-function AppController($scope, $routeParams, $http, $location, $window) {
+function AppController($scope) {
     $scope.metadata = {
         'title': 'default title',
         'description': 'default description',

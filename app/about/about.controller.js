@@ -1,5 +1,5 @@
 
-function AboutController($scope, $http, $window, $location) {
+function AboutController($scope) {
             $scope.message = 'This is about';      
 }
 

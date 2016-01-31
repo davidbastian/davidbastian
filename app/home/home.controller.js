@@ -1,7 +1,7 @@
 import p from 'json!../data.json'
 const data = p.projects
 
-function HomeController($scope, $routeParams, $http, $location, $window) {
+function HomeController($scope) {
     $scope.message = 'This is Home';
     $scope.home = data;
 }

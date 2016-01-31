@@ -1,6 +1,5 @@
 import zepto from 'npm-zepto'
 
-
 function aboutSplit($timeout) {
     return {
         link: function(scope, element, attr) {
