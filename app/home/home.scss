@@ -71,12 +71,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor:default;
     .ball-inner {
         width: 20px;
         height: 20px;
         background-color: red;
         border-radius: 1000px;
         position: relative;
+
         h2 {
             content: 'drag the red dot to start';
             position: absolute;

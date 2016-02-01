@@ -53,15 +53,12 @@ function homeScroll($timeout) {
                         return false;
                     },
                     onDrag: function() {
-                        var suPos = 1 * (parseInt(this.x, 10));
-                        //console.log(suPos);
+                        var suPos = 1 * (parseInt(this.x, 10)),
+                            percent = ((suPos * 100) / (($('#tagHome').width()) - $('.ball').width())),
+                            equal = ((percent * $('#home').width()) / 100);
+                        console.log(equal);
 
-                        var percent = ((suPos * 100) / (($('#tagHome').width()- $('#home').width()) - $('.ball').width()));
-                        console.log(percent);
-
-                        TweenLite.set($('#home'), {
-                            x: -percent + '%',
-                        });
+                        $('#tagHome').scrollLeft(equal);
 
 
                     },
@@ -69,15 +66,12 @@ function homeScroll($timeout) {
                         //        $('.grab').removeClass('grabbing');
                     },
                     onThrowUpdate: function() {
-                        var suPos = 1 * (parseInt(this.x, 10));
-                        //console.log(suPos);
+                        var suPos = 1 * (parseInt(this.x, 10)),
+                            percent = ((suPos * 100) / (($('#tagHome').width()) - $('.ball').width())),
+                            equal = ((percent * $('#home').width()) / 100);
+                        console.log(equal);
 
-                        var percent = ((suPos * 100) / (($('#tagHome').width()- $('#home').width()) - $('.ball').width()));
-                        console.log(percent);
-
-                        TweenLite.set($('#home'), {
-                            x: -percent + '%',
-                        });
+                        $('#tagHome').scrollLeft(equal);
 
                     }
 
