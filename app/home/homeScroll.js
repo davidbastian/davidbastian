@@ -57,21 +57,21 @@ function Dragdot() {
         },
 
         onDragStart: function() {
-            TweenMax.to($('.msg'), 1.5, {
+            TweenMax.to($('.msg'), 1.2, {
                 autoAlpha: 0,
                 ease: Power4.easeOut
             });
-            TweenMax.to($('#home .white'), 1.5, {
+            TweenMax.to($('#home .white'), 1, {
                 autoAlpha: 0,
                 ease: Power4.easeOut
             });
 
-            TweenMax.staggerTo("#home .appear", 1, {
+            TweenMax.staggerTo("#home .appear", 0.8, {
                 opacity: 1,
                 y: 0,
                 ease: Power4.easeOut,
                 delay: 0.4
-            }, 0.03);
+            }, 0.02);
 
             $('body').addClass('home-first');
         },
