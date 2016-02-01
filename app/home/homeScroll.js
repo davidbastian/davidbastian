@@ -40,7 +40,50 @@ function homeScroll($timeout) {
         link: function(scope, element, attr) {
             $timeout(function() {
 
-                scrollFunction();
+                console.log($('html').hasClass('safari'));
+
+                //scrollFunction();
+
+                Draggable.create($('.ball'), {
+                    //type: "x",
+                    edgeResistance: 0.65,
+                    bounds: '#tagHome',
+                    throwProps: true,
+                    onClick: function() {
+                        return false;
+                    },
+                    onDrag: function() {
+                        var suPos = 1 * (parseInt(this.x, 10));
+                        //console.log(suPos);
+
+                        var percent = ((suPos * 100) / (($('#tagHome').width()- $('#home').width()) - $('.ball').width()));
+                        console.log(percent);
+
+                        TweenLite.set($('#home'), {
+                            x: -percent + '%',
+                        });
+
+
+                    },
+                    onDragEnd: function() {
+                        //        $('.grab').removeClass('grabbing');
+                    },
+                    onThrowUpdate: function() {
+                        var suPos = 1 * (parseInt(this.x, 10));
+                        //console.log(suPos);
+
+                        var percent = ((suPos * 100) / (($('#tagHome').width()- $('#home').width()) - $('.ball').width()));
+                        console.log(percent);
+
+                        TweenLite.set($('#home'), {
+                            x: -percent + '%',
+                        });
+
+                    }
+
+
+
+                });
 
             })
         }

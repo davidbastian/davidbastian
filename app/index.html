@@ -10,8 +10,8 @@
     <meta name="copyright" content="Copyright © 2016 David Bastian, Chilean Designer & Web Developer." />
     <meta name="author" content="David Bastian Fernandez Izarraulde" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8" />
-    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=0.85, maximum-scale=0.85" />
+    <link rel="icon" href="favicon.png">
     <meta name="format-detection" content="telephone=no">
     <!-- apple icon -->
     <meta name="apple-mobile-web-app-title" content="David Bastian">
@@ -32,26 +32,36 @@
     <!-- open graph meta -->
     <meta property="og:title" content="David Bastian. Chilean Designer & Web Developer">
     <meta property="og:description" content="I am a Designer & Web Developer from Viña del Mar (Chile), but I am based in New Zealand. I love enjoying Good Art, Conceptualising and Designing simple and clean interfaces.">
-    <meta property="og:image" content="social/fb.jpg"> 
-    <meta property="og:url" content="http://www.davidbastian.cl">
+    <meta property="og:image" content="http://www.davidbastian.cl/proyectos/dist/social/fb.jpg"> 
+    <meta property="og:url" content="http://www.davidbastian.cl/proyectos/dist">
     <meta property="og:site_name" content="David Bastian. Chilean Designer & Web Developer">
+    <meta property="fb:app_id" content="966242223397117" />
     <!-- twitter meta -->
     <meta name="twitter:card" content="photo" />
     <meta name="twitter:site" content="http://www.davidbastian.cl" />
     <meta name="twitter:title" content="David Bastian. Chilean Designer & Web Developer" />
     <meta name="twitter:description" content="I am a Designer & Web Developer from Viña del Mar (Chile), but I am based in New Zealand. I love enjoying Good Art, Conceptualising and Designing simple and clean interfaces." />
-    <meta name="twitter:image" content="social/tw.jpg" />
-    <meta name="twitter:url" content="http://www.davidbastian.cl" />
+    <meta name="twitter:image" content="http://www.davidbastian.cl/proyectos/dist/social/tw.jpg" />
+    <meta name="twitter:url" content="http://www.davidbastian.cl/proyectos/dist" />
     <meta name="google-site-verification" content="" />
 </head>
 
 <body>
+     <div class="ball">
+         <div class="ball-inner">
+              <h2>drag the red dot to start</h2>
+         </div>
+
+     </div>
     <main>
         <header header-app></header>
         <section class="main-container" ng-view></section>
         <footer footer-app></footer>
     </main>
+
     <script src="bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/utils/Draggable.min.js"></script>
+    <script src="https://www.modex3d.com/units/commons/Vendors/gsap/plugins/ThrowPropsPlugin.js"></script>
 </body>
 
 </html>

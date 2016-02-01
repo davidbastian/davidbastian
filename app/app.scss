@@ -66,6 +66,7 @@ body {
     top: 0;
     left: 0;
     overflow: auto;
+     -webkit-overflow-scrolling: touch;
     height: 100vh;
     &::-webkit-scrollbar {
         width: 10px;
@@ -79,6 +80,14 @@ body {
     }
     @media (max-width:1040px) {
         position: relative;
+    }
+
+
+}
+
+.mobile {
+    .wrap-container {
+      //  top: 9.5vh;
     }
 }
 
@@ -99,6 +108,7 @@ body {
     visibility: hidden;
     opacity: 0;
     overflow: hidden;
+     -webkit-overflow-scrolling: touch;
     top: 0;
     .container {
         height: 100vh;

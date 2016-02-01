@@ -8,6 +8,10 @@ function SingleController($scope, $routeParams) {
     $scope.message = 'This is Single';
     $scope.slug = $routeParams.single;
 
+    $scope.mobile = $('html').hasClass('mobile');
+
+    //console.log($scope.mobile);
+
     $scope.inner = data.filter(function(entry) {
         //console.log(entry.slug);
         var slug = entry.slug.toLowerCase().split(' ').join('-');

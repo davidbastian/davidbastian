@@ -18,13 +18,12 @@
         padding-right: 10px;
         display: inline-table;
         text-decoration: none;
-        cursor:pointer;
+        cursor: pointer;
         img {
             height: 53vh;
             width: auto;
             display: inline-block;
         }
-        
         p {
             padding-left: 0%;
             font-size: 14px;
@@ -34,7 +33,6 @@
                 font-weight: 100;
                 font-style: italic;
             }
-
             @media (max-width:680px) {
                 .role {
                     display: block;
@@ -43,17 +41,59 @@
                 span {
                     display: none;
                 }
-                
             }
         }
-
         &:last-child {
             padding-right: 0px;
         }
-
         a {
-            opacity:0;
-            visibility:hidden;
+            opacity: 0;
+            visibility: hidden;
         }
     }
+}
+
+.mobile {
+    #home .link {
+        img {
+            height: 38vh;
+        }
+    }
+}
+
+.ball {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    z-index: 10;
+    top: 50%;
+    margin-top: -2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ball-inner {
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 1000px;
+        position: relative;
+        h2 {
+            content: 'drag the red dot to start';
+            position: absolute;
+           // transform: rotate(-90deg);
+            //transform-origin: left;
+            opacity: 0.5;
+            width: 100vw;
+            /* text-transform: uppercase; */
+            left: 2.5vw;
+            top: -18px;
+            letter-spacing: 0.2px;
+            font-size: 40px;
+            padding-top: 0px;
+            opacity: 0;
+        }
+        
+    }
+
+
 }

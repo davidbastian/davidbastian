@@ -9,6 +9,10 @@ import './single/single.scss'
 import './header/header.scss'
 import './footer/footer.scss'
 
+//load npm-modernizr
+import modernizr from 'imports?this=>window!../node_modules/npm-modernizr/modernizr.js'
+import detectizr from 'imports?this=>window!../node_modules/detectizr/dist/detectizr.js'
+
 //load angular
 import angular from 'angular'
 import ngroute from 'angular-route'
@@ -18,7 +22,14 @@ import sanitize from 'angular-sanitize'
 //load gsap & pageAnimation
 import zepto from 'npm-zepto'
 import gsap from 'gsap'
-import scrolltoplugin from '../node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin.js'
+//import tweenlite from '../node_modules/gsap/src/uncompressed/TweenLite.js'
+//import tweenmax from 'imports?this=>window!../node_modules/gsap/src/uncompressed/TweenMax.js'
+
+//var TweenMax = require('imports?this=>window!../node_modules/gsap/src/uncompressed/TweenMax.js');
+//var Draggable = require('imports?this=>window!../node_modules/gsap/src/uncompressed/utils/Draggable.js');
+/*import tweenlite from 'imports?this=>window!../node_modules/gsap/src/uncompressed/TweenLite.js'
+import Draggable from 'imports?this=>window!../node_modules/gsap/src/uncompressed/utils/Draggable.js'*/
+//import scrolltoplugin from '../node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin.js'
 import {pageAnimation} from  './pageAnimation'
 
 //load routing
