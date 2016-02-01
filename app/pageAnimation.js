@@ -9,6 +9,15 @@ function pageAnimation() {
 
             } else if (tag === 'tagHome') {
 
+                $('#tagHome').scrollLeft( $('body').attr('data-s'));
+
+                TweenMax.to($('.ball-inner'), 1, {
+                    autoAlpha: 1,
+                    // y: '20vh',
+                    scale: 1,
+                    ease: Back.easeOut
+                });
+
 
             } else if (tag === 'tagFull') {
 
@@ -39,6 +48,25 @@ function pageAnimation() {
 
             } else if (tag === 'tagHome') {
                 $('.page-switch').css('display', 'none');
+
+                TweenMax.to($('.ball-inner'), 1, {
+                    autoAlpha: 0,
+                    // y: '20vh',
+                    scale: 0.5,
+                    ease: Back.easeOut
+                });
+
+                TweenMax.to($('.msg'), 0.7, {
+                    autoAlpha: 0,
+                    // y: '20vh',
+                    ease: Back.easeOut
+                });
+
+                //console.log($('#tagHome').scrollLeft());
+
+                $('body').attr('data-s', $('#tagHome').scrollLeft())
+
+
                 TweenMax.to($('#home .appear'), 1, {
                     opacity: 0,
                     // y: '20vh',

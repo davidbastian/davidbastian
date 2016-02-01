@@ -29,7 +29,7 @@ import gsap from 'gsap'
 //var Draggable = require('imports?this=>window!../node_modules/gsap/src/uncompressed/utils/Draggable.js');
 /*import tweenlite from 'imports?this=>window!../node_modules/gsap/src/uncompressed/TweenLite.js'
 import Draggable from 'imports?this=>window!../node_modules/gsap/src/uncompressed/utils/Draggable.js'*/
-//import scrolltoplugin from '../node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin.js'
+import scrolltoplugin from '../node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin.js'
 import {pageAnimation} from  './pageAnimation'
 
 //load routing

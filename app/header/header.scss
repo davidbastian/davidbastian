@@ -29,3 +29,46 @@ header {
         }
     }
 }
+
+
+
+.ball {
+    position: fixed;
+    width: 5vw;
+    height: 5vw;
+    z-index: 10;
+    top: 50%;
+    margin-top: -2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //cursor: -webkit-grab!important;
+    
+    cursor: grab!important;
+    cursor: -webkit-grab!important;
+    .ball-inner {
+        width: 0.8vw;
+        height: 0.8vw;
+        background-color: red;
+        border-radius: 1000px;
+        position: relative;
+        opacity: 0;
+        transform: scale(2) translateY(-20px);
+        
+    }
+    &.grab {
+        cursor: -webkit-grabbing!important;
+        cursor: grabbing!important;
+    }
+}
+
+.msg {
+    
+    position:fixed;
+    top:45%;
+    padding-top: 0px;
+    padding-left: 5vw;
+    transform: translateY(-50%);
+    margin-top: -0.5vh;
+    opacity: 0;
+}

@@ -2,10 +2,7 @@ import zepto from 'npm-zepto'
 var count = 0;
 
 function listo() {
-    TweenMax.to($('#home .white'), 2, {
-        autoAlpha: 0,
-        ease: Power4.easeOut
-    });
+    /* */
 
     TweenMax.to($('#home .white h1'), 0.65, {
         y: '200vh',
@@ -14,12 +11,46 @@ function listo() {
     })
 
 
-    TweenMax.staggerTo("#home .appear", .7, {
+    TweenMax.to($('.ball-inner'), 1.2, {
+        y: '0px',
+        scale: '1',
         opacity: 1,
-        y: 0,
         ease: Power4.easeOut,
-        delay: 0.4
-    }, 0.05);
+        delay: 0.75
+    })
+
+
+    if ($('body').hasClass('home-first')) {
+        TweenMax.to($('#home .white'), 2, {
+            autoAlpha: 0,
+            ease: Power4.easeOut
+        });
+
+        TweenMax.staggerTo("#home .appear", .7, {
+            opacity: 1,
+            y: 0,
+            ease: Power4.easeOut,
+            delay: 0.4
+        }, 0.01);
+
+
+    } else {
+
+
+        TweenMax.to($('.msg'), 1, {
+            opacity: 0.5,
+            top: '50%',
+            ease: Power4.easeOut,
+            delay: 0.65
+        })
+
+    }
+
+
+
+
+
+
 
 }
 
@@ -32,7 +63,7 @@ function homePreload($timeout) {
                 $('.page-switch').css('display', 'block');
                 $('.page-switch').attr('href', '#/full');
 
-                 TweenMax.to($('#home .white'), 1, {
+                TweenMax.to($('#home .white'), 1, {
                     autoAlpha: 1,
                     ease: Power4.easeOut
                 });
@@ -43,28 +74,28 @@ function homePreload($timeout) {
                 });
 
                 TweenMax.to($('.page-switch').find('.w'), .6, {
-                                opacity: '1',
-                                scale:'1',
-                                ease: Power4.easeOut,
-                                delay:0.8
-                 });
+                    opacity: '1',
+                    scale: '1',
+                    ease: Power4.easeOut,
+                    delay: 0.8
+                });
 
                 TweenMax.to($('.page-switch').children().eq(0), .4, {
-                                opacity: '1',
-                                x:'0',
-                                ease: Power4.easeOut,
-                 });
+                    opacity: '1',
+                    x: '0',
+                    ease: Power4.easeOut,
+                });
 
                 TweenMax.to($('.page-switch').children().eq(1), .5, {
-                                opacity: '0',
-                                x:'0',
-                                ease: Power4.easeOut,
-                 });
+                    opacity: '0',
+                    x: '0',
+                    ease: Power4.easeOut,
+                });
 
                 TweenMax.to($('.page-switch').children().eq(2), .6, {
-                                opacity: '0',
-                                ease: Power4.easeOut,
-                 });
+                    opacity: '0',
+                    ease: Power4.easeOut,
+                });
 
 
                 var sizeItem = $('#home .item').size();
@@ -80,7 +111,7 @@ function homePreload($timeout) {
                             $('#home .white h1').text(Math.round(done) + '.');
 
                             if (done === 100) {
-                               // console.log('yes') // ready 
+                                // console.log('yes') // ready 
                                 count = 0; // reset counter
 
                                 listo();

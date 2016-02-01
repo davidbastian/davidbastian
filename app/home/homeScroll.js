@@ -34,50 +34,83 @@ function scrollFunction() {
 
 }
 
+function Dragdot() {
+
+    Draggable.create($('.ball'), {
+        //type: "x",
+        edgeResistance: 0.65,
+        bounds: '#tagHome',
+        throwProps: true,
+        onDrag: function() {
+            var suPos = 1 * (parseInt(this.x, 10)),
+                percent = ((suPos * 100) / (($('#tagHome').width()) - $('.ball').width())),
+                equal = ((percent * $('#home').width()) / 100);
+            // console.log(equal);
+            $('#tagHome').scrollLeft(equal);
+            $('.ball').addClass('grab');
+
+            /*TweenLite.set($('#home'), {
+                x: -equal + 'px',
+            });*/
+
+
+        },
+
+        onDragStart: function() {
+            TweenMax.to($('.msg'), 1.5, {
+                autoAlpha: 0,
+                ease: Power4.easeOut
+            });
+            TweenMax.to($('#home .white'), 1.5, {
+                autoAlpha: 0,
+                ease: Power4.easeOut
+            });
+
+            TweenMax.staggerTo("#home .appear", 1, {
+                opacity: 1,
+                y: 0,
+                ease: Power4.easeOut,
+                delay: 0.4
+            }, 0.03);
+
+            $('body').addClass('home-first');
+        },
+
+        onDragEnd: function() {
+            $('.ball').removeClass('grab');
+        },
+        onThrowUpdate: function() {
+            var suPos = 1 * (parseInt(this.x, 10)),
+                percent = ((suPos * 100) / (($('#tagHome').width()) - $('.ball').width())),
+                equal = ((percent * $('#home').width()) / 100);
+            //console.log(equal);
+
+            $('#tagHome').scrollLeft(equal);
+
+            /*TweenLite.set($('#home'), {
+                x: -equal + 'px',
+            });*/
+
+        }
+
+
+
+    });
+
+}
+
 
 function homeScroll($timeout) {
     return {
         link: function(scope, element, attr) {
             $timeout(function() {
 
-                console.log($('html').hasClass('safari'));
+                //console.log($('html').hasClass('safari'));
 
                 //scrollFunction();
-
-                Draggable.create($('.ball'), {
-                    //type: "x",
-                    edgeResistance: 0.65,
-                    bounds: '#tagHome',
-                    throwProps: true,
-                    onClick: function() {
-                        return false;
-                    },
-                    onDrag: function() {
-                        var suPos = 1 * (parseInt(this.x, 10)),
-                            percent = ((suPos * 100) / (($('#tagHome').width()) - $('.ball').width())),
-                            equal = ((percent * $('#home').width()) / 100);
-                        console.log(equal);
-
-                        $('#tagHome').scrollLeft(equal);
+                Dragdot();
 
 
-                    },
-                    onDragEnd: function() {
-                        //        $('.grab').removeClass('grabbing');
-                    },
-                    onThrowUpdate: function() {
-                        var suPos = 1 * (parseInt(this.x, 10)),
-                            percent = ((suPos * 100) / (($('#tagHome').width()) - $('.ball').width())),
-                            equal = ((percent * $('#home').width()) / 100);
-                        console.log(equal);
-
-                        $('#tagHome').scrollLeft(equal);
-
-                    }
-
-
-
-                });
 
             })
         }
