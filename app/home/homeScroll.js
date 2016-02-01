@@ -107,7 +107,7 @@ function homeScroll($timeout) {
 
                 //console.log($('html').hasClass('safari'));
 
-                //scrollFunction();
+                scrollFunction();
                 Dragdot();
 
 
