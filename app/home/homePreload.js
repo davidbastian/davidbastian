@@ -5,11 +5,23 @@ function listo() {
 
     $('#tagHome').scrollLeft($('body').attr('data-scroll'));
     
-    $('.ball').css({
-        'transform': $('body').attr('data-ball'),
-        '-webkit-transform': $('body').attr('data-ball')
-    });
-    
+    var databall = $('body').attr('data-ball');
+
+    if (databall !== null) {
+        var obj = databall.replace("translate3d", " ").replace("(", "").replace(")", "");
+        var arr = obj.split(',');
+
+        var arrX = arr[0];
+        var arrY = arr[1];
+
+        console.log(arrX, arrY);
+
+        TweenMax.set($('.ball'), {
+            y: arrY,
+            x: arrX
+        })
+    }
+
 
     TweenMax.to($('#home .white h1'), 0.65, {
         y: '200vh',
@@ -49,7 +61,6 @@ function listo() {
         });
 
     } else {
-
 
         window.onmouseover = function() {
 
