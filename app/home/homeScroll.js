@@ -16,11 +16,14 @@ function scrollFunction() {
             b = (equal * ($('#tagHome').width())) / 100;
 
         if (!$('body').hasClass('home-first')) {
+
             $('body').addClass('home-first');
+
             TweenMax.to($('#home .white'), 1, {
                 autoAlpha: 0,
                 ease: Power4.easeOut
             });
+
             TweenMax.to($('.msg'), 1.2, {
                 autoAlpha: 0,
                 ease: Power4.easeOut
@@ -34,15 +37,16 @@ function scrollFunction() {
                 delay: 0.4
             }, 0.06);
 
-
-
         }
-        if (!$('html').hasClass('.ipad')) {
 
-            TweenLite.to($('.ball'), 1, {
-                x: b + 'px',
-                ease: Expo.easeOut,
-            });
+        TweenLite.to($('.ball'), 1, {
+            x: b + 'px',
+            ease: Expo.easeOut,
+        });
+
+        if (!$('#single').size() > 0) {
+            $('body').attr('data-scroll', $('#tagHome').scrollLeft())
+            $('body').attr('data-ball', $('.ball').css('transform'));
 
         }
 
@@ -51,18 +55,25 @@ function scrollFunction() {
                 x: finalScroll
             },
             ease: Expo.easeOut,
-            overwrite: 5
-        });
+            overwrite: 5,
+            onComplete: function() {
 
+                if (!$('#single').size() > 0) {
+                    $('body').attr('data-scroll', $('#tagHome').scrollLeft())
+                    $('body').attr('data-ball', $('.ball').css('transform'));
+
+                }
+
+            }
+        });
     }
+
     var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel"
     if (document.attachEvent) {
         document.attachEvent("on" + mousewheelevt, displaywheel)
     } else if (document.addEventListener) {
         document.addEventListener(mousewheelevt, displaywheel, false)
     }
-
-
 }
 
 function Dragdot() {
@@ -80,8 +91,10 @@ function Dragdot() {
             $('#tagHome').scrollLeft(equal);
             $('.ball').addClass('grab');
 
-            $('body').attr('data-s', $('#tagHome').scrollLeft())
-            $('body').attr('data-p', percent);
+            $('body').attr('data-scroll', $('#tagHome').scrollLeft())
+            $('body').attr('data-ball', $('.ball').css('transform'));
+
+
         },
 
         onDragStart: function() {
@@ -117,17 +130,15 @@ function Dragdot() {
             $('#tagHome').scrollLeft(equal);
             $('.ball').addClass('grab');
 
-            $('body').attr('data-s', $('#tagHome').scrollLeft())
-            $('body').attr('data-p', percent);
+            $('body').attr('data-scroll', $('#tagHome').scrollLeft())
+            $('body').attr('data-ball', $('.ball').css('transform'));
+
 
         }
-
-
 
     });
 
 }
-
 
 function homeScroll($timeout) {
     return {
@@ -146,6 +157,7 @@ function homeScroll($timeout) {
         }
     }
 }
+
 export {
     homeScroll
 };

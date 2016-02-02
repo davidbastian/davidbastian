@@ -3,7 +3,13 @@ var count = 0;
 
 function listo() {
 
-    $('#tagHome').scrollLeft($('body').attr('data-s'));
+    $('#tagHome').scrollLeft($('body').attr('data-scroll'));
+    
+    $('.ball').css({
+        'transform': $('body').attr('data-ball'),
+        '-webkit-transform': $('body').attr('data-ball')
+    });
+    
 
     TweenMax.to($('#home .white h1'), 0.65, {
         y: '200vh',
@@ -28,14 +34,12 @@ function listo() {
 
         TweenMax.to($('.ball-inner'), 0.8, {
             autoAlpha: 1,
-            // y: '20vh',
             scale: '2',
             delay: 0.2,
             ease: Back.easeIn,
             onComplete: function() {
 
                 TweenMax.to($('.ball-inner'), 1, {
-                    // y: '20vh',
                     scale: '1',
                     ease: Expo.easeOut
                 });
@@ -56,7 +60,6 @@ function listo() {
                         autoAlpha: 0,
                         ease: Power4.easeOut,
                         delay: 0.4,
-                        //  y: '-5vh'
                     });
                     TweenMax.to($('#home .white'), 1, {
                         autoAlpha: 0,
