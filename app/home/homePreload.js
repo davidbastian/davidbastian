@@ -2,18 +2,18 @@ import zepto from 'npm-zepto'
 var count = 0;
 
 function listo() {
-    /* */
+
     $('#tagHome').scrollLeft($('body').attr('data-s'));
+
     TweenMax.to($('#home .white h1'), 0.65, {
         y: '200vh',
         opacity: 0,
         ease: Power4.easeIn
     })
 
-
-
-
     if ($('body').hasClass('home-first')) {
+
+
         TweenMax.to($('#home .white'), 2, {
             autoAlpha: 0,
             ease: Power4.easeOut
@@ -44,7 +44,6 @@ function listo() {
             }
         });
 
-
     } else {
 
 
@@ -57,7 +56,7 @@ function listo() {
                         autoAlpha: 0,
                         ease: Power4.easeOut,
                         delay: 0.4,
-                      //  y: '-5vh'
+                        //  y: '-5vh'
                     });
                     TweenMax.to($('#home .white'), 1, {
                         autoAlpha: 0,
@@ -75,20 +74,9 @@ function listo() {
                     $('body').addClass('home-first');
 
                 }, 1000)
-
-
-
             }
 
         }
-
-
-
-
-
-
-
-
 
         TweenMax.to($('.ball-inner'), 1.2, {
             y: '0px',
@@ -110,17 +98,12 @@ function listo() {
 
 
 
-
-
-
-
 }
 
 function homePreload($timeout) {
     return {
         link: function(scope, element, attr) {
             $timeout(function() {
-
 
                 $('.page-switch').css('display', 'block');
                 $('.page-switch').attr('href', '#/full');

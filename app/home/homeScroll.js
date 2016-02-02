@@ -77,20 +77,14 @@ function Dragdot() {
                 percent = ((suPos * 100) / (($('#tagHome').width()) - $('.ball').width())),
                 equal = ((percent * $('#home').width()) / 100);
 
-            console.log(percent);
-            $('body').attr('data-p', percent);
-            // console.log(equal);
             $('#tagHome').scrollLeft(equal);
             $('.ball').addClass('grab');
-            /*TweenLite.set($('#home'), {
-                x: -equal + 'px',
-            });*/
-            $('body').attr('data-s', $('#tagHome').scrollLeft())
 
+            $('body').attr('data-s', $('#tagHome').scrollLeft())
+            $('body').attr('data-p', percent);
         },
 
         onDragStart: function() {
-
             if (!$('body').hasClass('home-first')) {
                 TweenMax.to($('.msg'), 1.2, {
                     autoAlpha: 0,
@@ -109,8 +103,6 @@ function Dragdot() {
                     delay: 0.4
                 }, 0.02);
             }
-
-
         },
 
         onDragEnd: function() {
@@ -121,15 +113,12 @@ function Dragdot() {
             var suPos = 1 * (parseInt(this.x, 10)),
                 percent = ((suPos * 100) / (($('#tagHome').width()) - $('.ball').width())),
                 equal = ((percent * $('#home').width()) / 100);
-            //console.log(equal);
-            $('body').attr('data-p', percent);
-            $('body').attr('data-s', $('#tagHome').scrollLeft());
 
             $('#tagHome').scrollLeft(equal);
+            $('.ball').addClass('grab');
 
-            /*TweenLite.set($('#home'), {
-                x: -equal + 'px',
-            });*/
+            $('body').attr('data-s', $('#tagHome').scrollLeft())
+            $('body').attr('data-p', percent);
 
         }
 
@@ -146,17 +135,10 @@ function homeScroll($timeout) {
             $timeout(function() {
 
                 scrollFunction();
-
                 Dragdot();
 
 
                 $(window).on('resize', function() {
-                    /*var suPos = (($('#tagHome').width()*100)/$('#home').width()),
-                            eq = ($('body').attr('data-s') + ($('#tagHome').width()));
-
-                           console.log($('body').attr('data-p'), eq)*/
-
-
 
                 })
 

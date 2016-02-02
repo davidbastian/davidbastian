@@ -55,21 +55,13 @@ footer {
         }
     }
 
-    @media (max-width:1040px) {
-       // position: relative;
-       opacity: 0;
-    }
+    
     
    // padding-top: 25px;
 }
 
-.mobile {
-    footer {
-        opacity:1;
-    }
-}
 
-.ipad {
+.ipad, .mobile {
     footer {
         opacity:1!important;
     }
