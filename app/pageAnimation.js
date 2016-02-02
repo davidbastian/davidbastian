@@ -9,35 +9,14 @@ function pageAnimation() {
 
             } else if (tag === 'tagHome') {
 
-                if ($('html').hasClass('.ipad')) {
+               /* if ($('html').hasClass('.ipad')) {
 
                     TweenMax.set($('.ball'), {
-                        'x':'0',
-                        'y':'0%'
+                        'x': '0',
+                        'y': '0'
 
                     });
-                }
-
-                /*TweenMax.to($('.ball-inner'), 0.5, {
-                    autoAlpha: 1,
-                    // y: '20vh',
-                    scale: '3',
-                    delay: 1,
-                    ease: Back.easeIn,
-                    onComplete: function() {
-
-                        TweenMax.to($('.ball-inner'), 1, {
-                            // y: '20vh',
-                            scale: '1',
-                            ease: Back.easeOut
-                        });
-
-
-                    }
-                });*/
-
-
-
+                }*/
 
             } else if (tag === 'tagFull') {
 
@@ -81,11 +60,6 @@ function pageAnimation() {
                     // y: '20vh',
                     ease: Back.easeOut
                 });
-
-                //console.log($('#tagHome').scrollLeft());
-
-
-
 
                 TweenMax.to($('#home .appear'), 1, {
                     opacity: 0,

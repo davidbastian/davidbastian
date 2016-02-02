@@ -1,9 +1,10 @@
 import zepto from 'npm-zepto'
 
 
-function scrollFunction() {
+function scrollFunctionB() {
 
-    function displaywheel(e) {
+
+    function displaywheelB(e) {
         var el = $('#tagHome'),
             scrollTime = 2,
             scrollDistance = 200,
@@ -15,7 +16,15 @@ function scrollFunction() {
             equal = (finalScroll * 100) / $('#home').width(),
             b = (equal * ($('#tagHome').width())) / 100;
 
+        //console.log(b);
+        if (!$('html').hasClass('.ipad')) {
 
+            TweenMax.to($('.ball'), 1, {
+                x: b + 'px',
+                ease: Expo.easeOut
+            });
+
+        }
 
         if (!$('body').hasClass('home-first')) {
             $('body').addClass('home-first');
@@ -39,18 +48,6 @@ function scrollFunction() {
 
 
         }
-        if (!$('html').hasClass('.ipad')) {
-
-            TweenLite.to($('.ball'), 1, {
-                x: b + 'px',
-                ease: Expo.easeOut,
-            });
-
-        }
-
-
-
-
 
         TweenMax.to(el, scrollTime, {
             scrollTo: {
@@ -63,9 +60,9 @@ function scrollFunction() {
     }
     var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel"
     if (document.attachEvent) {
-        document.attachEvent("on" + mousewheelevt, displaywheel)
+        document.attachEvent("on" + mousewheelevt, displaywheelB)
     } else if (document.addEventListener) {
-        document.addEventListener(mousewheelevt, displaywheel, false)
+        document.addEventListener(mousewheelevt, displaywheelB, false)
     }
 
 
@@ -146,8 +143,20 @@ function homeScroll($timeout) {
 
                 //console.log($('html').hasClass('safari'));
 
-                scrollFunction();
+                $('#tagHome').scroll(function() {
+                    console.log($('#tagHome').scrollLeft())
+
+                });
+
+                //if ($('#tagSingle').size() !== 1) {
+
+
                 Dragdot();
+                scrollFunctionB();
+
+
+
+                // }
 
 
 
