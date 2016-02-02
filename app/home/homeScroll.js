@@ -89,6 +89,8 @@ function Dragdot() {
         },
 
         onDragStart: function() {
+
+             if (!$('body').hasClass('home-first')) {
             TweenMax.to($('.msg'), 1.2, {
                 autoAlpha: 0,
                 ease: Power4.easeOut
@@ -105,6 +107,7 @@ function Dragdot() {
                 ease: Power4.easeOut,
                 delay: 0.4
             }, 0.02);
+        }
 
 
         },
