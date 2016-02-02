@@ -7,13 +7,12 @@
                 <h1>0.<span></span></h1>
             </div>
         </div>
-        <div class="appear link" page-link ng-repeat="x in home">
+        <a ng-href="#/{{x.slug|toslug}}" class="appear link" ng-repeat="x in home">
             <img class="item" ng-src="{{x.img}}" home-loader alt="{{x.slug}}" />
             <p>
                 {{x.slug}} <span>—</span>
                 <span class="role">{{x.role}}</span>
-                <a ng-href="#/{{x.slug|toslug}}" class="appear"></a>
             </p>
-        </div>
+        </a>
     </div>
 </div>

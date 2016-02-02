@@ -1,8 +1,27 @@
 import zepto from 'npm-zepto'
 
 
-
 function scrollFunction() {
+
+    TweenMax.to($('.msg'), 1.2, {
+        autoAlpha: 0,
+        ease: Power4.easeOut
+    });
+    TweenMax.to($('#home .white'), 1, {
+        autoAlpha: 0,
+        ease: Power4.easeOut
+    });
+
+    TweenMax.staggerTo("#home .appear", 1, {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        ease: Power4.easeOut,
+        delay: 0.4
+    }, 0.02);
+
+    $('body').addClass('home-first');
+
     function displaywheel(e) {
         var el = $('#tagHome'),
             scrollTime = 2,
@@ -11,9 +30,17 @@ function scrollFunction() {
             evt = window.event || e,
             delta = evt.detail ? evt.detail / 3 : evt.wheelDelta / 120,
             scrollLeft = el.scrollLeft(),
-            finalScroll = scrollLeft - parseInt((delta * scrollDistance), 10);
+            finalScroll = scrollLeft - parseInt((delta * scrollDistance), 10),
+            equal = (finalScroll * 100) / $('#home').width(),
+            b = (equal * ($('#tagHome').width())) / 100;
 
-        //console.log(finalScroll) 
+
+
+
+        TweenLite.to($('.ball'), 1, {
+            x: b + 'px',
+            ease: Expo.easeOut,
+        });
 
         TweenMax.to(el, scrollTime, {
             scrollTo: {
@@ -48,11 +75,10 @@ function Dragdot() {
             // console.log(equal);
             $('#tagHome').scrollLeft(equal);
             $('.ball').addClass('grab');
-
             /*TweenLite.set($('#home'), {
                 x: -equal + 'px',
             });*/
-
+            $('body').attr('data-s', $('#tagHome').scrollLeft())
 
         },
 
@@ -66,24 +92,27 @@ function Dragdot() {
                 ease: Power4.easeOut
             });
 
-            TweenMax.staggerTo("#home .appear", 0.8, {
+            TweenMax.staggerTo("#home .appear", 1, {
                 opacity: 1,
+                x: 0,
                 y: 0,
                 ease: Power4.easeOut,
                 delay: 0.4
             }, 0.02);
 
-            $('body').addClass('home-first');
+
         },
 
         onDragEnd: function() {
             $('.ball').removeClass('grab');
+            $('body').addClass('home-first');
         },
         onThrowUpdate: function() {
             var suPos = 1 * (parseInt(this.x, 10)),
                 percent = ((suPos * 100) / (($('#tagHome').width()) - $('.ball').width())),
                 equal = ((percent * $('#home').width()) / 100);
             //console.log(equal);
+            $('body').attr('data-s', $('#tagHome').scrollLeft());
 
             $('#tagHome').scrollLeft(equal);
 

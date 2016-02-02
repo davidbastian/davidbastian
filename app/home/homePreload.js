@@ -3,7 +3,7 @@ var count = 0;
 
 function listo() {
     /* */
-
+    $('#tagHome').scrollLeft($('body').attr('data-s'));
     TweenMax.to($('#home .white h1'), 0.65, {
         y: '200vh',
         opacity: 0,
@@ -11,13 +11,7 @@ function listo() {
     })
 
 
-    TweenMax.to($('.ball-inner'), 1.2, {
-        y: '0px',
-        scale: '1',
-        opacity: 1,
-        ease: Power4.easeOut,
-        delay: 0.75
-    })
+
 
 
     if ($('body').hasClass('home-first')) {
@@ -33,8 +27,95 @@ function listo() {
             delay: 0.4
         }, 0.01);
 
+        TweenMax.to($('.ball-inner'), 0.8, {
+            autoAlpha: 1,
+            // y: '20vh',
+            scale: '2',
+            delay: 0.2,
+            ease: Back.easeIn,
+            onComplete: function() {
+
+                TweenMax.to($('.ball-inner'), 1, {
+                    // y: '20vh',
+                    scale: '1',
+                    ease: Expo.easeOut
+                });
+
+
+            }
+        });
+
 
     } else {
+
+        /* var ball = $('.ball');
+
+         ball.onmouseenter = function() {
+             TweenMax.to($('.msg'), 1.2, {
+                 autoAlpha: 0,
+                 ease: Power4.easeOut,
+                 delay: 0.4,
+                 y: '-10vh'
+             });
+             TweenMax.to($('#home .white'), 1, {
+                 autoAlpha: 0,
+                 ease: Power4.easeOut
+             });
+
+             TweenMax.staggerTo("#home .appear", 1, {
+                 opacity: 1,
+                 x: 0,
+                 y: 0,
+                 ease: Power4.easeOut,
+                 delay: 0.4
+             }, 0.02);
+
+
+
+         };*/
+
+
+        window.onmouseover = function() {
+            setTimeout(function() {
+                TweenMax.to($('.msg'), 1.2, {
+                    autoAlpha: 0,
+                    ease: Power4.easeOut,
+                    delay: 0.4,
+                    y: '-10vh'
+                });
+                TweenMax.to($('#home .white'), 1, {
+                    autoAlpha: 0,
+                    ease: Power4.easeOut
+                });
+
+                TweenMax.staggerTo("#home .appear", 1, {
+                    opacity: 1,
+                    x: 0,
+                    y: 0,
+                    ease: Power4.easeOut,
+                    delay: 0.4
+                }, 0.02);
+
+            }, 1000)
+
+        }
+
+
+
+
+
+
+
+
+
+
+        TweenMax.to($('.ball-inner'), 1.2, {
+            y: '0px',
+            scale: '1',
+            opacity: 1,
+            ease: Power4.easeOut,
+            delay: 0.75
+        })
 
 
         TweenMax.to($('.msg'), 1, {

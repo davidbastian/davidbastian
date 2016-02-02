@@ -1,7 +1,7 @@
 //header
 header {
     position: fixed;
-    z-index: 5;
+    z-index: 6;
     width: 100%;
     nav {
         display: flex;
@@ -47,8 +47,8 @@ header {
     cursor: grab!important;
     cursor: -webkit-grab!important;
     .ball-inner {
-        width: 0.8vw;
-        height: 0.8vw;
+        width: 13px;
+        height: 13px;
         background-color: red;
         border-radius: 1000px;
         position: relative;
@@ -69,6 +69,6 @@ header {
     padding-top: 0px;
     padding-left: 5vw;
     transform: translateY(-50%);
-    margin-top: -0.5vh;
+    margin-top: -0.35vh;
     opacity: 0;
 }
