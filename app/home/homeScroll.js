@@ -46,10 +46,6 @@ function scrollFunction() {
 
         }
 
-
-
-
-
         TweenMax.to(el, scrollTime, {
             scrollTo: {
                 x: finalScroll
@@ -80,6 +76,8 @@ function Dragdot() {
             var suPos = 1 * (parseInt(this.x, 10)),
                 percent = ((suPos * 100) / (($('#tagHome').width()) - $('.ball').width())),
                 equal = ((percent * $('#home').width()) / 100);
+
+                console.log(percent);
             // console.log(equal);
             $('#tagHome').scrollLeft(equal);
             $('.ball').addClass('grab');
@@ -143,14 +141,26 @@ function homeScroll($timeout) {
             $timeout(function() {
 
                 //console.log($('html').hasClass('safari'));
-                $('#tagHome').scroll(function(){
+                /*$('#tagHome').scroll(function() {
 
-                            $('body').attr('data-s', $('#tagHome').scrollLeft());
+                    $('body').attr('data-s', $('#tagHome').scrollLeft());
 
-                });
+                            $('.ball').attr('data-s', $('#tagHome').scrollLeft());
 
-                scrollFunction();
-                Dragdot();
+
+                });*/
+
+                //scrollFunction();
+               // $(window).on('ready',function(){
+                     //   Dragdot();
+
+               // })
+
+                //$('#tagHome').on('resize ready',function(){
+                        Dragdot();
+
+              //  })
+                
 
 
 
