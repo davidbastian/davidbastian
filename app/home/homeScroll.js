@@ -143,6 +143,11 @@ function homeScroll($timeout) {
             $timeout(function() {
 
                 //console.log($('html').hasClass('safari'));
+                $('#tagHome').scroll(function(){
+
+                            $('body').attr('data-s', $('#tagHome').scrollLeft());
+
+                });
 
                 scrollFunction();
                 Dragdot();
