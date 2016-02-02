@@ -28,11 +28,11 @@
                 }
             }
             .credits {
-               // position: absolute;
+                // position: absolute;
                 bottom: 0;
                 left: 0;
                 padding-bottom: 3vh;
-                padding-top:13vh;
+                padding-top: 13vh;
                 ul {
                     margin-top: 20px;
                     li {
@@ -101,6 +101,14 @@
             width: 100%;
             max-width: 1200px;
             left: 0;
+        }
+    }
+}
+
+.ipad {
+    #single {
+        .description {
+            position: absolute;
         }
     }
 }

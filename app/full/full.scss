@@ -85,3 +85,12 @@
         }
     }
 }
+
+.ipad {
+    .el {
+        width: 80vw!important;
+        @media only screen and (orientation: landscape) {
+            width: 60vw!important;
+        }
+    }
+}

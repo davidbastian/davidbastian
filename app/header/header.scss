@@ -17,10 +17,9 @@ header {
             padding-right: 2vw;
             li {
                 margin-left: 40px;
-                 @media (max-width:1040px) {
+                @media (max-width: 1040px) {
                     margin-left: 4vw;
                 }
-
                 a {
                     text-transform: lowercase;
                     font-size: 13px;
@@ -29,8 +28,6 @@ header {
         }
     }
 }
-
-
 
 .ball {
     position: fixed;
@@ -43,7 +40,6 @@ header {
     align-items: center;
     justify-content: center;
     //cursor: -webkit-grab!important;
-    
     cursor: grab!important;
     cursor: -webkit-grab!important;
     .ball-inner {
@@ -54,7 +50,6 @@ header {
         position: relative;
         opacity: 0;
         transform: scale(2) translateY(-20px);
-        
     }
     &.grab {
         cursor: -webkit-grabbing!important;
@@ -63,12 +58,33 @@ header {
 }
 
 .msg {
-    
-    position:fixed;
-    top:45%;
+    position: fixed;
+    top: 45%;
     padding-top: 0px;
     padding-left: 5vw;
     transform: translateY(-50%);
     margin-top: -0.35vh;
     opacity: 0;
+}
+
+
+.ipad {
+    .ball {
+        left: 2.5vw;
+        .ball-inner {
+            width: 4.5vw;
+            height: 4.5vw;
+        }
+    }
+
+    .msg {
+        padding-left: 10vw;
+         margin-top: -0.1vh;
+    }
+
+    .home-first {
+        .ball {
+           // top:-50%!important;
+        }
+    }
 }

@@ -97,6 +97,8 @@ video {
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-backface-visibility: hidden;
+    
 }
 
 article,

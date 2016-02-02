@@ -8,6 +8,7 @@
         line-height: 1.6em;
         padding: 0px;
         opacity: 0;
+        transform: translateZ(0);
         &.active {
             opacity: 1;
         }

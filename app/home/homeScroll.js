@@ -3,13 +3,6 @@ import zepto from 'npm-zepto'
 
 function scrollFunction() {
 
-
-
-
-
-
-
-
     function displaywheel(e) {
         var el = $('#tagHome'),
             scrollTime = 2,
@@ -25,7 +18,7 @@ function scrollFunction() {
 
 
         if (!$('body').hasClass('home-first')) {
-             $('body').addClass('home-first');
+            $('body').addClass('home-first');
             TweenMax.to($('#home .white'), 1, {
                 autoAlpha: 0,
                 ease: Power4.easeOut
@@ -43,14 +36,18 @@ function scrollFunction() {
                 delay: 0.4
             }, 0.06);
 
-           
+
 
         }
+        if (!$('html').hasClass('.ipad')) {
 
-        TweenLite.to($('.ball'), 1, {
+            TweenLite.to($('.ball'), 1, {
                 x: b + 'px',
                 ease: Expo.easeOut,
             });
+
+        }
+
 
 
 

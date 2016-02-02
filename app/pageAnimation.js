@@ -9,6 +9,14 @@ function pageAnimation() {
 
             } else if (tag === 'tagHome') {
 
+                if ($('html').hasClass('.ipad')) {
+
+                    TweenMax.set($('.ball'), {
+                        'x':'0',
+                        'y':'0%'
+
+                    });
+                }
 
                 /*TweenMax.to($('.ball-inner'), 0.5, {
                     autoAlpha: 1,

@@ -68,3 +68,13 @@ footer {
         opacity:1;
     }
 }
+
+.ipad {
+    footer {
+        opacity:1!important;
+    }
+
+    .page-switch {
+        display: none!important;
+    }
+}
