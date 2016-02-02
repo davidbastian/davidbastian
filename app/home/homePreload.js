@@ -57,7 +57,7 @@ function listo() {
                         autoAlpha: 0,
                         ease: Power4.easeOut,
                         delay: 0.4,
-                        y: '-5vh'
+                      //  y: '-5vh'
                     });
                     TweenMax.to($('#home .white'), 1, {
                         autoAlpha: 0,
