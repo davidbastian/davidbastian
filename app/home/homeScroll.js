@@ -145,41 +145,17 @@ function homeScroll($timeout) {
         link: function(scope, element, attr) {
             $timeout(function() {
 
-                //console.log($('html').hasClass('safari'));
-                /*$('#tagHome').scroll(function() {
+                scrollFunction();
 
-                    $('body').attr('data-s', $('#tagHome').scrollLeft());
-
-                            $('.ball').attr('data-s', $('#tagHome').scrollLeft());
-
-
-                });*/
-
-                //scrollFunction();
-                // $(window).on('ready',function(){
-                //   Dragdot();
-
-                // })
-
-
-
-                //$('#tagHome').on('resize ready',function(){
                 Dragdot();
 
-                //  })
 
                 $(window).on('resize', function() {
-                    //   Dragdot();
-                    var suPos = (($('#tagHome').width()*100)/$('#home').width()),
+                    /*var suPos = (($('#tagHome').width()*100)/$('#home').width()),
                             eq = ($('body').attr('data-s') + ($('#tagHome').width()));
 
-                           console.log($('body').attr('data-p'), eq)
+                           console.log($('body').attr('data-p'), eq)*/
 
-                    /*$('#tagHome').scrollLeft(eq);
-
-                   /* TweenLite.set($('.ball'), {
-                        x: suPos + '%'
-                    });*/
 
 
                 })
