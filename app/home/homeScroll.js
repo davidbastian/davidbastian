@@ -1,78 +1,90 @@
 import zepto from 'npm-zepto'
 
 
-function scrollFunction() {
+function scrollFunctionB() {
 
-    function displaywheel(e) {
-        var el = $('#tagHome'),
-            scrollTime = 2,
-            scrollDistance = 200,
-
-            evt = window.event || e,
-            delta = evt.detail ? evt.detail / 3 : evt.wheelDelta / 120,
-            scrollLeft = el.scrollLeft(),
-            finalScroll = scrollLeft - parseInt((delta * scrollDistance), 10),
-            equal = (finalScroll * 100) / $('#home').width(),
-            b = (equal * ($('#tagHome').width())) / 100;
-
-        if (!$('body').hasClass('home-first')) {
-
-            $('body').addClass('home-first');
-
-            TweenMax.to($('#home .white'), 1, {
-                autoAlpha: 0,
-                ease: Power4.easeOut
-            });
-
-            TweenMax.to($('.msg'), 1.2, {
-                autoAlpha: 0,
-                ease: Power4.easeOut
-            });
-
-            TweenMax.staggerTo("#home .appear", 1, {
-                opacity: 1,
-                x: 0,
-                y: 0,
-                ease: Power4.easeOut,
-                delay: 0.4
-            }, 0.06);
-
-        }
-
-        TweenLite.to($('.ball'), 1, {
-            x: b + 'px',
-            ease: Expo.easeOut,
-        });
-
+    function displaywheelB(e) {
         if (!$('#single').size() > 0) {
-            $('body').attr('data-scroll', $('#tagHome').scrollLeft())
-            $('body').attr('data-ball', $('.ball').css('transform'));
 
-        }
 
-        TweenMax.to(el, scrollTime, {
-            scrollTo: {
-                x: finalScroll
-            },
-            ease: Expo.easeOut,
-            overwrite: 5,
-            onComplete: function() {
 
-                if (!$('#single').size() > 0) {
-                    $('body').attr('data-scroll', $('#tagHome').scrollLeft())
-                    $('body').attr('data-ball', $('.ball').css('transform'));
+            var el = $('#tagHome'),
+                scrollTime = 2,
+                scrollDistance = 200,
 
-                }
+                evt = window.event || e,
+                delta = evt.detail ? evt.detail / 3 : evt.wheelDelta / 120,
+
+                scrollLeft = el.scrollLeft(),
+                finalScroll = scrollLeft - parseInt((delta * scrollDistance), 10),
+                equal = (finalScroll * 100) / $('#home').width(),
+                b = (equal * ($('#tagHome').width())) / 100;
+
+                //console.log(delta);
+
+
+
+            if (!$('body').hasClass('home-first')) {
+
+                $('body').addClass('home-first');
+
+                TweenMax.to($('#home .white'), 1, {
+                    autoAlpha: 0,
+                    ease: Power4.easeOut
+                });
+
+                TweenMax.to($('.msg'), 1.2, {
+                    autoAlpha: 0,
+                    ease: Power4.easeOut
+                });
+
+                TweenMax.staggerTo("#home .appear", 1, {
+                    opacity: 1,
+                    x: 0,
+                    y: 0,
+                    ease: Power4.easeOut,
+                    delay: 0.4
+                }, 0.06);
 
             }
-        });
+
+            TweenLite.to($('.ball'), 1, {
+                x: b + 'px',
+                ease: Expo.easeOut,
+            });
+
+            if (!$('#single').size() > 0) {
+                $('body').attr('data-scroll', $('#tagHome').scrollLeft())
+                $('body').attr('data-ball', $('.ball').css('transform'));
+
+            }
+
+            TweenMax.to(el, scrollTime, {
+                scrollTo: {
+                    x: finalScroll
+                },
+                ease: Expo.easeOut,
+                overwrite: 5,
+                onComplete: function() {
+
+                    if (!$('#single').size() > 0) {
+                        $('body').attr('data-scroll', $('#tagHome').scrollLeft())
+                        $('body').attr('data-ball', $('.ball').css('transform'));
+
+                    }
+
+                }
+            });
+
+
+        }
     }
 
     var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel"
     if (document.attachEvent) {
-        document.attachEvent("on" + mousewheelevt, displaywheel)
+        document.attachEvent("on" + mousewheelevt, displaywheelB)
     } else if (document.addEventListener) {
-        document.addEventListener(mousewheelevt, displaywheel, false)
+        document.addEventListener(mousewheelevt, displaywheelB, false)
     }
 }
 
@@ -128,7 +140,7 @@ function Dragdot() {
                 equal = ((percent * $('#home').width()) / 100);
 
             $('#tagHome').scrollLeft(equal);
-            $('.ball').addClass('grab');
+            // $('.ball').addClass('grab');
 
             $('body').attr('data-scroll', $('#tagHome').scrollLeft())
             $('body').attr('data-ball', $('.ball').css('transform'));
@@ -145,13 +157,10 @@ function homeScroll($timeout) {
         link: function(scope, element, attr) {
             $timeout(function() {
 
-                scrollFunction();
+
+
+                scrollFunctionB();
                 Dragdot();
-
-
-                $(window).on('resize', function() {
-
-                })
 
             })
         }

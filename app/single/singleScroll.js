@@ -4,24 +4,30 @@ import zepto from 'npm-zepto'
 function scrollFunction() {
 
     function displaywheel(e) {
-        var el = $('#tagSingle'),
-            scrollTime = 2,
-            scrollDistance = 180,
+        if ($('#single').size() > 0) {
 
-            evt = window.event || e,
-            delta = evt.detail ? evt.detail / 3 : evt.wheelDelta / 120,
-            scrollTop = el.scrollTop(),
-            finalScroll = scrollTop - parseInt((delta * scrollDistance), 10);
 
-        //console.log(finalScroll) 
+            var el = $('#tagSingle'),
+                scrollTime = 2,
+                scrollDistance = 180,
 
-        TweenMax.to(el, scrollTime, {
-            scrollTo: {
-                y: finalScroll
-            },
-            ease: Expo.easeOut,
-            overwrite: 5
-        });
+                evt = window.event || e,
+                delta = evt.detail ? evt.detail / 3 : evt.wheelDelta / 120,
+                scrollTop = el.scrollTop(),
+                finalScroll = scrollTop - parseInt((delta * scrollDistance), 10);
+
+            //console.log(finalScroll) 
+
+            TweenMax.to(el, scrollTime, {
+                scrollTo: {
+                    y: finalScroll
+                },
+                ease: Expo.easeOut,
+                overwrite: 5
+            });
+
+
+        }
 
     }
 

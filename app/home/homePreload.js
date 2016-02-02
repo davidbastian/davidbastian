@@ -4,7 +4,7 @@ var count = 0;
 function listo() {
 
     $('#tagHome').scrollLeft($('body').attr('data-scroll'));
-    
+
     var databall = $('body').attr('data-ball');
 
     if (databall !== null) {
@@ -14,7 +14,7 @@ function listo() {
         var arrX = arr[0];
         var arrY = arr[1];
 
-        console.log(arrX, arrY);
+        //console.log(arrX, arrY);
 
         TweenMax.set($('.ball'), {
             y: arrY,
@@ -30,7 +30,6 @@ function listo() {
     })
 
     if ($('body').hasClass('home-first')) {
-
 
         TweenMax.to($('#home .white'), 2, {
             autoAlpha: 0,
@@ -55,7 +54,6 @@ function listo() {
                     scale: '1',
                     ease: Expo.easeOut
                 });
-
 
             }
         });
