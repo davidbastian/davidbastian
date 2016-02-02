@@ -3,24 +3,12 @@ import zepto from 'npm-zepto'
 
 function scrollFunction() {
 
-    TweenMax.to($('.msg'), 1.2, {
-        autoAlpha: 0,
-        ease: Power4.easeOut
-    });
-    TweenMax.to($('#home .white'), 1, {
-        autoAlpha: 0,
-        ease: Power4.easeOut
-    });
 
-    TweenMax.staggerTo("#home .appear", 1, {
-        opacity: 1,
-        x: 0,
-        y: 0,
-        ease: Power4.easeOut,
-        delay: 0.4
-    }, 0.02);
 
-    $('body').addClass('home-first');
+
+
+
+
 
     function displaywheel(e) {
         var el = $('#tagHome'),
@@ -36,11 +24,36 @@ function scrollFunction() {
 
 
 
+        if (!$('body').hasClass('home-first')) {
+             $('body').addClass('home-first');
+            TweenMax.to($('#home .white'), 1, {
+                autoAlpha: 0,
+                ease: Power4.easeOut
+            });
+            TweenMax.to($('.msg'), 1.2, {
+                autoAlpha: 0,
+                ease: Power4.easeOut
+            });
+
+            TweenMax.staggerTo("#home .appear", 1, {
+                opacity: 1,
+                x: 0,
+                y: 0,
+                ease: Power4.easeOut,
+                delay: 0.4
+            }, 0.06);
+
+           
+
+        }
 
         TweenLite.to($('.ball'), 1, {
-            x: b + 'px',
-            ease: Expo.easeOut,
-        });
+                x: b + 'px',
+                ease: Expo.easeOut,
+            });
+
+
+
 
         TweenMax.to(el, scrollTime, {
             scrollTo: {

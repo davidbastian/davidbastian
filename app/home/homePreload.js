@@ -13,7 +13,6 @@ function listo() {
 
 
 
-
     if ($('body').hasClass('home-first')) {
         TweenMax.to($('#home .white'), 2, {
             autoAlpha: 0,
@@ -48,58 +47,40 @@ function listo() {
 
     } else {
 
-        /* var ball = $('.ball');
-
-         ball.onmouseenter = function() {
-             TweenMax.to($('.msg'), 1.2, {
-                 autoAlpha: 0,
-                 ease: Power4.easeOut,
-                 delay: 0.4,
-                 y: '-10vh'
-             });
-             TweenMax.to($('#home .white'), 1, {
-                 autoAlpha: 0,
-                 ease: Power4.easeOut
-             });
-
-             TweenMax.staggerTo("#home .appear", 1, {
-                 opacity: 1,
-                 x: 0,
-                 y: 0,
-                 ease: Power4.easeOut,
-                 delay: 0.4
-             }, 0.02);
-
-
-
-         };*/
-
 
         window.onmouseover = function() {
-            setTimeout(function() {
-                TweenMax.to($('.msg'), 1.2, {
-                    autoAlpha: 0,
-                    ease: Power4.easeOut,
-                    delay: 0.4,
-                    y: '-10vh'
-                });
-                TweenMax.to($('#home .white'), 1, {
-                    autoAlpha: 0,
-                    ease: Power4.easeOut
-                });
 
-                TweenMax.staggerTo("#home .appear", 1, {
-                    opacity: 1,
-                    x: 0,
-                    y: 0,
-                    ease: Power4.easeOut,
-                    delay: 0.4
-                }, 0.02);
+            if (!$('body').hasClass('home-first')) {
 
-            }, 1000)
+                setTimeout(function() {
+                    TweenMax.to($('.msg'), 1.2, {
+                        autoAlpha: 0,
+                        ease: Power4.easeOut,
+                        delay: 0.4,
+                        y: '-5vh'
+                    });
+                    TweenMax.to($('#home .white'), 1, {
+                        autoAlpha: 0,
+                        ease: Power4.easeOut
+                    });
+
+                    TweenMax.staggerTo("#home .appear", 1, {
+                        opacity: 1,
+                        x: 0,
+                        y: 0,
+                        ease: Power4.easeOut,
+                        delay: 0.4
+                    }, 0.06);
+
+                    $('body').addClass('home-first');
+
+                }, 1000)
+
+
+
+            }
 
         }
-
 
 
 
