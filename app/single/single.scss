@@ -64,6 +64,13 @@
                     position: relative;
                     padding-top: 3vh;
                 }
+
+                @media (max-height:850px) {
+                    position: relative;
+                    padding-top: 3vh;
+                }
+
+
             }
         }
         @media (max-width:1040px) {
