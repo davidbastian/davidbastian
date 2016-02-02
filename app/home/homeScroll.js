@@ -1,10 +1,9 @@
 import zepto from 'npm-zepto'
 
 
-function scrollFunctionB() {
+function scrollFunction() {
 
-
-    function displaywheelB(e) {
+    function displaywheel(e) {
         var el = $('#tagHome'),
             scrollTime = 2,
             scrollDistance = 200,
@@ -15,16 +14,6 @@ function scrollFunctionB() {
             finalScroll = scrollLeft - parseInt((delta * scrollDistance), 10),
             equal = (finalScroll * 100) / $('#home').width(),
             b = (equal * ($('#tagHome').width())) / 100;
-
-        //console.log(b);
-        if (!$('html').hasClass('.ipad')) {
-
-            TweenMax.to($('.ball'), 1, {
-                x: b + 'px',
-                ease: Expo.easeOut
-            });
-
-        }
 
         if (!$('body').hasClass('home-first')) {
             $('body').addClass('home-first');
@@ -48,6 +37,18 @@ function scrollFunctionB() {
 
 
         }
+        if (!$('html').hasClass('.ipad')) {
+
+            TweenLite.to($('.ball'), 1, {
+                x: b + 'px',
+                ease: Expo.easeOut,
+            });
+
+        }
+
+
+
+
 
         TweenMax.to(el, scrollTime, {
             scrollTo: {
@@ -60,9 +61,9 @@ function scrollFunctionB() {
     }
     var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel"
     if (document.attachEvent) {
-        document.attachEvent("on" + mousewheelevt, displaywheelB)
+        document.attachEvent("on" + mousewheelevt, displaywheel)
     } else if (document.addEventListener) {
-        document.addEventListener(mousewheelevt, displaywheelB, false)
+        document.addEventListener(mousewheelevt, displaywheel, false)
     }
 
 
@@ -143,20 +144,8 @@ function homeScroll($timeout) {
 
                 //console.log($('html').hasClass('safari'));
 
-                $('#tagHome').scroll(function() {
-                    console.log($('#tagHome').scrollLeft())
-
-                });
-
-                //if ($('#tagSingle').size() !== 1) {
-
-
+                scrollFunction();
                 Dragdot();
-                scrollFunctionB();
-
-
-
-                // }
 
 
 
