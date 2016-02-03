@@ -74,9 +74,12 @@ header {
     .msg {
         display: none;
     }
-    #menu li a {
-        @media (max-width: 360px) {
+    @media (max-width: 360px) {
+        #menu li a {
             font-size: 12px!important;
+        }
+        #logo {
+            font-size: 15px;
         }
     }
 }

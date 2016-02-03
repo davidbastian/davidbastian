@@ -12,6 +12,8 @@
         &.active {
             opacity: 1;
         }
+
+
     }
     .findme {
         margin-top: 50px;
@@ -28,5 +30,15 @@
         }
         opacity:0;
         transform:translatey(20px);
+    }
+}
+
+.mobile {
+
+    #about {
+
+        h2 {
+                margin-top: -80px;
+        }
     }
 }
