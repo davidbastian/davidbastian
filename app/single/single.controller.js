@@ -10,6 +10,8 @@ function SingleController($scope, $routeParams) {
 
     $scope.mobile = $('html').hasClass('mobile');
 
+    $('body').removeClass('cr');
+
     //console.log($scope.mobile);
 
     $scope.inner = data.filter(function(entry) {

@@ -31,7 +31,7 @@
                 // position: absolute;
                 bottom: 0;
                 left: 0;
-                    position: absolute;
+                position: absolute;
                 padding-bottom: 3vh;
                 padding-top: 13vh;
                 ul {
@@ -64,13 +64,10 @@
                     position: relative;
                     padding-top: 3vh;
                 }
-
                 @media (max-height:850px) {
                     position: relative;
                     padding-top: 3vh;
                 }
-
-
             }
         }
         @media (max-width:1040px) {
@@ -99,6 +96,7 @@
             video {
                 width: 100%;
                 display: block;
+                -webkit-transform: translateZ(0);
             }
             &:last-of-type {
                 margin-bottom: 0px;
@@ -111,12 +109,27 @@
             left: 0;
         }
     }
+    .fake-footer {
+        font-size: 13px;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+        opacity: 0.5;
+        //font-weight:100;
+    }
 }
 
 .ipad {
     #single {
         .description {
-            position: absolute;
+            @media only screen and (orientation: landscape) {
+                position: absolute;
+            }
         }
+    }
+}
+
+.mobile {
+    footer {
+        display: none;
     }
 }

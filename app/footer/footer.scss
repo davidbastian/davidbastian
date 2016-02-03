@@ -5,7 +5,6 @@ footer {
     bottom: 0px;
     left: 0px;
     width: 100%;
-    //display:none;
     
     z-index: 5;
     .container {
@@ -64,6 +63,7 @@ footer {
 .ipad, .mobile {
     footer {
         opacity:1!important;
+          display:none;
     }
 
     .page-switch {

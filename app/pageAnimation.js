@@ -9,6 +9,8 @@ function pageAnimation() {
 
             } else if (tag === 'tagHome') {
 
+                
+
                /* if ($('html').hasClass('.ipad')) {
 
                     TweenMax.set($('.ball'), {
@@ -22,6 +24,9 @@ function pageAnimation() {
 
 
             } else if (tag === 'tagAbout') {
+
+                  
+
                 $('.page-switch').css('display', 'none');
                 TweenMax.to($('#about'), 1, {
                     opacity: 1,
@@ -37,6 +42,7 @@ function pageAnimation() {
             var tag = element[0].children[0].id;
 
             if (tag === 'tagSingle') {
+                
 
                 TweenMax.to($('#single .appear'), 1, {
                     opacity: 0,
@@ -47,6 +53,7 @@ function pageAnimation() {
 
             } else if (tag === 'tagHome') {
                 $('.page-switch').css('display', 'none');
+                // $('footer').css('display','none');
 
                 TweenMax.to($('.ball-inner'), 1, {
                     autoAlpha: 0,

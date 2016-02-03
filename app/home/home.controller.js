@@ -5,6 +5,8 @@ function HomeController($scope) {
     $scope.message = 'This is Home';
     $scope.home = data;
 
+    $('body').addClass('cr');
+
 }
 
 export {

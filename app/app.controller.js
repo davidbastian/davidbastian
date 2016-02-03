@@ -4,11 +4,12 @@ function AppController($scope) {
         'description': 'default description',
     };
 
+ 
+
     // whenever a controller emits the newPageLoaded event, we update the app's metadata
     $scope.$on('newPageLoaded', function(event, metadata) {
         $scope.metadata = metadata
     });
-
 
 }
 

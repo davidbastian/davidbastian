@@ -2,7 +2,8 @@ import zepto from 'npm-zepto'
 var count = 0;
 
 function listo() {
-     $('.page-switch').css('display', 'none');
+    $('.page-switch').css('display', 'none');
+    $('footer').css('display', 'block');
     TweenMax.to($('#single .white'), 2, {
         //  top: '-100vh',
         autoAlpha: 0,
@@ -33,7 +34,7 @@ function singlePreload($timeout) {
                 TweenMax.to($('#single .white'), 1, {
                     autoAlpha: 1,
                     ease: Power4.easeOut,
-                   // onComplete: done
+                    // onComplete: done
                 });
                 TweenMax.to($('#single .white h1'), 0.6, {
                     y: '0vh',
@@ -50,11 +51,11 @@ function singlePreload($timeout) {
                         var done = ((count * 100) / sizeItem);
 
                         setTimeout(function() {
-                             //  console.log(Math.round(done) + '%') // show the percent 
+                            //  console.log(Math.round(done) + '%') // show the percent 
                             $('#single .white h1').text(Math.round(done) + '.');
 
                             if (done === 100) {
-                               // console.log('yes') // ready 
+                                // console.log('yes') // ready 
                                 count = 0; // reset counter
 
                                 listo();

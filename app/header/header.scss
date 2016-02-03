@@ -14,7 +14,7 @@ header {
         }
         #menu {
             display: flex;
-            padding-right: 2vw;
+            padding-right: 0vw;
             li {
                 margin-left: 40px;
                 @media (max-width: 1040px) {
@@ -67,24 +67,30 @@ header {
     opacity: 0;
 }
 
+.mobile {
+    .ball {
+        display: none;
+    }
+    .msg {
+        display: none;
+    }
+}
 
 .ipad {
     .ball {
-        left: 2.5vw;
+        left: 4.5vw;
         .ball-inner {
             width: 4.5vw;
             height: 4.5vw;
         }
     }
-
     .msg {
-        padding-left: 10vw;
-         margin-top: -0.1vh;
+        padding-left: 12vw;
+        margin-top: -0.1vh;
     }
-
     .home-first {
         .ball {
-           // top:-50%!important;
+            // top:-50%!important;
         }
     }
 }
