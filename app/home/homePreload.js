@@ -5,7 +5,6 @@ function listo() {
 
     $('#tagHome').scrollLeft($('body').attr('data-scroll'));
 
-    $('footer').css('display','block');
 
     var databall = $('body').attr('data-ball');
 

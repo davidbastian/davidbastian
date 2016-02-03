@@ -9,6 +9,7 @@ function SingleController($scope, $routeParams) {
     $scope.slug = $routeParams.single;
 
     $scope.mobile = $('html').hasClass('mobile');
+    $scope.ipad = $('html').hasClass('ipad');
 
     $('footer').removeClass('cr');
 

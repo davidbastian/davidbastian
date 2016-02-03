@@ -1,11 +1,9 @@
-
 //footer
 footer {
     position: fixed;
     bottom: 0px;
     left: 0px;
     width: 100%;
-    
     z-index: 5;
     .container {
         position: relative;
@@ -21,9 +19,9 @@ footer {
             height: 16px;
             width: 16px;
             right: 0;
-            position:relative;
+            position: relative;
             opacity: 0.3;
-           // transition: .3s ease-out;
+            // transition: .3s ease-out;
             //display:none;
             a {
                 position: absolute;
@@ -34,38 +32,43 @@ footer {
                     height: auto;
                     display: block;
                     position: absolute;
-                    opacity:0;
-
-
+                    opacity: 0;
                     &:first-child {
-                            opacity: 1;
-
+                        opacity: 1;
                     }
-
                     &.w {
-                        opacity:1;
+                        opacity: 1;
                     }
                 }
             }
-
             &:hover {
-             //   opacity: 1;
+                //   opacity: 1;
             }
         }
     }
-
-    
-    
-   // padding-top: 25px;
+    // padding-top: 25px;
 }
 
-
-.ipad, .mobile {
+.mobile {
     footer {
-        opacity:1!important;
-          display:none;
+        p {
+            @media (max-width: 360px) {
+                font-size: 12px!important;
+            }
+        }
     }
+}
 
+.ipad,
+.mobile {
+    footer {
+        //  opacity:1!important;
+        // display:none;
+        display: none;
+        &.cr {
+            display: block;
+        }
+    }
     .page-switch {
         display: none!important;
     }

@@ -3,7 +3,6 @@ var count = 0;
 
 function listo() {
     $('.page-switch').css('display', 'none');
-    $('footer').css('display', 'block');
     TweenMax.to($('#single .white'), 2, {
         //  top: '-100vh',
         autoAlpha: 0,
