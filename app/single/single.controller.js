@@ -10,7 +10,7 @@ function SingleController($scope, $routeParams) {
 
     $scope.mobile = $('html').hasClass('mobile');
 
-    $('body').removeClass('cr');
+    $('footer').removeClass('cr');
 
     //console.log($scope.mobile);
 

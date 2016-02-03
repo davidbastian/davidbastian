@@ -4,7 +4,7 @@ const data = p.projects
 function FullController($scope) {
     $scope.message = 'This is Full';
     $scope.full = data;
-    $('body').addClass('cr');
+    $('footer').addClass('cr');
 }
 
 export {

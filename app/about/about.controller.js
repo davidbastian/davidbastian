@@ -1,7 +1,7 @@
 
 function AboutController($scope) {
             $scope.message = 'This is about';
-            $('body').addClass('cr');      
+            $('footer').addClass('cr');      
 }
 
 export {AboutController};
