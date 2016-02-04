@@ -32,21 +32,21 @@ function listo() {
 
     if ($('html').hasClass('mobile')) {
 
-            TweenMax.to($('#home .white'), 1, {
-                autoAlpha: 0,
-                ease: Power4.easeOut
-            });
+        TweenMax.to($('#home .white'), 1, {
+            autoAlpha: 0,
+            ease: Power4.easeOut
+        });
 
-            TweenMax.staggerTo("#home .appear", 1, {
-                opacity: 1,
-                x: 0,
-                y: 0,
-                ease: Power4.easeOut,
-                delay: 0.4
-            }, 0.06);
+        TweenMax.staggerTo("#home .appear", 1, {
+            opacity: 1,
+            x: 0,
+            y: 0,
+            ease: Power4.easeOut,
+            delay: 0.4
+        }, 0.06);
 
 
-        } 
+    }
 
 
 
@@ -66,13 +66,13 @@ function listo() {
 
         TweenMax.to($('.ball-inner'), 0.8, {
             autoAlpha: 1,
-            scale: '2',
+            scale: '1',
             delay: 0.2,
             ease: Back.easeIn,
             onComplete: function() {
 
                 TweenMax.to($('.ball-inner'), 1, {
-                    scale: '1',
+                    scale: '0.4',
                     ease: Expo.easeOut
                 });
 
@@ -84,45 +84,45 @@ function listo() {
 
     } else {
 
-       
 
-            window.onmouseover = function() {
 
-                if (!$('body').hasClass('home-first')) {
+        window.onmouseover = function() {
 
-                    setTimeout(function() {
-                        TweenMax.to($('.msg'), 1.2, {
-                            autoAlpha: 0,
-                            ease: Power4.easeOut,
-                            delay: 0.4,
-                        });
-                        TweenMax.to($('#home .white'), 1, {
-                            autoAlpha: 0,
-                            ease: Power4.easeOut
-                        });
+            if (!$('body').hasClass('home-first')) {
 
-                        TweenMax.staggerTo("#home .appear", 1, {
-                            opacity: 1,
-                            x: 0,
-                            y: 0,
-                            ease: Power4.easeOut,
-                            delay: 0.4
-                        }, 0.06);
+                setTimeout(function() {
+                    TweenMax.to($('.msg'), 1.2, {
+                        autoAlpha: 0,
+                        ease: Power4.easeOut,
+                        delay: 0.4,
+                    });
+                    TweenMax.to($('#home .white'), 1, {
+                        autoAlpha: 0,
+                        ease: Power4.easeOut
+                    });
 
-                        $('body').addClass('home-first');
+                    TweenMax.staggerTo("#home .appear", 1, {
+                        opacity: 1,
+                        x: 0,
+                        y: 0,
+                        ease: Power4.easeOut,
+                        delay: 0.4
+                    }, 0.06);
 
-                    }, 800)
-                }
+                    $('body').addClass('home-first');
 
+                }, 800)
             }
 
-        
+        }
+
+
 
 
 
         TweenMax.to($('.ball-inner'), 1.2, {
             y: '0px',
-            scale: '1',
+            scale: '0.4',
             opacity: 1,
             ease: Power4.easeOut,
             delay: 0.75

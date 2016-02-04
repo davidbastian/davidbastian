@@ -7,7 +7,6 @@ function scrollFunctionB() {
         if (!$('#single').size() > 0) {
 
 
-
             var el = $('#tagHome'),
                 scrollTime = 2,
                 scrollDistance = 200,
@@ -90,6 +89,7 @@ function scrollFunctionB() {
 
 function Dragdot() {
 
+
     Draggable.create($('.ball'), {
         //type: "x",
         edgeResistance: 0.65,
@@ -128,11 +128,53 @@ function Dragdot() {
                     delay: 0.4
                 }, 0.02);
             }
+
+
+            $('#home a').each(function(i){
+                
+                var posY = i * 10;
+ 
+                //$(this).data("y", posY);
+                console.log(posY);
+
+                TweenMax.to($('#home a').eq(i), 1, {
+
+                    left:'45vw',
+                    x: -posY + '%',
+                    scale: '0.9',
+                    y:'2%',
+                    ease: Expo.easeOut
+                });
+
+
+            });
+
+
+            TweenMax.to($('.ball-inner'), .5, {
+                    scale: '1',
+                    ease: Power4.easeOut
+            });
+
+
         },
 
         onDragEnd: function() {
             $('.ball').removeClass('grab');
             $('body').addClass('home-first');
+
+             TweenMax.to($('#home a'), 1, {
+                    scale: '1',
+                    y:'0%',
+                    x:'0%',
+                    left:'0vw',
+                    ease: Expo.easeOut
+            });
+
+             TweenMax.to($('.ball-inner'), .5, {
+                    scale: '0.4',
+                    ease: Power4.easeOut
+            });
+
         },
         onThrowUpdate: function() {
             var suPos = 1 * (parseInt(this.x, 10)),
