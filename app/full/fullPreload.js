@@ -1,11 +1,15 @@
 import zepto from 'npm-zepto'
-import {
-    toRight
-}
-from './toRight.js'
 var count = 0;
 
 function listo() {
+
+    var w = ($(window).width() / 2) - $('.ballB').width() / 2,
+        y = $('.ballB').height()/2;
+
+    TweenMax.set($('.ballB'), {
+        x: w + 'px',
+        y: -y + 'px'
+    })
 
     TweenMax.to($('#full .white'), 2, {
         //  top: '-100vh',
@@ -18,25 +22,13 @@ function listo() {
         y: '-200vh',
         opacity: 0,
         ease: Power4.easeIn,
-        onComplete: function() {
-
-            setTimeout(function() {
-                toRight();
-
-            }, 1000)
-
-            /*setInterval(function() {
-                toRight();
-
-            }, 8000)*/
-        }
     })
 
     TweenMax.to("#full .appear", 1.5, {
         opacity: 1,
         scale: 1,
         ease: Power4.easeOut
-    })
+    });
 
 
 }
@@ -45,6 +37,83 @@ function fullPreload($timeout) {
     return {
         link: function(scope, element, attr) {
             $timeout(function() {
+
+
+                var wrapSize = $('.wrap-a').size();
+
+                Draggable.create($('.ballB'), {
+                    //type: "x",
+                    edgeResistance: 0.65,
+                    bounds: '#tagFull',
+                    throwProps: true,
+                    onDrag: function() {
+                        $('.ballB').addClass('grab');
+
+                        var suPos = 1 * (parseInt(this.x, 10)),
+                            percent = ((suPos * 100) / (($('#tagFull').width()) - $('.ballB').width())),
+                            equal = Math.floor((percent * wrapSize) / 100);
+
+                        if ((equal >= 0) && (equal < wrapSize)) {
+                            $('.wrap-a').removeClass('active');
+                            $('.wrap-a').eq(equal).addClass('active');
+
+                        }
+
+                        TweenMax.to($('.ballB .ball-inner'), .5, {
+                            scale: '1',
+                            ease: Power4.easeOut
+                        });
+
+                    },
+
+                    onDragStart: function() {
+
+                    },
+
+                    onDragEnd: function() {
+                        $('.ballB').removeClass('grab');
+
+                        TweenMax.to($('.ballB .ball-inner'), .5, {
+                            scale: '0.4',
+                            ease: Power4.easeOut
+                        });
+
+
+                    },
+                    onThrowUpdate: function() {
+
+                        var suPos = 1 * (parseInt(this.x, 10)),
+                            percent = ((suPos * 100) / (($('#tagFull').width()) - $('.ballB').width())),
+                            equal = Math.floor((percent * wrapSize) / 100);
+
+                        if ((equal >= 0) && (equal < wrapSize)) {
+                            $('.wrap-a').removeClass('active');
+                            $('.wrap-a').eq(equal).addClass('active');
+
+                        }
+
+
+
+                    }
+
+                });
+
+
+
+                TweenMax.to($('.ball-inner'), 0.8, {
+                    autoAlpha: 1,
+                    scale: '1',
+                    delay: 1,
+                    ease: Back.easeIn,
+                    onComplete: function() {
+
+                        TweenMax.to($('.ball-inner'), 1, {
+                            scale: '0.4',
+                            ease: Expo.easeOut
+                        });
+
+                    }
+                });
 
 
                 $('.page-switch').css('display', 'block');

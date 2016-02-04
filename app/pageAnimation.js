@@ -55,7 +55,7 @@ function pageAnimation() {
                 $('.page-switch').css('display', 'none');
                 // $('footer').css('display','none');
 
-                TweenMax.to($('.ball-inner'), 1, {
+                TweenMax.to($('.ball .ball-inner'), 1, {
                     autoAlpha: 0,
                     // y: '20vh',
                     scale: 0.5,
@@ -92,6 +92,13 @@ function pageAnimation() {
                     scale: '0.95',
                     ease: Power4.easeOut,
                     onComplete: done
+                });
+
+                TweenMax.to($('.ballB .ball-inner'), 1, {
+                    autoAlpha: 0,
+                    // y: '20vh',
+                    scale: 0.5,
+                    ease: Back.easeOut
                 });
 
             }

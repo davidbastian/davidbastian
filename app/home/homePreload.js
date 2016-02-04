@@ -64,14 +64,14 @@ function listo() {
             delay: 0.4
         }, 0.01);
 
-        TweenMax.to($('.ball-inner'), 0.8, {
+        TweenMax.to($('.ball .ball-inner'), 0.8, {
             autoAlpha: 1,
             scale: '1',
             delay: 0.2,
             ease: Back.easeIn,
             onComplete: function() {
 
-                TweenMax.to($('.ball-inner'), 1, {
+                TweenMax.to($('.ball .ball-inner'), 1, {
                     scale: '0.4',
                     ease: Expo.easeOut
                 });
@@ -111,7 +111,7 @@ function listo() {
 
                     $('body').addClass('home-first');
 
-                }, 800)
+                }, 500)
             }
 
         }
@@ -120,7 +120,7 @@ function listo() {
 
 
 
-        TweenMax.to($('.ball-inner'), 1.2, {
+        TweenMax.to($('.ball .ball-inner'), 1.2, {
             y: '0px',
             scale: '0.4',
             opacity: 1,

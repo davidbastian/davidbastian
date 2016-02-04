@@ -19,7 +19,7 @@ function scrollFunctionB() {
                 equal = (finalScroll * 100) / $('#home').width(),
                 b = (equal * ($('#tagHome').width())) / 100;
 
-                //console.log(delta);
+            //console.log(delta);
 
 
 
@@ -130,19 +130,19 @@ function Dragdot() {
             }
 
 
-            $('#home a').each(function(i){
-                
+            $('#home a').each(function(i) {
+
                 var posY = i * 10;
- 
+
                 //$(this).data("y", posY);
-                console.log(posY);
+                // console.log(posY);
 
-                TweenMax.to($('#home a').eq(i), 1, {
+                TweenMax.to($('#home a').eq(i), 0.5, {
 
-                    left:'45vw',
+                    left: '33vw',
                     x: -posY + '%',
                     scale: '0.9',
-                    y:'2%',
+                    y: '2%',
                     ease: Expo.easeOut
                 });
 
@@ -151,8 +151,8 @@ function Dragdot() {
 
 
             TweenMax.to($('.ball-inner'), .5, {
-                    scale: '1',
-                    ease: Power4.easeOut
+                scale: '1',
+                ease: Power4.easeOut
             });
 
 
@@ -162,17 +162,17 @@ function Dragdot() {
             $('.ball').removeClass('grab');
             $('body').addClass('home-first');
 
-             TweenMax.to($('#home a'), 1, {
-                    scale: '1',
-                    y:'0%',
-                    x:'0%',
-                    left:'0vw',
-                    ease: Expo.easeOut
+            TweenMax.to($('#home a'), 1.5, {
+                scale: '1',
+                y: '0%',
+                x: '0%',
+                left: '0vw',
+                ease: Expo.easeOut
             });
 
-             TweenMax.to($('.ball-inner'), .5, {
-                    scale: '0.4',
-                    ease: Power4.easeOut
+            TweenMax.to($('.ball-inner'), .5, {
+                scale: '0.4',
+                ease: Power4.easeOut
             });
 
         },

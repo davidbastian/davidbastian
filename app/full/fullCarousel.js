@@ -1,6 +1,6 @@
 import zepto from 'npm-zepto'
-import {toRight} from './toRight.js'
-import {toLeft} from './toLeft.js'
+//import {toRight} from './toRight.js'
+//import {toLeft} from './toLeft.js'
 
 
 function fullCarousel() {
@@ -22,10 +22,10 @@ function fullCarousel() {
                    
                 //console.log(pos,win);
                 if (pos < win) {
-                        toLeft();
+                      //  toLeft();
                 } else {
                     //console.log('left');
-                        toRight();
+                       // toRight();
 
                 }
 

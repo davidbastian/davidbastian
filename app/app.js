@@ -54,8 +54,8 @@ import {fullPreload} from  './full/fullPreload'
 import {homeScroll} from  './home/homeScroll'
 import {singleScroll} from  './single/singleScroll'
 
-import {fullCarousel} from  './full/fullCarousel'
-import {fullMouse} from  './full/fullMouse'
+//import {fullCarousel} from  './full/fullCarousel'
+import {singleMouse} from  './single/singleMouse'
 
 //load directives Trigger Link
 import {pageLink} from  './pageLink.js'
@@ -94,8 +94,8 @@ angular
 	.directive('singleScroll', ['$timeout',singleScroll])
 
 	//slider Carousel
-	.directive('fullCarousel', fullCarousel)
-	.directive('fullMouse', fullMouse)
+	//.directive('fullCarousel', fullCarousel)
+	.directive('singleMouse', singleMouse)
 
 	//links trigger
 	.directive('pageLink', pageLink)

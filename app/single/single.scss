@@ -116,7 +116,19 @@
         opacity: 0.5;
         //font-weight:100;
     }
+    
 }
+
+.next {
+        font-size: 20vh;
+        font-weight: bold;
+        position: fixed;
+        right: 0;
+        top: 50%;
+        margin-top: -10vh;
+        transform: translateX(100%);
+        padding-right: 4vw;
+    }
 
 .ipad {
     #single {

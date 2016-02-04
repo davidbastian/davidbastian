@@ -3,6 +3,11 @@ import zepto from 'npm-zepto'
 
 function scrollFunction() {
 
+    
+
+
+
+
     function displaywheel(e) {
         if ($('#single').size() > 0) {
 
@@ -37,6 +42,9 @@ function scrollFunction() {
     } else if (document.addEventListener) {
         document.addEventListener(mousewheelevt, displaywheel, false)
     }
+
+
+
 
 }
 
