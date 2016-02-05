@@ -68,14 +68,35 @@ function nextProject() {
 
             }
 
-            TweenMax.set($('.description, .media-container'), {
-                x: percent + '%',
-            })
+            if ($('html').hasClass('ipad') || $('html').hasClass('mobile')) {
+
+                TweenMax.set($('.description, .media-container'), {
+                    x: (percent * 2) + '%',
+                })
+
+                TweenMax.set($('.next'), {
+                    x: (100 + (percent * 1.5)) + '%',
+                })
 
 
-            TweenMax.set($('.next'), {
-                x: (100 + (percent * 2)) + '%',
-            })
+
+            } else {
+                TweenMax.set($('.description, .media-container'), {
+                    x: percent + '%',
+
+                })
+
+                TweenMax.set($('.next'), {
+                    x: (100 + (percent * 2)) + '%',
+                })
+
+            }
+
+
+
+
+
+
 
             $('.media-container').css(
                 '-webkit-filter', 'grayscale(' + gray + '%)'
@@ -155,14 +176,31 @@ function nextProject() {
 
             if (percent <= -55) {
 
-                TweenMax.set($('.description, .media-container'), {
-                    x: percent + '%',
-                })
+                if ($('html').hasClass('ipad') || $('html').hasClass('mobile')) {
+
+                    TweenMax.set($('.description, .media-container'), {
+                        x: (percent * 2) + '%',
+                    })
+
+                    TweenMax.set($('.next'), {
+                        x: (100 + (percent * 1.5)) + '%',
+                    })
 
 
-                TweenMax.set($('.next'), {
-                    x: (100 + (percent * 2)) + '%',
-                })
+
+                } else {
+                    TweenMax.set($('.description, .media-container'), {
+                        x: percent + '%',
+
+                    })
+
+                    TweenMax.set($('.next'), {
+                        x: (100 + (percent * 2)) + '%',
+                    })
+
+                }
+
+
 
                 $('.media-container').css(
                     '-webkit-filter', 'grayscale(' + gray + '%)'

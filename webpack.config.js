@@ -51,7 +51,11 @@ var config = {
 
 if (process.env.NODE_ENV === 'production') {
     config.output.path = __dirname + '/dist';
-    config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+    config.plugins.push(new webpack.optimize.UglifyJsPlugin({
+        output: {
+            comments: false
+        }
+    }));
     config.devtool = 'source-map';
 }
 

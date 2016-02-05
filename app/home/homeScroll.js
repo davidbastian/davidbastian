@@ -130,31 +130,32 @@ function Dragdot() {
             }
 
 
-            $('#home a').each(function(i) {
+            if (!$('html').hasClass('ipad')) {
 
-                var posY = i * 10;
+                $('#home a').each(function(i) {
 
-                //$(this).data("y", posY);
-                // console.log(posY);
+                    var posY = i * 10;
 
-                TweenMax.to($('#home a').eq(i), 0.5, {
+                    //$(this).data("y", posY);
+                    // console.log(posY);
 
-                    left: '33vw',
-                    x: -posY + '%',
-                    scale: '0.9',
-                    y: '2%',
-                    ease: Expo.easeOut
+                    TweenMax.to($('#home a').eq(i), 0.5, {
+
+                        left: '33vw',
+                        x: -posY + '%',
+                        scale: '0.9',
+                        y: '2%',
+                        ease: Expo.easeOut
+                    });
+
                 });
 
-
-            });
-
+            }
 
             TweenMax.to($('.ball-inner'), .5, {
                 scale: '1',
                 ease: Power4.easeOut
             });
-
 
         },
 
@@ -162,13 +163,15 @@ function Dragdot() {
             $('.ball').removeClass('grab');
             $('body').addClass('home-first');
 
-            TweenMax.to($('#home a'), 1.5, {
-                scale: '1',
-                y: '0%',
-                x: '0%',
-                left: '0vw',
-                ease: Expo.easeOut
-            });
+            if (!$('html').hasClass('ipad')) {
+                TweenMax.to($('#home a'), 1.5, {
+                    scale: '1',
+                    y: '0%',
+                    x: '0%',
+                    left: '0vw',
+                    ease: Expo.easeOut
+                });
+            }
 
             TweenMax.to($('.ball-inner'), .5, {
                 scale: '0.3',

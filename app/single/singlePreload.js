@@ -11,12 +11,18 @@ function listo() {
         x: 100 + '%',
     });
 
+    TweenMax.set($('.ballC'), {
+        x: '0',
+        y: '0',
+    });
+
+    TweenMax.set($('.ballC .ball-inner'), {
+        scale: '0.3'
+    });
+
     $('.media-container').css(
         '-webkit-filter', 'grayscale(' + 0 + '%)'
     )
-
-
-
 
     TweenMax.set($('.next'), {
         autoAlpha: 1,
@@ -44,7 +50,6 @@ function listo() {
         ease: Power4.easeOut,
         delay: 0.7
     }, 0.01);
-
 
     TweenMax.to($('.ballC .ball-inner'), 0.8, {
         autoAlpha: 1,
