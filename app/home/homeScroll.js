@@ -113,7 +113,7 @@ function Dragdot() {
             if (!$('body').hasClass('home-first')) {
                 TweenMax.to($('.msg'), 1.2, {
                     autoAlpha: 0,
-                    x:'80vw',
+                    x:'8vw',
                     ease: Power4.easeOut
                 });
                 TweenMax.to($('#home .white'), 1, {

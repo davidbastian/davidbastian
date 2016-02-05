@@ -34,7 +34,10 @@ function listo() {
     TweenMax.to($('#single .white'), 2, {
         //  top: '-100vh',
         autoAlpha: 0,
-        ease: Power4.easeOut
+        ease: Power4.easeOut,
+        onComplete:function(){
+            $('#single .white').remove();
+        }
     })
 
 

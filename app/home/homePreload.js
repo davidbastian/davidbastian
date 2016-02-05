@@ -93,6 +93,7 @@ function listo() {
                 setTimeout(function() {
                     TweenMax.to($('.msg'), 1.2, {
                         autoAlpha: 0,
+                        x:'8vw',
                         ease: Power4.easeOut,
                         delay: 0.4,
                     });
@@ -130,7 +131,8 @@ function listo() {
 
 
         TweenMax.to($('.msg'), 1, {
-            opacity: 0.5,
+            autoAlpha: 0.5,
+
             top: '50%',
             ease: Power4.easeOut,
             delay: 0.65

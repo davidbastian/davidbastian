@@ -87,7 +87,7 @@ function nextProject() {
                 })
 
                 TweenMax.set($('.next'), {
-                    x: (100 + (percent * 2)) + '%',
+                    x: (100 + (percent * 1.5)) + '%',
                 })
 
             }
@@ -195,7 +195,7 @@ function nextProject() {
                     })
 
                     TweenMax.set($('.next'), {
-                        x: (100 + (percent * 2)) + '%',
+                        x: (100 + (percent * 1.5)) + '%',
                     })
 
                 }
