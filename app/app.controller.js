@@ -4,7 +4,7 @@ function AppController($scope) {
         'description': 'default description',
     };
 
- 
+ 	$scope.phone = $('html').hasClass('mobile');
 
     // whenever a controller emits the newPageLoaded event, we update the app's metadata
     $scope.$on('newPageLoaded', function(event, metadata) {
