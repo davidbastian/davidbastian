@@ -120,7 +120,6 @@
 
 .next {
     font-size: 20vh;
-    
     position: fixed;
     right: 0;
     top: 50%;
@@ -135,10 +134,14 @@
 }
 
 .ipad {
-    #single {
-        .description {
-            @media only screen and (orientation: landscape) {
+    @media only screen and (orientation: landscape) {
+        #single {
+            .description {
                 position: absolute;
+            }
+             .fake-footer  {
+                position: fixed;
+                bottom: 0;
             }
         }
     }

@@ -56,7 +56,7 @@ function nextProject() {
                 gray = -((percent * 2));
 
 
-            console.log(percent);
+          //  console.log(percent);
 
 
             if (percent < -55) {
@@ -171,7 +171,7 @@ function nextProject() {
                 gray = -((percent * 2));
 
 
-            console.log(percent);
+            //console.log(percent);
 
 
             if (percent <= -55) {

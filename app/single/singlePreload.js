@@ -93,7 +93,7 @@ function singlePreload($timeout) {
                         var done = ((count * 100) / sizeItem);
 
                         setTimeout(function() {
-                            console.log(Math.round(done) + '%') // show the percent 
+                          //  console.log(Math.round(done) + '%') // show the percent 
                             $('#single .white h1').text(Math.round(done) + '.');
 
                             if (done === 100) {

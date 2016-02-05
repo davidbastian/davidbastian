@@ -31,11 +31,11 @@ header {
 
 .ball {
     position: fixed;
-    //width: 5vw;
-    // height: 5vw;
+    width: 5vw;
+    height: 5vw;
     z-index: 10;
     top: 50%;
-    margin-top: -2.5vw;
+    margin-top: -8vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,7 +43,7 @@ header {
     cursor: grab!important;
     cursor: -webkit-grab!important;
     .ball-inner {
-        margin: 2.5vh;
+        // margin: 2.5vh;
         width: 50px;
         height: 50px;
         background-color: red;
@@ -60,11 +60,11 @@ header {
 
 .ballB {
     position: fixed;
-    //width: 5vw;
-    // height: 5vw;
+    width: 5vw;
+    height: 5vw;
     z-index: 10;
     top: 50%;
-    margin-top: -2.5vw;
+    margin-top: -8vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +72,7 @@ header {
     cursor: grab!important;
     cursor: -webkit-grab!important;
     .ball-inner {
-        margin: 2.5vh;
+        // margin: 2.5vh;
         width: 50px;
         height: 50px;
         background-color: red;
@@ -89,10 +89,10 @@ header {
 
 .ballC {
     position: fixed;
-    // width: 5vw;
-    // height: 5vw;
+    width: 5vw;
+    height: 5vw;
     z-index: 10;
-    margin-top: -2.5vw;
+    margin-top: -8vh;
     display: flex;
     top: 50%;
     right: 0;
@@ -102,7 +102,7 @@ header {
     cursor: grab!important;
     cursor: -webkit-grab!important;
     .ball-inner {
-        margin: 2.5vh;
+        //  margin: 2.5vh;
         width: 50px;
         height: 50px;
         background-color: red;
@@ -121,10 +121,12 @@ header {
     position: fixed;
     top: 45%;
     padding-top: 0px;
-    padding-left: 5vw;
+    padding-left: 0vw;
     transform: translateY(-50%);
-    margin-top: -0.8vh;
+    margin-top: -4px;
     opacity: 0;
+    width:100vw;
+
 }
 
 .mobile {
@@ -152,7 +154,7 @@ header {
         margin-top: -4vh;
     }
     .ball {
-        left: 0;
+        left: 2.5vw;
         margin-top: -4vh;
         .ball-inner {
             width: 4.5vw;
@@ -160,7 +162,7 @@ header {
         }
     }
     .msg {
-        padding-left: 12vw;
+        padding-left:0vw;
         margin-top: -0.1vh;
     }
     .home-first {
