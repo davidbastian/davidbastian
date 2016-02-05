@@ -125,8 +125,7 @@ header {
     transform: translateY(-50%);
     margin-top: -4px;
     opacity: 0;
-    width:100vw;
-
+    width: 100vw;
 }
 
 .mobile {
@@ -149,6 +148,17 @@ header {
     }
 }
 
+@media (max-width:1040px) {
+    .ball,.ballB,.ballC {
+         width: 40px!important;
+            height:40px!important;
+        .ball-inner {
+            width: 40px!important;
+            height:40px!important;
+        }
+    }
+}
+
 .ipad {
     .ballC {
         margin-top: -4vh;
@@ -162,7 +172,7 @@ header {
         }
     }
     .msg {
-        padding-left:0vw;
+        padding-left: 0vw;
         margin-top: -0.1vh;
     }
     .home-first {

@@ -65,8 +65,8 @@
                     padding-top: 3vh;
                 }
                 @media (max-height:850px) {
-                    position: relative;
-                    padding-top: 3vh;
+                    //position: relative;
+                    //padding-top: 3vh;
                 }
             }
         }
@@ -137,11 +137,11 @@
     @media only screen and (orientation: landscape) {
         #single {
             .description {
-                position: absolute;
+               // position: absolute;
             }
              .fake-footer  {
-                position: fixed;
-                bottom: 0;
+                //position: fixed;
+               // bottom: 0;
             }
         }
     }
