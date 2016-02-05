@@ -3,6 +3,21 @@ var count = 0;
 
 function listo() {
 
+    TweenMax.set($('.description, .media-container'), {
+        x: 0 + '%',
+    });
+
+    TweenMax.set($('.next'), {
+        x: 100 + '%',
+    });
+
+    $('.media-container').css(
+        '-webkit-filter', 'grayscale(' + 0 + '%)'
+    )
+
+
+
+
     TweenMax.set($('.next'), {
         autoAlpha: 1,
         y: '0vh',
@@ -28,7 +43,7 @@ function listo() {
         y: 0,
         ease: Power4.easeOut,
         delay: 0.7
-    },0.01);
+    }, 0.01);
 
 
     TweenMax.to($('.ballC .ball-inner'), 0.8, {
