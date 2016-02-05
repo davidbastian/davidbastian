@@ -144,24 +144,35 @@ header {
         }
     }
     .ballC {
-        top: 15%;
+        top: 20%;
+        right: 2vw;
     }
 }
 
 @media (max-width:1040px) {
-    .ball,.ballB,.ballC {
-         width: 40px!important;
-            height:40px!important;
+    .ball,
+    .ballB,
+    .ballC {
+        width: 40px!important;
+        height: 40px!important;
         .ball-inner {
             width: 40px!important;
-            height:40px!important;
+            height: 40px!important;
         }
     }
 }
 
 .ipad {
     .ballC {
-        margin-top: -4vh;
+        margin-top: -35vh;
+        right: 1.5vw;
+        width: 80px !important;
+        height: 80px !important;
+
+         .ball-inner {
+            width: 80px !important;
+            height: 80px !important
+        }
     }
     .ball {
         left: 2.5vw;
