@@ -72,7 +72,7 @@ function listo() {
             onComplete: function() {
 
                 TweenMax.to($('.ball .ball-inner'), 1, {
-                    scale: '0.4',
+                    scale: '0.3',
                     ease: Expo.easeOut
                 });
 
@@ -122,7 +122,7 @@ function listo() {
 
         TweenMax.to($('.ball .ball-inner'), 1.2, {
             y: '0px',
-            scale: '0.4',
+            scale: '0.3',
             opacity: 1,
             ease: Power4.easeOut,
             delay: 0.75

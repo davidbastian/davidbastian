@@ -2,6 +2,13 @@ import zepto from 'npm-zepto'
 var count = 0;
 
 function listo() {
+
+    TweenMax.set($('.next'), {
+        autoAlpha: 1,
+        y: '0vh',
+        x: '100%'
+    });
+
     $('.page-switch').css('display', 'none');
     TweenMax.to($('#single .white'), 2, {
         //  top: '-100vh',
@@ -20,8 +27,24 @@ function listo() {
         opacity: 1,
         y: 0,
         ease: Power4.easeOut,
-        delay: 0.4
-    }, 0.2);
+        delay: 0.7
+    },0.01);
+
+
+    TweenMax.to($('.ballC .ball-inner'), 0.8, {
+        autoAlpha: 1,
+        scale: '1',
+        delay: 0.2,
+        ease: Back.easeIn,
+        onComplete: function() {
+
+            TweenMax.to($('.ballC .ball-inner'), 1, {
+                scale: '0.3',
+                ease: Expo.easeOut
+            });
+
+        }
+    });
 
 }
 
@@ -41,7 +64,7 @@ function singlePreload($timeout) {
                     ease: Power4.easeOut
                 });
 
-                var sizeItem = $('#single .item').size();
+                var sizeItem = $('#single .item.preload').size();
 
                 function checkLoad() {
                     if (element[0].readyState === 4 || element[0].complete === true) {
@@ -50,11 +73,12 @@ function singlePreload($timeout) {
                         var done = ((count * 100) / sizeItem);
 
                         setTimeout(function() {
-                            //  console.log(Math.round(done) + '%') // show the percent 
+                            console.log(Math.round(done) + '%') // show the percent 
                             $('#single .white h1').text(Math.round(done) + '.');
 
                             if (done === 100) {
                                 // console.log('yes') // ready 
+                                $('#single .item').removeClass('preload');
                                 count = 0; // reset counter
 
                                 listo();

@@ -19,9 +19,29 @@ function SingleController($scope, $routeParams) {
         //console.log(entry.slug);
         var slug = entry.slug.toLowerCase().split(' ').join('-');
         return slug === $scope.slug
+
+
     });
+
+
+    var suNext = (data.indexOf($scope.inner[0])) + 1;
+
+
+    //console.log(data.length);
+
+    if (suNext < data.length) {
+        $scope.next = (data[suNext].slug.toLowerCase().split(' ').join('-'));
+    } else {
+        $scope.next = (data[0].slug.toLowerCase().split(' ').join('-'));
+    }
+
+
     $scope.project = $scope.inner[0];
-    $scope.$emit('newPageLoaded', { 'title': 'Some Page', 'description': 'blah' });
+
+    $scope.$emit('newPageLoaded', {
+        'title': 'Some Page',
+        'description': 'blah'
+    });
 
 }
 

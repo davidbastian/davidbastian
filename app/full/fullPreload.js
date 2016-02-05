@@ -3,8 +3,10 @@ var count = 0;
 
 function listo() {
 
+ 
+
     var w = ($(window).width() / 2) - $('.ballB').width() / 2,
-        y = $('.ballB').height()/2;
+        y = $('.ballB').height() / 2;
 
     TweenMax.set($('.ballB'), {
         x: w + 'px',
@@ -74,7 +76,7 @@ function fullPreload($timeout) {
                         $('.ballB').removeClass('grab');
 
                         TweenMax.to($('.ballB .ball-inner'), .5, {
-                            scale: '0.4',
+                            scale: '0.3',
                             ease: Power4.easeOut
                         });
 
@@ -108,7 +110,7 @@ function fullPreload($timeout) {
                     onComplete: function() {
 
                         TweenMax.to($('.ball-inner'), 1, {
-                            scale: '0.4',
+                            scale: '0.3',
                             ease: Expo.easeOut
                         });
 

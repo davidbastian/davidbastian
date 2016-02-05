@@ -22,13 +22,9 @@ import sanitize from 'angular-sanitize'
 //load gsap & pageAnimation
 import zepto from 'npm-zepto'
 import gsap from 'gsap'
-//import tweenlite from '../node_modules/gsap/src/uncompressed/TweenLite.js'
-//import tweenmax from 'imports?this=>window!../node_modules/gsap/src/uncompressed/TweenMax.js'
+import 'imports?this=>window!./pageDrag.js'
+import Draggable from 'imports?this=>window!../node_modules/gsap/src/uncompressed/utils/Draggable.js'
 
-//var TweenMax = require('imports?this=>window!../node_modules/gsap/src/uncompressed/TweenMax.js');
-//var Draggable = require('imports?this=>window!../node_modules/gsap/src/uncompressed/utils/Draggable.js');
-/*import tweenlite from 'imports?this=>window!../node_modules/gsap/src/uncompressed/TweenLite.js'
-import Draggable from 'imports?this=>window!../node_modules/gsap/src/uncompressed/utils/Draggable.js'*/
 import scrolltoplugin from '../node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin.js'
 import {pageAnimation} from  './pageAnimation'
 
@@ -95,7 +91,7 @@ angular
 
 	//slider Carousel
 	//.directive('fullCarousel', fullCarousel)
-	.directive('singleMouse', singleMouse)
+	//.directive('singleMouse', singleMouse)
 
 	//links trigger
 	.directive('pageLink', pageLink)

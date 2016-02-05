@@ -94,10 +94,9 @@ video {
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-backface-visibility: hidden;
+     -webkit-font-smoothing: antialiased; 
     
 }
 

@@ -171,7 +171,7 @@ function Dragdot() {
             });
 
             TweenMax.to($('.ball-inner'), .5, {
-                scale: '0.4',
+                scale: '0.3',
                 ease: Power4.easeOut
             });
 

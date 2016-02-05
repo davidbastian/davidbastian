@@ -9,23 +9,23 @@ function pageAnimation() {
 
             } else if (tag === 'tagHome') {
 
-                
 
-               /* if ($('html').hasClass('.ipad')) {
 
-                    TweenMax.set($('.ball'), {
-                        'x': '0',
-                        'y': '0'
+                /* if ($('html').hasClass('.ipad')) {
 
-                    });
-                }*/
+                     TweenMax.set($('.ball'), {
+                         'x': '0',
+                         'y': '0'
+
+                     });
+                 }*/
 
             } else if (tag === 'tagFull') {
 
 
             } else if (tag === 'tagAbout') {
 
-                  
+
 
                 $('.page-switch').css('display', 'none');
                 TweenMax.to($('#about'), 1, {
@@ -42,13 +42,33 @@ function pageAnimation() {
             var tag = element[0].children[0].id;
 
             if (tag === 'tagSingle') {
-                
+
 
                 TweenMax.to($('#single .appear'), 1, {
                     opacity: 0,
                     y: '20vh',
                     ease: Power4.easeOut,
                     onComplete: done
+                });
+
+                TweenMax.to($('.ballB .ball-inner'), 1, {
+                    autoAlpha: 0,
+                    // y: '20vh',
+                    scale: 0.3,
+                    ease: Back.easeOut
+                });
+
+                TweenMax.to($('.ballC .ball-inner'), 1, {
+                    autoAlpha: 0,
+                    // y: '20vh',
+                    scale: 0.3,
+                    ease: Back.easeOut
+                });
+
+                TweenMax.to($('.next'), 1, {
+                    autoAlpha: 0,
+                     y: '20vh',
+                    ease: Back.easeOut
                 });
 
             } else if (tag === 'tagHome') {
@@ -58,7 +78,7 @@ function pageAnimation() {
                 TweenMax.to($('.ball .ball-inner'), 1, {
                     autoAlpha: 0,
                     // y: '20vh',
-                    scale: 0.5,
+                    scale: 0.3,
                     ease: Back.easeOut
                 });
 
@@ -97,7 +117,7 @@ function pageAnimation() {
                 TweenMax.to($('.ballB .ball-inner'), 1, {
                     autoAlpha: 0,
                     // y: '20vh',
-                    scale: 0.5,
+                    scale: 0.3,
                     ease: Back.easeOut
                 });
 
