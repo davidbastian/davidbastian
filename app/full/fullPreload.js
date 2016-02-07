@@ -3,7 +3,7 @@ var count = 0;
 
 function listo() {
 
- 
+
 
     var w = ($(window).width() / 2) - $('.ballB').width() / 2,
         y = $('.ballB').height() / 2;
@@ -119,7 +119,7 @@ function fullPreload($timeout) {
 
 
                 $('.page-switch').css('display', 'block');
-                $('.page-switch').attr('href', '#/');
+                $('.page-switch').attr('href', '/');
 
                 TweenMax.to($('#full .white'), 1, {
                     autoAlpha: 1,

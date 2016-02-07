@@ -8,7 +8,7 @@
         <div class="wrap-full appear" >
             <div class="wrap-a" ng-repeat="x in full" ng-class='{active:$first}'>
                 <div class="wrap-fix">
-                    <a ng-href="#/{{x.slug|toslug}}" class="el">
+                    <a ng-href="{{x.slug|toslug}}" class="el">
                         <img class="item" full-loader ng-src="{{x.img}}" alt="{{x.slug}}" />
                         <p>
                             {{x.slug}}

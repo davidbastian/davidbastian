@@ -150,7 +150,7 @@ function homePreload($timeout) {
             $timeout(function() {
 
                 $('.page-switch').css('display', 'block');
-                $('.page-switch').attr('href', '#/full');
+                $('.page-switch').attr('href', 'full');
 
                 TweenMax.to($('#home .white'), 1, {
                     autoAlpha: 1,

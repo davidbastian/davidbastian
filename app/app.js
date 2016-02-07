@@ -31,6 +31,11 @@ import {pageAnimation} from  './pageAnimation'
 //load routing
 import {pageRouting} from  './pageRouting'
 
+
+//pageLocation
+import {pageLocation} from  './pageLocation'
+
+
 //load filters
 import {toSlug} from  './toSlug'
 
@@ -102,8 +107,8 @@ angular
 	.directive('footerApp', footerApp)
 
 
-	.run(function() {
-	  // add somethig before compilation ??
-	})
+	.run(['$rootScope', '$location', pageLocation])
+
+
 
 

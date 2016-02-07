@@ -19,6 +19,9 @@ header {
                 margin-left: 40px;
                 @media (max-width: 1040px) {
                     margin-left: 4vw;
+                    &:last-child{
+                        margin-right: 10px;
+                    }
                 }
                 a {
                     text-transform: lowercase;
@@ -123,6 +126,7 @@ header {
     padding-top: 0px;
     padding-left: 0vw;
     transform: translateY(-50%);
+    left: 5vw;
     margin-top: -4px;
     opacity: 0;
     width: 100vw;
@@ -150,7 +154,7 @@ header {
     }
 }
 
-@media (max-width:1040px) {
+/*@media (max-width:1040px) {
     .ball,
     .ballB,
     .ballC {
@@ -161,16 +165,16 @@ header {
             height: 40px!important;
         }
     }
-}
+}*/
 
-.ipad {
+@media (max-width:1040px) {
+
     .ballC {
         margin-top: -35vh;
-        right: 1.5vw;
+        right: 3%;
         width: 80px !important;
         height: 80px !important;
-
-         .ball-inner {
+        .ball-inner {
             width: 80px !important;
             height: 80px !important
         }
@@ -178,18 +182,32 @@ header {
     .ball {
         left: 2.5vw;
         margin-top: -4vh;
+        width: 80px !important;
+        height: 80px !important;
         .ball-inner {
             width: 4.5vw;
             height: 4.5vw;
+            width: 80px !important;
+            height: 80px !important;
+        }
+    }
+    .ballB {
+        width: 80px !important;
+        height: 80px !important;
+        .ball-inner {
+            width: 80px !important;
+            height: 80px !important;
         }
     }
     .msg {
-        padding-left: 0vw;
-        margin-top: -0.1vh;
+        padding-left: 6vw;
+        margin-top: -0.17vh;
     }
     .home-first {
         .ball {
             // top:-50%!important;
         }
     }
+
+
 }

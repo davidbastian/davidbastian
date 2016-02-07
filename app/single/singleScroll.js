@@ -56,19 +56,22 @@ function nextProject() {
                 gray = -((percent * 2));
 
 
-           // console.log(percent);
+            // console.log(percent);
 
-
+            
             if (percent < -55) {
 
                 $('.next').addClass('done');
+
+
+
 
             } else {
                 $('.next').removeClass('done');
 
             }
 
-            if ($('html').hasClass('ipad') || $('html').hasClass('mobile')) {
+            if (($(window).width()) <= 1040) {
 
                 TweenMax.set($('.description, .media-container'), {
                     x: (percent * 2) + '%',
@@ -91,8 +94,6 @@ function nextProject() {
                 })
 
             }
-
-
 
 
 
@@ -123,6 +124,13 @@ function nextProject() {
 
         onDragEnd: function() {
 
+             var suPos = 1 * (parseInt(this.x, 10)),
+                percent = ((suPos * 100) / $(window).width()),
+                gray = -((percent * 2));
+
+            if (percent < -80) {
+                $('.next').click();
+            }
 
             if (!$('.next').hasClass('done')) {
 
@@ -153,13 +161,7 @@ function nextProject() {
                     '-webkit-filter', 'grayscale(' + 0 + '%)'
                 )
 
-
-
             }
-
-
-
-
 
         },
 
@@ -176,7 +178,7 @@ function nextProject() {
 
             if (percent <= -55) {
 
-                if ($('html').hasClass('ipad') || $('html').hasClass('mobile')) {
+                if (($(window).width()) <= 1040) {
 
                     TweenMax.set($('.description, .media-container'), {
                         x: (percent * 2) + '%',
@@ -187,20 +189,15 @@ function nextProject() {
                     })
 
 
-
                 } else {
                     TweenMax.set($('.description, .media-container'), {
                         x: percent + '%',
-
                     })
-
                     TweenMax.set($('.next'), {
                         x: (100 + (percent * 1.5)) + '%',
                     })
 
                 }
-
-
 
                 $('.media-container').css(
                     '-webkit-filter', 'grayscale(' + gray + '%)'
@@ -235,13 +232,7 @@ function nextProject() {
                     '-webkit-filter', 'grayscale(' + 0 + '%)'
                 )
 
-
-
             }
-
-
-
-
 
         }
 
