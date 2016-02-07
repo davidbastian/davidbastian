@@ -5,35 +5,37 @@
                 <h1>0. <span></span></h1>
             </div>
         </div>
-        <div class="description">
-            <div class="descriptionInner appear">
-                <h2 ng-bind-html="project.title"></h2>
-                <div class="credits">
-                    <p ng-bind-html="project.description"></p>
-                    <ul>
-                        <li ng-if="project.agency">Agency: {{project.agency}}</li>
-                        <li ng-if="project.year">Year: {{project.year}}</li>
-                        <li ng-if="project.link">
-                            <a target="_blank" href={{project.link}}>
-                                <span class="see">Take a Look</span>
-                                <span class="plane"></span>
-                            </a>
-                        </li>
-                    </ul>
+        <div class="a">
+            <div class="description">
+                <div class="descriptionInner appear">
+                    <h2 ng-bind-html="project.title"></h2>
+                    <div class="credits">
+                        <p ng-bind-html="project.description"></p>
+                        <ul>
+                            <li ng-if="project.agency">Agency: {{project.agency}}</li>
+                            <li ng-if="project.year">Year: {{project.year}}</li>
+                            <li ng-if="project.link">
+                                <a target="_blank" href={{project.link}}>
+                                    <span class="see">Take a Look</span>
+                                    <span class="plane"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="media-container">
-            <div ng-repeat="x in project.media" class="media appear">
-                <video class="item preload" ng-repeat="m in x.links[0]" single-loader ng-if="!mobile &&  x.type ==='video'" preload="auto" loop="true" muted autoplay>
-                    <source ng-src="{{m}}" type="video/mp4" /> Your browser does not support the video tag.
-                </video>
-                <img class="item preload" single-loader ng-repeat="i in x.links[0]" ng-if="x.type ==='image'" alt="image" ng-src="{{i}}" />
+            <div class="media-container">
+                <div ng-repeat="x in project.media" class="media appear">
+                    <video class="item preload" ng-repeat="m in x.links[0]" single-loader ng-if="!mobile &&  x.type ==='video'" preload="auto" loop="true" muted autoplay>
+                        <source ng-src="{{m}}" type="video/mp4" /> Your browser does not support the video tag.
+                    </video>
+                    <img class="item preload" single-loader ng-repeat="i in x.links[0]" ng-if="x.type ==='image'" alt="image" ng-src="{{i}}" />
+                </div>
             </div>
+            <p class="fake-footer" ng-if="mobile || ipad">© 2016 David Bastian. Chilean Designer & Web Developer. </p>
         </div>
-        <p class="fake-footer" ng-if="mobile || ipad">© 2016 David Bastian. Chilean Designer & Web Developer. </p>
     </div>
-    <a  ng-href="{{next}}" class="next"><span>Next</span></a>
+    <a ng-href="{{next}}" class="next"><span>Next</span></a>
 </div>
 <div class="ballC">
     <div class="ball-inner">

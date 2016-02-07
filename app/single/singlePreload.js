@@ -34,17 +34,17 @@ function listo() {
     TweenMax.to($('#single .white'), 2, {
         //  top: '-100vh',
         autoAlpha: 0,
-        ease: Power4.easeOut,
-        onComplete:function(){
-            $('#single .white').remove();
-        }
+        ease: Power4.easeOut
     })
 
 
     TweenMax.to($('#single .white h1'), 0.65, {
         y: '-200vh',
         opacity: 0,
-        ease: Power4.easeIn
+        ease: Power4.easeIn,
+        onComplete:function(){
+            $('#single .white h1').remove();
+        }
     })
 
     TweenMax.staggerTo("#single .appear", .7, {
@@ -68,6 +68,8 @@ function listo() {
 
         }
     });
+
+    
 
 }
 

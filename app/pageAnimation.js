@@ -1,3 +1,5 @@
+import zepto from 'npm-zepto'
+
 function pageAnimation() {
     return {
         enter: function(element, done, attr) {
@@ -39,10 +41,12 @@ function pageAnimation() {
 
         leave: function(element, done, attr) {
 
+
             var tag = element[0].children[0].id;
 
             if (tag === 'tagSingle') {
 
+                //element.find('.white').remove();
 
                 TweenMax.to($('#single .appear'), 1, {
                     opacity: 0,

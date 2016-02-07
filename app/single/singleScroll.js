@@ -45,138 +45,34 @@ function scrollFunction() {
 
 
 function nextProject() {
-    var myNext = Draggable.create($('.ballC'), {
-        //type: "x",
-        edgeResistance: 0.65,
-        bounds: '#tagSingle',
-        throwProps: true,
-        onDrag: function() {
-            var suPos = 1 * (parseInt(this.x, 10)),
-                percent = ((suPos * 100) / $(window).width()),
-                gray = -((percent * 2));
+
+    if (!$('html').hasClass('mobile')) {
+
+        var myNext = Draggable.create($('.ballC'), {
+            //type: "x",
+            edgeResistance: 0.65,
+            bounds: '#tagSingle',
+            throwProps: true,
+            onDrag: function() {
+                var suPos = 1 * (parseInt(this.x, 10)),
+                    percent = ((suPos * 100) / $(window).width()),
+                    gray = -((percent * 2));
 
 
-            // console.log(percent);
-
-            
-            if (percent < -55) {
-
-                $('.next').addClass('done');
+                // console.log(percent);
 
 
+                if (percent < -55) {
 
-
-            } else {
-                $('.next').removeClass('done');
-
-            }
-
-            if (($(window).width()) <= 1040) {
-
-                TweenMax.set($('.description, .media-container'), {
-                    x: (percent * 2) + '%',
-                })
-
-                TweenMax.set($('.next'), {
-                    x: (100 + (percent * 1.5)) + '%',
-                })
-
-
-
-            } else {
-                TweenMax.set($('.description, .media-container'), {
-                    x: percent + '%',
-
-                })
-
-                TweenMax.set($('.next'), {
-                    x: (100 + (percent * 1.5)) + '%',
-                })
-
-            }
+                    $('.next').addClass('done');
 
 
 
 
+                } else {
+                    $('.next').removeClass('done');
 
-            $('.media-container').css(
-                '-webkit-filter', 'grayscale(' + gray + '%)'
-            )
-
-
-            $('.ball').addClass('grab');
-
-
-        },
-
-        onDragStart: function() {
-
-            TweenMax.to($('.ballC .ball-inner'), .5, {
-                scale: '1',
-                ease: Power4.easeOut
-            });
-
-
-            $('.white').remove();
-
-
-        },
-
-        onDragEnd: function() {
-
-             var suPos = 1 * (parseInt(this.x, 10)),
-                percent = ((suPos * 100) / $(window).width()),
-                gray = -((percent * 2));
-
-            if (percent < -80) {
-                $('.next').click();
-            }
-
-            if (!$('.next').hasClass('done')) {
-
-                $('.ball').removeClass('grab');
-
-                TweenMax.to($('.ballC'), 1.5, {
-                    x: '0',
-                    y: '0',
-                    ease: Power4.easeOut
-                });
-
-                TweenMax.to($('.ballC .ball-inner'), .5, {
-                    scale: '0.3',
-                    ease: Power4.easeOut
-                });
-
-                TweenMax.to($('.description, .media-container'), 1.5, {
-                    x: 0 + '%',
-                    ease: Power4.easeOut
-                });
-
-                TweenMax.to($('.next'), 1.5, {
-                    x: 100 + '%',
-                    ease: Power4.easeOut
-                });
-
-                $('.media-container').css(
-                    '-webkit-filter', 'grayscale(' + 0 + '%)'
-                )
-
-            }
-
-        },
-
-        onThrowUpdate: function() {
-
-
-            var suPos = 1 * (parseInt(this.x, 10)),
-                percent = ((suPos * 100) / $(window).width()),
-                gray = -((percent * 2));
-
-
-            //console.log(percent);
-
-
-            if (percent <= -55) {
+                }
 
                 if (($(window).width()) <= 1040) {
 
@@ -189,54 +85,226 @@ function nextProject() {
                     })
 
 
+
                 } else {
                     TweenMax.set($('.description, .media-container'), {
                         x: percent + '%',
+
                     })
+
                     TweenMax.set($('.next'), {
                         x: (100 + (percent * 1.5)) + '%',
                     })
 
                 }
 
+
+
+
+
                 $('.media-container').css(
                     '-webkit-filter', 'grayscale(' + gray + '%)'
                 )
 
-            } else {
 
-                $('.ball').removeClass('grab');
+                $('.ballC').addClass('grab');
 
-                TweenMax.to($('.ballC'), 1.5, {
-                    x: '0',
-                    y: '0',
-                    ease: Power4.easeOut
-                });
+
+            },
+
+            onDragStart: function() {
 
                 TweenMax.to($('.ballC .ball-inner'), .5, {
-                    scale: '0.3',
+                    scale: '1',
                     ease: Power4.easeOut
                 });
 
-                TweenMax.to($('.description, .media-container'), 1.5, {
-                    x: 0 + '%',
-                    ease: Power4.easeOut
-                });
 
-                TweenMax.to($('.next'), 1.5, {
-                    x: 100 + '%',
-                    ease: Power4.easeOut
-                });
+                $('.white').remove();
 
-                $('.media-container').css(
-                    '-webkit-filter', 'grayscale(' + 0 + '%)'
-                )
+
+            },
+
+            onDragEnd: function() {
+
+                var suPos = 1 * (parseInt(this.x, 10)),
+                    percent = ((suPos * 100) / $(window).width()),
+                    gray = -((percent * 2));
+
+                $('.ballC').removeClass('grab');
+
+                if (percent < -80) {
+                    $('.next').click();
+                }
+
+                if (!$('.next').hasClass('done')) {
+
+
+
+                    TweenMax.to($('.ballC'), 1.5, {
+                        x: '0',
+                        y: '0',
+                        ease: Power4.easeOut
+                    });
+
+                    TweenMax.to($('.ballC .ball-inner'), .5, {
+                        scale: '0.3',
+                        ease: Power4.easeOut
+                    });
+
+                    TweenMax.to($('.description, .media-container'), 1.5, {
+                        x: 0 + '%',
+                        ease: Power4.easeOut
+                    });
+
+                    TweenMax.to($('.next'), 1.5, {
+                        x: 100 + '%',
+                        ease: Power4.easeOut
+                    });
+
+                    $('.media-container').css(
+                        '-webkit-filter', 'grayscale(' + 0 + '%)'
+                    )
+
+                }
+
+            },
+
+            onThrowUpdate: function() {
+
+
+                var suPos = 1 * (parseInt(this.x, 10)),
+                    percent = ((suPos * 100) / $(window).width()),
+                    gray = -((percent * 2));
+
+
+                //console.log(percent);
+
+
+                if (percent <= -55) {
+
+                    if (($(window).width()) <= 1040) {
+
+                        TweenMax.set($('.description, .media-container'), {
+                            x: (percent * 2) + '%',
+                        })
+
+                        TweenMax.set($('.next'), {
+                            x: (100 + (percent * 1.5)) + '%',
+                        })
+
+
+                    } else {
+                        TweenMax.set($('.description, .media-container'), {
+                            x: percent + '%',
+                        })
+                        TweenMax.set($('.next'), {
+                            x: (100 + (percent * 1.5)) + '%',
+                        })
+
+                    }
+
+                    $('.media-container').css(
+                        '-webkit-filter', 'grayscale(' + gray + '%)'
+                    )
+
+                } else {
+
+                    $('.ballC').removeClass('grab');
+
+                    TweenMax.to($('.ballC'), 1.5, {
+                        x: '0',
+                        y: '0',
+                        ease: Power4.easeOut
+                    });
+
+                    TweenMax.to($('.ballC .ball-inner'), .5, {
+                        scale: '0.3',
+                        ease: Power4.easeOut
+                    });
+
+                    TweenMax.to($('.description, .media-container'), 1.5, {
+                        x: 0 + '%',
+                        ease: Power4.easeOut
+                    });
+
+                    TweenMax.to($('.next'), 1.5, {
+                        x: 100 + '%',
+                        ease: Power4.easeOut
+                    });
+
+                    $('.media-container').css(
+                        '-webkit-filter', 'grayscale(' + 0 + '%)'
+                    )
+
+                }
 
             }
 
-        }
+        });
 
-    });
+
+
+
+    } else {
+
+        var nextMobile = Draggable.create($('#single .a'), {
+            type: "-x",
+            edgeResistance: 0.65,
+            //bounds: '#tagSingle',
+            throwProps: true,
+
+            onDrag: function() {
+                var suPos = 1 * (parseInt(this.x, 10)),
+                    percent = ((suPos * 100) / $(window).width()),
+                    gray = -((percent * 2));
+                //  console.log(percent);
+                if (percent < -20) {
+                    $('.next').addClass('done');
+                } else {
+                    $('.next').removeClass('done');
+                }
+            },
+            onDragStart: function() {
+                $('.white').remove();
+            },
+            onDragEnd: function() {
+                var suPos = 1 * (parseInt(this.x, 10)),
+                    percent = ((suPos * 100) / $(window).width()),
+                    gray = -((percent * 2));
+
+                //   console.log(percent)
+
+
+                if ((percent < -20) || (percent > 0)) {
+                    TweenMax.to($('#single .a'), 1.5, {
+                        x: 0 + 'px',
+                        ease: Power4.easeOut
+                    });
+
+
+                    if (($('.next').addClass('done')) && (percent < -20)) {
+
+                        $('.next').click();
+                    }
+
+
+                } else {
+
+                }
+
+
+            },
+            onThrowUpdate: function() {
+                var suPos = 1 * (parseInt(this.x, 10)),
+                    percent = ((suPos * 100) / $(window).width()),
+                    gray = -((percent * 2));
+            }
+
+        });
+
+    }
+
 
 
 }

@@ -152,7 +152,7 @@
     }
 }
 
-.ipad {
+.ipad, {
     @media only screen and (orientation: landscape) {
         #single {
             .description {
@@ -161,6 +161,7 @@
             .fake-footer {
                 //position: fixed;
                 // bottom: 0;
+                display: none;
             }
         }
     }
