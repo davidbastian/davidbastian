@@ -17,7 +17,6 @@ function scrollFunction() {
                 finalScroll = scrollTop - parseInt((delta * scrollDistance), 10);
 
             //console.log(finalScroll) 
-
             TweenMax.to(el, scrollTime, {
                 scrollTo: {
                     y: finalScroll
@@ -25,8 +24,6 @@ function scrollFunction() {
                 ease: Expo.easeOut,
                 overwrite: 5
             });
-
-
         }
 
     }
@@ -37,7 +34,6 @@ function scrollFunction() {
     } else if (document.addEventListener) {
         document.addEventListener(mousewheelevt, displaywheel, false)
     }
-
 
 
 
@@ -246,64 +242,7 @@ function nextProject() {
 
 
 
-    } else {
-
-        var nextMobile = Draggable.create($('#single .a'), {
-            type: "-x",
-            edgeResistance: 0.65,
-            //bounds: '#tagSingle',
-            throwProps: true,
-
-            onDrag: function() {
-                var suPos = 1 * (parseInt(this.x, 10)),
-                    percent = ((suPos * 100) / $(window).width()),
-                    gray = -((percent * 2));
-                //  console.log(percent);
-                if (percent < -20) {
-                    $('.next').addClass('done');
-                } else {
-                    $('.next').removeClass('done');
-                }
-            },
-            onDragStart: function() {
-                $('.white').remove();
-            },
-            onDragEnd: function() {
-                var suPos = 1 * (parseInt(this.x, 10)),
-                    percent = ((suPos * 100) / $(window).width()),
-                    gray = -((percent * 2));
-
-                //   console.log(percent)
-
-
-                if ((percent < -20) || (percent > 0)) {
-                    TweenMax.to($('#single .a'), 1.5, {
-                        x: 0 + 'px',
-                        ease: Power4.easeOut
-                    });
-
-
-                    if (($('.next').addClass('done')) && (percent < -20)) {
-
-                        $('.next').click();
-                    }
-
-
-                } else {
-
-                }
-
-
-            },
-            onThrowUpdate: function() {
-                var suPos = 1 * (parseInt(this.x, 10)),
-                    percent = ((suPos * 100) / $(window).width()),
-                    gray = -((percent * 2));
-            }
-
-        });
-
-    }
+    } 
 
 
 
