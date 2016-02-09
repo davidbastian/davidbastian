@@ -65,7 +65,7 @@ function fullPreload($timeout) {
                         });
 
                         TweenMax.to($('.el'), .5, {
-                            scale: '0.9',
+                            scale: '0.95',
                             ease: Power4.easeOut
                         });
 
