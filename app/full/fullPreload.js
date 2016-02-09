@@ -9,7 +9,7 @@ function listo() {
         y = $('.ballB').height() / 2;
 
     TweenMax.set($('.ballB'), {
-        x: w + 3.52 + 'px',
+        x: w + 3.51 + 'px',
         y: -y + 'px'
     })
 
