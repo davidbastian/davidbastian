@@ -1,4 +1,6 @@
 #tagSingle {
+    overflow: hidden;
+    overflow-y: scroll;
     @media (max-width: 1040px) {
         position: relative;
     }
@@ -152,7 +154,8 @@
     }
 }
 
-.ipad, {
+.ipad,
+{
     @media only screen and (orientation: landscape) {
         #single {
             .description {
