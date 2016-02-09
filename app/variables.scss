@@ -1,4 +1,5 @@
-//@import url(https://fonts.googleapis.com/css?family=Roboto:400,300italic,400italic,500,100,700,500italic,300,100italic);
+
+@import "./fonts/stylesheet.css";
 
 /*color*/
 $body-bg: #fff;
@@ -6,7 +7,8 @@ $text-color: #000;
 $brand-color: #000;
 
 /*font*/
-$font-family-base: sans-serif ;//'Arial', sans-serif;//"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+//$font-family-base: sans-serif;
+$font-family-base: 'h';
 $font-size: 14px;
 
 /*media queries*/
