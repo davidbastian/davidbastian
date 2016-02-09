@@ -9,15 +9,13 @@ function listo() {
         y = $('.ballB').height() / 2;
 
     TweenMax.set($('.ballB'), {
-        x: w + 'px',
+        x: w + 3.52 + 'px',
         y: -y + 'px'
     })
 
     TweenMax.to($('#full .white'), 2, {
-        //  top: '-100vh',
         autoAlpha: 0,
         ease: Power4.easeOut
-
     })
 
     TweenMax.to($('#full .white h1'), 0.65, {
@@ -66,6 +64,11 @@ function fullPreload($timeout) {
                             ease: Power4.easeOut
                         });
 
+                        TweenMax.to($('.el'), .5, {
+                            scale: '0.9',
+                            ease: Power4.easeOut
+                        });
+
                     },
 
                     onDragStart: function() {
@@ -77,6 +80,11 @@ function fullPreload($timeout) {
 
                         TweenMax.to($('.ballB .ball-inner'), .5, {
                             scale: '0.3',
+                            ease: Power4.easeOut
+                        });
+
+                        TweenMax.to($('.el'), .5, {
+                            scale: '1',
                             ease: Power4.easeOut
                         });
 
@@ -93,6 +101,11 @@ function fullPreload($timeout) {
                             $('.wrap-a').eq(equal).addClass('active');
 
                         }
+
+                        TweenMax.to($('.el'), .5, {
+                            scale: '0.9',
+                            ease: Power4.easeOut
+                        });
 
 
 

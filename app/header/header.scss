@@ -19,7 +19,7 @@ header {
                 margin-left: 40px;
                 @media (max-width: 1040px) {
                     margin-left: 4vw;
-                    &:last-child{
+                    &:last-child {
                         margin-right: 10px;
                     }
                 }
@@ -31,6 +31,7 @@ header {
         }
     }
 }
+
 .ball {
     position: fixed;
     width: 5vw;
@@ -65,7 +66,8 @@ header {
     width: 5vw;
     height: 5vw;
     z-index: 10;
-    top: 50%;
+    top: 53.5vh;
+    //left: 37vw;
     margin-top: -8vh;
     display: flex;
     align-items: center;
@@ -153,6 +155,7 @@ header {
     }
 }
 
+
 /*@media (max-width:1040px) {
     .ball,
     .ballB,
@@ -167,7 +170,6 @@ header {
 }*/
 
 @media (max-width:1040px) {
-
     .ballC {
         margin-top: -35vh;
         right: 3%;
@@ -207,6 +209,4 @@ header {
             // top:-50%!important;
         }
     }
-
-
 }
