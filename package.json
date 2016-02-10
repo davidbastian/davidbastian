@@ -35,6 +35,7 @@
     "detectizr": "^2.2.0",
     "gsap": "^1.18.2",
     "html-loader": "^0.4.0",
+    "image-webpack-loader": "^1.6.3",
     "imports-loader": "^0.6.5",
     "jshint": "^2.9.1",
     "jshint-loader": "^0.8.3",
